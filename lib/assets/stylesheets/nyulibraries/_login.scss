@@ -1,0 +1,10 @@
+ul.nyu-login {
+  @extend .pull-right;
+  li {
+    display: inline;
+  }
+}
+
+.login, .logout {
+  margin-left: 5px;
+}
