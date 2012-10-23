@@ -11,6 +11,6 @@ In your gemfile,
       ...
       gem 'sass-rails', "~> 3.2.5"
       gem 'compass-rails', "~> 1.0.3"
-      gem 'nyulibraries_assets'
+      gem 'nyulibraries_assets', :git => "git://github.com/NYULibraries/nyulibraries_assets.git"
       ...
     end
