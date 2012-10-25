@@ -6,16 +6,7 @@
 #   For .coffee files:
 #     #= require bootstrap-tooltip
 #     #= require bootstrap-popover
-->
-  # Load hover popovers to any element that has 
-  # substring popover in the class
-  new window.popover.HoverPopover('[class*="popover"]').init()
-  # Hide popover on click in page.
-  $('[class!="popover"]').click (e) -> $(".popover").hide()
-  # Hide popover when we leave it's area
-  $(".popover").live 'mouseleave', (e) ->
-      $(this).hide()
-
+# 
 window.popover = {}
 class Tooltip
   # Basic tooltip/popover options
@@ -115,3 +106,13 @@ class PartialHoverPopover extends HoverPopover
 
 # Make the PartialHoverPopover accessible
 window.popover.PartialHoverPopover = PartialHoverPopover
+
+$ ->
+  # Load hover popovers to any element that has 
+  # substring popover in the class
+  new window.popover.HoverPopover('[class*="popover"]').init()
+  # Hide popover on click in page.
+  $('[class!="popover"]').click (e) -> $(".popover").hide()
+  # Hide popover when we leave it's area
+  $(".popover").live 'mouseleave', (e) ->
+      $(this).hide()
