@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency "compass"
   s.add_dependency "bootstrap-sass"
-  s.add_development_dependency "sprockets"
+  s.add_development_dependency "coffee-script"
 end

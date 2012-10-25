@@ -14,3 +14,13 @@ In your gemfile,
       gem 'nyulibraries_assets', :git => "git://github.com/NYULibraries/nyulibraries_assets.git"
       ...
     end
+
+## Stylesheets
+
+## Javascripts
+
+### Popovers
+
+    
+
+## Icons and Sprites

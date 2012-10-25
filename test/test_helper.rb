@@ -4,4 +4,5 @@ require 'sass'
 require 'sass/plugin'
 require 'compass'
 require 'bootstrap-sass'
+require 'coffee-script'
 require File.expand_path("../../lib/nyulibraries_assets.rb",  __FILE__)
