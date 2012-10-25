@@ -7,113 +7,110 @@
 #     #= require bootstrap-tooltip
 #     #= require bootstrap-popover
 # 
-window.popover = {}
+# Basic Tooltip
 class Tooltip
-  # Basic tooltip/popover options
-  options:
+  default:
     html: true
     trigger: 'hover'
     delay: { show: 500, hide: 100 }
     placement: () ->
       element = arguments[1]
       if ($(element).offset().left > $(document).width() * .75) then 'left' else 'right'
+  
+  # Tooltip/popover options function
+  options: () ->
+    html: (() -> @_html ? @default.html).call(@)
+    trigger: (() -> @_trigger ? @default.trigger).call(@)
+    delay: (() -> @_delay ? @default.delay).call(@)
+    placement: (() -> @_placement ? @default.placement).call(@)
+    title: @_title
 
   init: () ->
-    $(@selector).tooltip @options
+    $(@selector).tooltip @options()
 
   # HTML option setter, allows chaining
-  html: (html) ->
-    @options.html = html
-    @
+  html: (@_html) ->  @
 
   # Trigger option setter, allows chaining
-  trigger: (trigger) ->
-    @options.trigger = trigger
-    @
+  trigger: (@_trigger) -> @
 
   # Delay option setter, allows chaining
-  delay: (delay) ->
-    @options.delay = delay
-    @
+  delay: (@_delay) -> @
 
   # Placement option setter, allows chaining
-  placement: (placement) ->
-    @options.placement = placement
-    @
+  placement: (@_placement) -> @
 
   # Title option setter, allows chaining
-  title: (title) ->
-    @options.title = title
-    @
+  title: (@_title) -> @
 
   # Contructor (obviously)
   constructor: (@selector) ->
 
-# Make the Tooltip accessible
-window.popover.Tooltip = Tooltip
-
+# Class for basic Popovers
 class Popover extends Tooltip
   _JSON_URL: 'https://webapps.library.nyu.edu/common/retrieve_file_contents_as_json.php?full_html=true&callback=?'
   # Callback method for content, returns a function
   @_CONTENT_CALLBACK: (self, json_url) ->
     ()->
-      element = $(this)
+      element = $(@)
       $.getJSON json_url + "&the_url=" + element.attr("href"),
         (data)->
           element.attr "data-content", self.wrap_html(data.theHtml, element.attr("data-class"))
           element.popover('show')
       "Loading..."
 
+  options: () ->
+    $.extend super(), 
+      content: @_content
+
   init: () ->
-    $(@selector).popover @options 
+    $(@selector).popover @options()
 
   # Content options setter, allows chaining
-  content: (content) ->
-    @options.content = content
-    @
+  content: (@_content) -> @
 
   # Contructor (obviously)
   constructor: (@selector) ->
-    console.log this
-    this.content(Popover._CONTENT_CALLBACK(@, @_JSON_URL))
+    @content(Popover._CONTENT_CALLBACK(@, @_JSON_URL))
 
   # Crappy hack to append an extra class
   wrap_html: (html, klass) ->
     if klass? then $("<p>").append($("<div>").addClass(klass).append(html)).html() else html
 
-# Make the Popover accessible
-window.popover.Popover = Popover
-
+# Class for Popovers with augmented hover features
 class HoverPopover extends Popover
   init: () ->
     @trigger('manual')
-    $(@selector).popover(@options).hover (e) ->
+    $(@selector).popover(@options()).hover (e) ->
         e.preventDefault()
       .mouseenter (e) ->
-        @mouseenter = e.timeStamp
-        $(".popover").hide()
-        $(this).popover('show')
+        $(@).popover('show')
       .mouseleave (e) ->
-        $(this).popover('hide') unless $(e.relatedTarget).parent().hasClass("popover")
+        $(@).popover('hide') unless $(e.relatedTarget).parent().hasClass("popover")
 
-# Make the HoverPopover accessible
-window.popover.HoverPopover = HoverPopover
-
+# Class for partial HTML retrieval
 class PartialHoverPopover extends HoverPopover
   _JSON_URL: 'https://webapps.library.nyu.edu/common/retrieve_file_contents_as_json.php?callback=?'
   # Contructor (obviously)
   constructor: (@selector) ->
     this.content(Popover._CONTENT_CALLBACK(@, @_JSON_URL))
 
-# Make the PartialHoverPopover accessible
-window.popover.PartialHoverPopover = PartialHoverPopover
-
+# Load on jquery document ready
 $ ->
+  # Make the Tooltip accessible
+  window.nyulibraries.Tooltip = Tooltip
+  # Make the Popover accessible
+  window.nyulibraries.Popover = Popover
+  # Make the HoverPopover accessible
+  window.nyulibraries.HoverPopover = HoverPopover
+  # Make the PartialHoverPopover accessible
+  window.nyulibraries.PartialHoverPopover = PartialHoverPopover
+
   # Load hover popovers to any element that has 
   # substring popover in the class
-  new window.popover.HoverPopover('[class*="popover"]').init()
+  new window.nyulibraries.HoverPopover('[class*="popover"]').init()
   # Hide popover on click in page.
   $('[class!="popover"]').click (e) -> $(".popover").hide()
   # Hide popover when we leave it's area
   $(".popover").live 'mouseleave', (e) ->
-      $(this).hide()
+      $(@).hide()
