@@ -8,7 +8,7 @@
 # Basic Dropdown
 class Dropdown
   init: () ->
-    $(@selector).dropdown @options()
+    $(@selector).dropdown
 
   # Contructor (obviously)
   constructor: (@selector) ->
