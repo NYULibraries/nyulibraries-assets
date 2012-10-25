@@ -74,6 +74,7 @@ class Popover extends Tooltip
 
   # Contructor (obviously)
   constructor: (@selector) ->
+    content.log this
     this.content(Popover._CONTENT_CALLBACK(@, @_JSON_URL))
 
   # Crappy hack to append an extra class
