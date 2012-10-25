@@ -4,4 +4,3 @@
 #= require bootstrap-popover
 # = require_tree './nyulibraries'
 window.nyulibraries = {}
-

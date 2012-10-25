@@ -9,6 +9,7 @@
 # 
 # Basic Tooltip
 class Tooltip
+  # Default options
   default:
     html: true
     trigger: 'hover'
