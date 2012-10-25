@@ -6,7 +6,7 @@
 #   For .coffee files:
 #     #= require bootstrap-tooltip
 #     #= require bootstrap-popover
-
+window.popover = {}
 class Tooltip
   # Basic tooltip/popover options
   options:
@@ -48,6 +48,9 @@ class Tooltip
   # Contructor (obviously)
   constructor: (@selector) ->
 
+# Make the Tooltip accessible
+window.popover.Tooltip = Tooltip
+
 class Popover extends Tooltip
   _JSON_URL: 'https://webapps.library.nyu.edu/common/retrieve_file_contents_as_json.php?full_html=true&callback=?'
   # Callback method for content, returns a function
@@ -76,6 +79,9 @@ class Popover extends Tooltip
   wrap_html: (html, klass) ->
     if klass? then $("<p>").append($("<div>").addClass(klass).append(html)).html() else html
 
+# Make the Popover accessible
+window.popover.Popover = Popover
+
 class HoverPopover extends Popover
   init: () ->
     @trigger('manual')
@@ -88,15 +94,22 @@ class HoverPopover extends Popover
       .mouseleave (e) ->
         $(this).popover('hide') unless $(e.relatedTarget).parent().hasClass("popover")
 
+# Make the HoverPopover accessible
+window.popover.HoverPopover = HoverPopover
+
 class PartialHoverPopover extends HoverPopover
   _JSON_URL: 'https://webapps.library.nyu.edu/common/retrieve_file_contents_as_json.php?callback=?'
   # Contructor (obviously)
   constructor: (@selector) ->
     this.content(Popover._CONTENT_CALLBACK(@, @_JSON_URL))
+
+# Make the PartialHoverPopover accessible
+window.popover.PartialHoverPopover = PartialHoverPopover
+
 ->
   # Load hover popovers to any element that has 
   # substring popover in the class
-  new HoverPopover('[class*="popover"]').init()
+  new window.popover.HoverPopover('[class*="popover"]').init()
   # Hide popover on click in page.
   $('[class!="popover"]').click (e) -> $(".popover").hide()
   # Hide popover when we leave it's area
