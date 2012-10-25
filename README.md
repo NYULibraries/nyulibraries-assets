@@ -21,6 +21,8 @@ Import "nyulibraries" in your SCSS file of choice to get all NYU Libraries and B
     @import "nyulibraries";
     
 ### Javascripts
+_**Currently assumes that you're using [Sprockets](https://github.com/sstephenson/sprockets)**_
+
 You can include the NYU Libraries javascripts through two methods. 
 In this case, Sprocket's `//=` (`#=` in CoffeeScript) require directives.
 
@@ -61,4 +63,4 @@ There are 4 classes of Tooltips/Popovers
 NYU Libraries assets have sprites built in.
 
 ## Compass
-Documentation coming soon
+Documentation coming soon.
