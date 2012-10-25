@@ -58,6 +58,7 @@ There are 4 classes of Tooltips/Popovers
 4. `PartialHoverPopover` - Hover popover that loads partial HTML (truncates after 250 chars) from an external source
 
 #### Dropdowns
+Coming soon.
 
 ### Icons and Sprites
 NYU Libraries assets have sprites built in.
