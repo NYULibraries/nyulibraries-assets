@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>{{title}}</title>
+    {{meta}}
+    {{stylesheets}}
+    {{javascripts}}
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="parent"><a href="http://library.nyu.edu/"><span>NYU Libraries</span></a></div>
+      <div class="suite"><span>{{suite}}</span></div>
+      <div class="application"><span>{{application}}</span></div>
+    </header>
+    <nav id="nav1" class="breadcrumb">
+      <ul class="nyu-breadcrumbs">
+        {{#crumbs}}
+          <li>{{.}}</li>
+        {{/crumbs}}
+      </ul>
+      <ul class="nyu-login">
+        <li>{{login}}</li>
+      </ul>
+    </nav>
+    <div class="nyu-container">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span8">
+            <ul class="nav nav-tabs">
+              {{#tabs}}
+                <li class="{{klass}}" id="{{id}}">{{link}}</li>
+              {{/tabs}}
+            </ul>
+            {{yield}}
+          </div>
+          <div class="span4">
+            <div id="sidebar" class="sidebar">
+              <div id="sidebar_tabs" class="sidebar-section">
+                <h2>{{title}}</h2>
+                <ul>
+                  {{#tabs}}
+                    <li class="{{klass}}" id="{{id}}">{{link}}</li>
+                  {{/tabs}}
+                </ul>
+              </div>
+              {{sidebar}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{footer}}
+  </body>
+</html>
