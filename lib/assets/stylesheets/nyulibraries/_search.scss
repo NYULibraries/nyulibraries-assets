@@ -10,21 +10,21 @@
     top: 0px;
   }
 
+  input[type="text"] {
+    padding:{ 
+      left: 24px;
+      top: 5px;
+      bottom: 5px;
+    }
+    background: {
+      image: url(image_path("magnifier.png"));
+      repeat: no-repeat;
+      position: 6px 50%;
+    }
+  }
+
   .search-section {
     border-top: 1px solid $searchBorderColor;
-
-    input[type="text"] {
-      padding:{ 
-        left: 24px;
-        top: 5px;
-        bottom: 5px;
-      }
-      background: {
-        image: url(image_path("magnifier.png"));
-        repeat: no-repeat;
-        position: 6px 50%;
-      }
-    }
   }
   
   #primary-search {
