@@ -18,7 +18,7 @@ class Tooltip
       element = arguments[1]
       if ($(element).offset().left > $(document).width() * .75) then 'left' else 'right'
   
-  # Tooltip/popover options function
+  # Tooltip options function
   options: () ->
     html: (() -> @_html ? @default.html).call(@)
     trigger: (() -> @_trigger ? @default.trigger).call(@)
@@ -107,11 +107,15 @@ $ ->
   # Make the PartialHoverPopover accessible
   window.nyulibraries.PartialHoverPopover = PartialHoverPopover
 
-  # Load hover popovers to any element that has 
-  # substring popover in the class
-  new window.nyulibraries.HoverPopover('[class*="popover"]').init()
   # Hide popover on click in page.
   $('[class!="popover"]').click (e) -> $(".popover").hide()
+  # Continue to show popover when we enter it's area
+  $(".popover").live 'mouseenter', (e) ->
+      $(@).show()
   # Hide popover when we leave it's area
   $(".popover").live 'mouseleave', (e) ->
       $(@).hide()
+
+  # Load hover popovers to any element that has 
+  # substring popover in the class
+  new window.nyulibraries.HoverPopover('[class*="popover"]').init()
