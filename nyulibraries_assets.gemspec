@@ -16,7 +16,8 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split($\)
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
 
-  s.add_dependency "compass"
-  s.add_dependency "bootstrap-sass"
-  s.add_development_dependency "coffee-script"
+  s.add_dependency "compass", "~> 0.12.2"
+  s.add_dependency "bootstrap-sass", "~> 2.1.1.0"
+  s.add_dependency "institutions", "~> 0.0.4"
+  s.add_development_dependency "coffee-script", "~> 2.2.0"
 end

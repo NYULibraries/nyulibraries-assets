@@ -1,5 +1,6 @@
 module NYULibrariesAssets
   class FrameworkNotFound < StandardError; end
+  require 'institutions'
 
   # Inspired by {bootstrap-sass}[https://github.com/thomas-mcdonald/bootstrap-sass]
   def self.load!
@@ -7,6 +8,8 @@ module NYULibrariesAssets
     if asset_pipeline?
       register_rails_engine
     end
+    # Set the common institutions file at the front of the load paths.
+    Institutions.loadpaths.unshift  File.join(File.dirname(__FILE__), '../', 'config')
   end
 
   private
@@ -15,7 +18,7 @@ module NYULibrariesAssets
   end
 
   def self.register_compass_extension
-    base = File.join(File.dirname(__FILE__), '../', 'lib', 'assets')
+    base = File.join(File.dirname(__FILE__), '/assets')
     styles = File.join(base, "stylesheets")
     images = File.join('lib', 'assets', "images")
     ::Compass::Frameworks.register('nyulibraries', :path => base, :stylesheets_directory => styles)

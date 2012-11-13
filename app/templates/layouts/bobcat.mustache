@@ -15,9 +15,9 @@
     </header>
     <nav id="nav1" class="breadcrumb">
       <ul class="nyu-breadcrumbs">
-        {{#crumbs}}
+        {{#breadcrumbs}}
           <li>{{.}}</li>
-        {{/crumbs}}
+        {{/breadcrumbs}}
       </ul>
       <ul class="nyu-login">
         <li>{{login}}</li>
@@ -29,7 +29,7 @@
           <div class="span8">
             <ul class="nav nav-tabs">
               {{#tabs}}
-                <li class="{{klass}}" id="{{id}}">{{link}}</li>
+                <li class="{{klass}}" id="{{code}}">{{link}}</li>
               {{/tabs}}
             </ul>
             {{yield}}

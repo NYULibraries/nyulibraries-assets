@@ -1,7 +1,8 @@
 # Configuration file for BobCat institutions.
 NYU:
-  display_name: NYU Libraries
-  login:
+  default: true
+  name: NYU Libraries
+  auth:
     link_code: NYU
   views:
     dir: nyu
@@ -30,7 +31,7 @@ NYU:
         tip: 'Search by instructor, course name, course title, etc.'
 
 NYUAD:
-  display_name: NYU Abu Dhabi Library
+  name: NYU Abu Dhabi Library
   views:
     dir: nyuad
     breadcrumbs:
@@ -58,8 +59,8 @@ NYUAD:
         tip: 'Search by Course or Professor'
 
 CU:
-  display_name: The Cooper Union Library
-  login:
+  name: The Cooper Union Library
+  auth:
     link_code: CU
   views:
     dir: cu
@@ -84,8 +85,8 @@ CU:
         tip: 'Search course reserves by instructor, course name or number, author, title, and other terms'
 
 NS:
-  display_name: New School Libraries
-  login:
+  name: New School Libraries
+  auth:
     link_code: NS
   views:
     dir: ns
