@@ -3,7 +3,7 @@ NYU:
   default: true
   name: NYU Libraries
   auth:
-    link_code: NYU
+    code: NYU
   views:
     dir: nyu
     breadcrumbs:
@@ -61,7 +61,7 @@ NYUAD:
 CU:
   name: The Cooper Union Library
   auth:
-    link_code: CU
+    code: CU
   views:
     dir: cu
     breadcrumbs:
@@ -87,7 +87,7 @@ CU:
 NS:
   name: New School Libraries
   auth:
-    link_code: NS
+    code: NS
   views:
     dir: ns
     breadcrumbs:

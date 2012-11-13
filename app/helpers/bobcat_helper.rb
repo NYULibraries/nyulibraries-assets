@@ -39,11 +39,10 @@ module BobcatHelper
 
   # Breadcrumbs
   def breadcrumbs
-    @breadcrumbs ||= []
-    if @breadcrumbs.empty?
-      breadcrumbs = views["breadcrumbs"]
-      @breadcrumbs << link_to(breadcrumbs["title"], breadcrumbs["url"])
-      @breadcrumbs << link_to('BobCat', "http://bobcat.library.nyu.edu/#{views["dir"]}")
+    breadcrumbs = []
+    if breadcrumbs.empty?
+      breadcrumbs << link_to(views["breadcrumbs"]["title"], views["breadcrumbs"]["url"])
+      breadcrumbs << link_to('BobCat', "http://bobcat.library.nyu.edu/#{views["dir"]}")
     end
   end
 
@@ -54,7 +53,7 @@ module BobcatHelper
 
   # Tabs
   def tabs
-    @tabs ||= views["tabs"].collect{|code, values|
+    tabs ||= views["tabs"].collect{|code, values|
       values["code"] = code
       values["url"], values["klass"] = root_url, "active" if active_tab? code
       values["link"] = link_to_with_popover(values["display"], values["url"], values["tip"], "tab")
@@ -63,7 +62,7 @@ module BobcatHelper
   end
   
   def active_tab? code
-    @institution.active_tab.eql? code if @institution.respond_to? :active_tab
+    institution.active_tab.eql? code if institution.respond_to? :active_tab
   end
   
   # Footer
@@ -72,21 +71,15 @@ module BobcatHelper
   end
 
   def views
-    @views ||= institution.views
+    views ||= institution.views
   end
 
   def institution
-    @institution ||= (current_primary_institution.nil? or 
-      institutions[current_primary_institution.name].nil?) ? 
-        default_institution : institutions[current_primary_institution.name]
+    current_primary_institution
   end
   
   def default_institution
     @default_institution ||= Institutions.defaults.first
-  end
-
-  def institutions
-    @institutions || Institutions.institutions
   end
 
   def link_to_with_popover(*args)
