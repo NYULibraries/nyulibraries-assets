@@ -88,4 +88,9 @@ module BobcatHelper
     args[2] = {"title" => args[0], "data-content" => "<div class=\"#{klass}\">#{content}</div>", :rel => "popover", :class => "#{klass}"}
     link_to(*args)
   end
+  
+  def two_column ; true end  
+  def onload ; false end
+  def body_class ; false end
+  def body_id ; false end
 end
