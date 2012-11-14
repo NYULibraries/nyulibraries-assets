@@ -7,7 +7,7 @@
     {{stylesheets}}
     {{javascripts}}
   </head>
-  <body>
+  <body{{#onload}} onload="{{onload}}"{{/onload}}{{#body_class}} class="{{body_class}}"{{/body_class}}{{#body_id}} id="{{body_id}}"{{/body_id}}>
     <header id="header" class="header">
       <div class="parent"><a href="http://library.nyu.edu/"><span>NYU Libraries</span></a></div>
       <div class="suite"><span>{{suite}}</span></div>
@@ -26,7 +26,7 @@
     <div class="nyu-container">
       <div class="container-fluid">
         <div class="row-fluid">
-          <div class="span8">
+          <div class="{{#two_column}}span8{{/two_column}}{{^two_column}}span12{{/two_column}}">
             <ul class="nav nav-tabs">
               {{#tabs}}
                 <li class="{{klass}}" id="{{code}}">{{link}}</li>
@@ -34,6 +34,7 @@
             </ul>
             {{yield}}
           </div>
+          {{#two_column}}
           <div class="span4">
             <div id="sidebar" class="sidebar">
               <div id="sidebar_tabs" class="sidebar-section">
@@ -47,6 +48,7 @@
               {{sidebar}}
             </div>
           </div>
+          {{/two_column}}
         </div>
       </div>
     </div>
