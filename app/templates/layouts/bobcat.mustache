@@ -8,6 +8,7 @@
     {{javascripts}}
   </head>
   <body{{#onload}} onload="{{onload}}"{{/onload}}{{#body_class}} class="{{body_class}}"{{/body_class}}{{#body_id}} id="{{body_id}}"{{/body_id}}>
+    {{prepend_body}}
     <header id="header" class="header">
       <div class="parent"><a href="http://library.nyu.edu/"><span>NYU Libraries</span></a></div>
       <div class="suite"><span>{{suite}}</span></div>
@@ -32,6 +33,7 @@
                 <li class="{{klass}}" id="{{code}}">{{link}}</li>
               {{/tabs}}
             </ul>
+            {{prepend_yield}}
             {{yield}}
           </div>
           {{#two_column}}
