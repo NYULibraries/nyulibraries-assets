@@ -89,8 +89,17 @@ module BobcatHelper
     link_to(*args)
   end
   
+  # Defaults to two column grid layout, but set to false for one column
+  # Can be conditional as well
   def two_column ; true end  
+  # Add onload code to body
   def onload ; false end
+  # Classes to put on the body
   def body_class ; false end
+  # Id to put on the body
   def body_id ; false end
+  # Prepend some elements to the body
+  def prepend_body ; false end
+  # Prepend some elements to the yield
+  def prepend_yield ; false end
 end
