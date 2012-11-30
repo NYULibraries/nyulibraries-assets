@@ -1,5 +1,5 @@
 # Rails helper module for bobcat layout.
-# Assumes 
+# Assumes
 #     - Rails helper function
 #     - AuthPdsNyu controller methods
 module BobcatHelper
@@ -9,7 +9,7 @@ module BobcatHelper
   def title
     "BobCat"
   end
-  
+
   def application
     title
   end
@@ -17,7 +17,14 @@ module BobcatHelper
   def suite
     title
   end
-  
+
+  def meta
+    content_tag(:meta, nil, :charset => "utf-8") +
+    content_tag(:meta, nil, :name => "viewport",
+      :content => "width=device-width, initial-scale=1.0")+
+    csrf_meta_tags
+  end
+
   # Stylesheets for the layout.
   def stylesheets
     stylesheet_link_tag "application"
@@ -31,9 +38,9 @@ module BobcatHelper
   # Login link and icon
   def login
     (current_user) ?
-      content_tag(:i, nil, :class => "icons-famfamfam-lock") + 
+      content_tag(:i, nil, :class => "icons-famfamfam-lock") +
         link_to("Log-out #{current_user.firstname}", logout_url, :class=>"logout") :
-      content_tag(:i, nil, :class => "icons-famfamfam-lock_open") + 
+      content_tag(:i, nil, :class => "icons-famfamfam-lock_open") +
         link_to("Login", login_url, :class=>"login")
   end
 
@@ -60,11 +67,11 @@ module BobcatHelper
       values
     }
   end
-  
+
   def active_tab? code
     institution.active_tab.eql? code if institution.respond_to? :active_tab
   end
-  
+
   # Footer
   def footer
     javascript_include_tag "https://libraryh3lp.com/js/libraryh3lp.js?multi"
@@ -77,7 +84,7 @@ module BobcatHelper
   def institution
     current_primary_institution
   end
-  
+
   def default_institution
     @default_institution ||= Institutions.defaults.first
   end
@@ -88,10 +95,10 @@ module BobcatHelper
     args[2] = {"title" => args[0], "data-content" => "<div class=\"#{klass}\">#{content}</div>", :rel => "popover", :class => "#{klass}"}
     link_to(*args)
   end
-  
+
   # Defaults to two column grid layout, but set to false for one column
   # Can be conditional as well
-  def two_column ; true end  
+  def two_column ; true end
   # Add onload code to body
   def onload ; false end
   # Classes to put on the body
@@ -99,7 +106,7 @@ module BobcatHelper
   # Id to put on the body
   def body_id ; false end
   # Prepend some elements to the body
-  def prepend_body ; false end
+  def prepend_body; end
   # Prepend some elements to the yield
-  def prepend_yield ; false end
+  def prepend_yield; end
 end
