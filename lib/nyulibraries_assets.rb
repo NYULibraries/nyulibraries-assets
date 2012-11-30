@@ -1,5 +1,6 @@
 module NYULibrariesAssets
   class FrameworkNotFound < StandardError; end
+  require 'compass'
   require 'institutions'
 
   # Inspired by {bootstrap-sass}[https://github.com/thomas-mcdonald/bootstrap-sass]
