@@ -1,11 +1,12 @@
 $baseFontSize:                              12px !default;
-$smallFontSize:                             $baseFontSize - 1 !default;
-$largeFontSize:                             $baseFontSize + 2 !default;
-$baseLineHeight:                            12px !default;
-$linkColor:                                 blue !default;
+$fontSizeSmall:                             $baseFontSize - 1 !default;
+$fontSizeLarge:                             $baseFontSize + 2 !default;
+$baseLineHeight:                            16px !default;
+$lineHeightLarge:                           20px !default;
+$linkColor:                                 #08C !default;
 $nyuLibrariesDarkBrown:                     #653d24 !default;
 $nyuLibrariesLightBrown:                    #E0D8C9 !default;
-$nyuLibrariesAzBlue:                        #0000ee !default;
+$nyuLibrariesAzBlue:                        $linkColor !default;
 $nyuLibrariesBorderColor:                   #653d24 !default;
 $nyuLibrariesLightBorderColor:              #CCCCCC !default;
 $nyuLibrariesBackgroundColor:               #000000 !default;

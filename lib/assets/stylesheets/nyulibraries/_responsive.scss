@@ -25,7 +25,12 @@
   label {
     margin: {
       left: 0px;
-    }
+    } 
+  }
+  
+  .control-label {
+    width: auto !important;
+    text-align: left !important;
   }
 
   div.entree {
