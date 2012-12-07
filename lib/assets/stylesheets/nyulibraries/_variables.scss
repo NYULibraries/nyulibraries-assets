@@ -16,6 +16,9 @@ $resultsBackgroundColor:                    white !default;
 $breadcrumbsBackgroundColor:                $searchBackgroundColor;
 $searchBorderColor:                         darken($searchBackgroundColor, 10%) !default;
 $tabBackgroundColor:                        lighten($searchBackgroundColor, 5%) !default;
+$tabHeaderColor:                            #333 !default;
+$tabBorderColor:                            $searchBorderColor !default;
+$tabActiveBackgroundColor:                  $tabBackgroundColor !default;
 $sidebarHeaderBackgroundColor:              darken($searchBackgroundColor, 10%) !default;
 $sidebarBackgroundColor:                    lighten($searchBackgroundColor, 5%) !default;
 $azLinkColor:                               $nyuLibrariesAzBlue !default;
@@ -24,3 +27,4 @@ $azBackgroundColor:                         white !default;
 $azHoverBackgroundColor:                    #EEEEEE !default;
 $paddingStandard:                           1.5em !default;
 $paddingSmall:                              $paddingStandard * .6666 !default;
+
