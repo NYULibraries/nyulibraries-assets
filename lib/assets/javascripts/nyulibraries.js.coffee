@@ -2,5 +2,8 @@
 #= require jquery_ujs
 #= require bootstrap-tooltip
 #= require bootstrap-popover
-# = require_tree './nyulibraries'
+#= require bootstrap-transition
+#= require bootstrap-collapse
+#= require bootstrap-alert
+#= require_tree './nyulibraries'
 window.nyulibraries = {}
