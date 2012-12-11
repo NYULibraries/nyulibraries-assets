@@ -2,3 +2,4 @@
 icons-*.png
 Gemfile.lock
 *.bak
+.DS_Store
