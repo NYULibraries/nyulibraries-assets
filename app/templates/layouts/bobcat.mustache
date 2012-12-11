@@ -27,25 +27,29 @@
       <div class="container-fluid">
         <div class="row-fluid">
           <div class="{{#two_column}}span8{{/two_column}}{{^two_column}}span12{{/two_column}}">
-            <ul class="nav nav-tabs">
-              {{#tabs}}
-                <li class="{{klass}}" id="{{code}}">{{link}}</li>
-              {{/tabs}}
-            </ul>
+            {{! Use Twitter Bootstrap's responsive collapsible menu }}
+            <div class="navbar navbar-tabs">
+              <div class="navbar-inner">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </a>
+                <h4>{{tabs_header}}</h4>
+                <div class="nav-collapse collapse">
+                  <ul class="nav nav-tabs">
+                    {{#tabs}}
+                      <li class="{{klass}}" id="{{code}}">{{link}}</li>
+                    {{/tabs}}
+                  </ul>
+                </div>
+              </div>
+            </div>
             {{prepend_yield}}
             {{yield}}
           </div>
           {{#two_column}}
           <div class="span4">
             <div id="sidebar" class="sidebar">
-              <div id="sidebar_tabs" class="sidebar-section">
-                <h2>{{title}}</h2>
-                <ul>
-                  {{#tabs}}
-                    <li class="{{klass}}" id="{{id}}">{{link}}</li>
-                  {{/tabs}}
-                </ul>
-              </div>
               {{sidebar}}
             </div>
           </div>

@@ -15,7 +15,7 @@
   }
 
   .sidebar-section {
-    margin-bottom: $baseLineHeight*2;
+    margin-bottom: $baseLineHeight;
     ul {
       @include sidebar;
       @include background-image(linear-gradient(color-stops($sidebarBackgroundColor, darken($sidebarBackgroundColor, 5%))));

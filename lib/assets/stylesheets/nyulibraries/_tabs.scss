@@ -1,25 +1,7 @@
-.nav-tabs {
-  margin-bottom: 0px;
+.navbar-tabs {
+  h4 { color: $tabHeaderColor; }
 }
 
-.nav-tabs > li > a {
-  background-color: $tabBackgroundColor;
-  color: lighten(black, 20%);
-}
+/* Tabs mixins are in mixins.scss */
 
-.nav-tabs > li > a:hover {
-  background-color: darken($tabBackgroundColor, 5%);
-}
-.nav-tabs > .active > a,
-.nav-tabs > .active > a:hover {
-  background-color: $searchBackgroundColor;
-  color: black;
-}
-
-#sidebar_tabs {
-  display: none;
-}
-
-.popover .tab {
-  width: 300px;
-}
+  

@@ -46,3 +46,101 @@
     content: "";
   }
 }
+
+@mixin tabs-fullscreen {
+  .navbar-tabs {
+    margin:0;
+    h4 {
+      display: none;
+    }
+    .navbar-inner, .container {
+      background-color: transparent;
+      background-image: none !important;
+      padding:0;
+      border: none;
+      box-shadow: none;
+    }
+    .nav-tabs {
+      margin-bottom: 0px;
+    }
+    .nav-tabs > li > a {
+      background-color: $tabBackgroundColor;
+      color: lighten(black, 20%);
+    }
+
+    .nav-tabs > li > a:hover {
+      background-color: darken($tabBackgroundColor, 5%);
+    }
+    .nav-tabs > .active > a,
+    .nav-tabs > .active > a:hover {
+      background-color: $searchBackgroundColor;
+      color: black;
+      box-shadow: none;
+    }
+
+    #sidebar_tabs {
+      display: none;
+    }
+
+    .popover .tab {
+      width: 300px;
+    }
+  }
+}
+
+@mixin tabs-responsive {
+  .navbar-tabs {
+    h4 { display: block; }
+    ul.nav-tabs {
+      border: none;
+      margin-bottom: 0;
+      li {
+        a {
+          border-top: 1px solid $tabBorderColor;
+          -webkit-border-radius: 0;
+             -moz-border-radius: 0;
+                  border-radius: 0;
+          margin-right: 0;
+          margin-bottom: 0;
+          font-size: 15px;
+          color: $tabHeaderColor;
+        }
+        &:hover {
+          a {
+            background-color: $tabActiveBackgroundColor;
+          }
+        }
+        &.active {
+          a {
+            color: $tabHeaderColor;
+            -webkit-box-shadow: none !important;
+               -moz-box-shadow: none !important;
+                    box-shadow: none !important;
+          }
+          background-color: $tabActiveBackgroundColor;
+        }
+      }
+      li:last-child {
+        -webkit-border-bottom-radius: 6px;
+           -moz-border-bottom-radius: 6px;
+                border-bottom-radius: 6px;
+      }
+    }
+
+    .navbar-inner {
+      min-height: auto;
+      background-image: none !important;
+      margin-bottom:1em;
+      padding: 0;
+      background-color: transparent !important;
+      border: 1px solid $tabBorderColor;
+  
+      h5, h4 {
+        display: block;
+        *width: 190px;
+        margin: 0 0 -1px;
+        padding: 8px 14px;
+      }
+    }
+  }
+}
