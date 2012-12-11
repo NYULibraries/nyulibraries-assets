@@ -59,20 +59,20 @@ div.entree {
     }
   }
   div.frbr {
-    margin-bottom: $paddingSmall * .25;
+    margin-bottom: $paddingStandard / 6;
   }
   div.fulldetails {
-    margin-top: $paddingSmall * .75;
+    margin-top: $paddingStandard / 3;
   }
   div.author {
-    margin-bottom: $paddingSmall * .25;
+    margin-bottom: $paddingStandard / 6;
   }
   div.locations {
-    margin: ($paddingSmall * .75) 0;
+    margin: ($paddingStandard / 3) 0;
   }
   div.delivery {
     font-size: 125%;
-    margin: ($paddingSmall * .75) 0;
+    margin: ($paddingStandard / 3) 0;
     span {
       font-weight: bold;
       &.getItText {	font-weight: normal; }
@@ -88,12 +88,12 @@ div.entree {
         @include no-padding;
         @include no-margin;
         display: inline;
-        &.separator {	margin: 0 ($paddingSmall * .25); }
+        &.separator {	margin: 0 ($paddingStandard / 6); }
       }
     }
   }
   div.dessert, div.desert {
     @include float-right;
-    margin-left: $paddingSmall;
+    margin-left: $paddingStandard * (2/3);
   }
 }

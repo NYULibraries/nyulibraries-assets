@@ -19,7 +19,7 @@
     ul {
       @include sidebar;
       @include background-image(linear-gradient(color-stops($sidebarBackgroundColor, darken($sidebarBackgroundColor, 5%))));
-      @extend .unstyled;
+      @extend .unstyled !optional;
       li {
         margin: {
           top: $baseLineHeight;
