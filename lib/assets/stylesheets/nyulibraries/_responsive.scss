@@ -25,7 +25,12 @@
   label {
     margin: {
       left: 0px;
-    }
+    } 
+  }
+  
+  .control-label {
+    width: auto !important;
+    text-align: left !important;
   }
 
   div.entree {
@@ -49,13 +54,7 @@
     display: none !important;
   }
 
-  .nav-tabs {
-    display: none
-  }
-
-  #sidebar_tabs {
-    display: block;
-  }
+  @include tabs-responsive;
 
   .sidebar {
     font: {
@@ -109,7 +108,12 @@
   }
 }
 
+@media (min-width: 979px) { 
+  @include tabs-fullscreen;
+}
+
 @media (max-width: 1200px) {
+  
   .nyu-tip {
     float: none;
     width: auto;
