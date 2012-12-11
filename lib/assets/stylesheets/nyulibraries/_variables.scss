@@ -26,5 +26,6 @@ $azBorderColor:                             #BBBBBB !default;
 $azBackgroundColor:                         white !default;
 $azHoverBackgroundColor:                    #EEEEEE !default;
 $paddingStandard:                           1.5em !default;
-$paddingSmall:                              $paddingStandard * .6666 !default;
+// paddingLarge, paddingSmall & paddingMini are set in bootstrap without !default and so can't be overridden for bootstrap styles
+
 
