@@ -59,7 +59,9 @@
       background-image: none !important;
       padding:0;
       border: none;
-      box-shadow: none;
+      -webkit-box-shadow: none !important;
+         -moz-box-shadow: none !important;
+              box-shadow: none !important;
     }
     .nav-tabs {
       margin-bottom: 0px;
@@ -76,7 +78,9 @@
     .nav-tabs > .active > a:hover {
       background-color: $searchBackgroundColor;
       color: black;
-      box-shadow: none;
+      -webkit-box-shadow: none !important;
+         -moz-box-shadow: none !important;
+              box-shadow: none !important;
     }
 
     #sidebar_tabs {
