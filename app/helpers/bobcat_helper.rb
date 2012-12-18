@@ -61,6 +61,11 @@ module BobcatHelper
   def sidebar
     render :partial => "#{current_primary_institution.views["dir"]}/sidebar" unless current_primary_institution.nil?
   end
+  
+  # Show tabs
+  def show_tabs
+    !tabs.empty?
+  end
 
   # Tabs
   def tabs
