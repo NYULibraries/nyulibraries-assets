@@ -1,0 +1,9 @@
+footer { 
+  border: none; 
+  color: darken(whiteSmoke, 20%); 
+  a {
+    color: darken(whiteSmoke, 35%); 
+    text-decoration: underline;
+    &:hover { text-decoration: none; }
+  }
+}

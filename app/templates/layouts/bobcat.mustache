@@ -27,6 +27,7 @@
       <div class="container-fluid">
         <div class="row-fluid">
           <div class="{{#two_column}}span8{{/two_column}}{{^two_column}}span12{{/two_column}}">
+            {{#show_tabs}}
             {{! Use Twitter Bootstrap's responsive collapsible menu }}
             <div class="navbar navbar-tabs">
               <div class="navbar-inner">
@@ -44,6 +45,7 @@
                 </div>
               </div>
             </div>
+            {{/show_tabs}}
             {{prepend_yield}}
             {{yield}}
           </div>
