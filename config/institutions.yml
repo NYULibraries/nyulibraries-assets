@@ -23,7 +23,7 @@ NYU:
         url: https://webdev1.library.nyu.edu/arch/databases/alphabetical/
         tip: All databases by title
       journals:
-        display: E-Journals A-Z
+        display: Journals
         tip: Find e-journals by title or locate a known article
       reserves:
         display: Course Reserves
@@ -43,7 +43,7 @@ NYUAD:
         url: http://bobcatdev.library.nyu.edu/nyuad
         tip: 'Books, E-Books, Journal Titles, Audio, Video & More'
       remote:
-        display: Articles
+        display: 'Articles & Databases'
         url: https://webdev1.library.nyu.edu/arch/nyuad
         tip: Sorted by Subject and Content Type
       databases:
@@ -51,7 +51,7 @@ NYUAD:
         url: https://webdev1.library.nyu.edu/arch/nyuad/databases/alphabetical/
         tip: All Databases by Title
       journals:
-        display: Journals A-Z
+        display: Journals
         tip: Find E-journals by Title or Locate a Known Article
       reserves:
         display: Course Reserves
