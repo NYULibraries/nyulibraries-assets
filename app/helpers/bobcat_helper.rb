@@ -34,6 +34,12 @@ module BobcatHelper
     stylesheet_link_tag "application"
   end
 
+  # Get the stylesheet base on the current
+  # institution.
+  def institutional_stylesheets
+    stylesheet_link_tag institution.views["css"]
+  end
+
   # Javascripts to include.
   def javascripts
     javascript_include_tag "application"
