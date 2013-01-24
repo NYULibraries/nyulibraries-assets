@@ -5,6 +5,7 @@ NYU:
   auth:
     code: NYU
   views:
+    css: bobcat
     dir: nyu
     breadcrumbs:
       title: NYU Libraries
@@ -33,6 +34,7 @@ NYU:
 NYUAD:
   name: NYU Abu Dhabi Library
   views:
+    css: bobcat_nyuad
     dir: nyuad
     breadcrumbs:
       title: NYUAD Library
@@ -63,6 +65,7 @@ CU:
   auth:
     code: CU
   views:
+    css: bobcat_cu
     dir: cu
     breadcrumbs:
       title: Cooper Union Library
@@ -89,6 +92,7 @@ NS:
   auth:
     code: NS
   views:
+    css: bobcat_ns
     dir: ns
     breadcrumbs:
       title: New School Libraries

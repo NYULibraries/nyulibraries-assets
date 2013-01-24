@@ -37,5 +37,5 @@
 }
 
 input[type="submit"] {
-  padding-top: 3px;
+  @extend .btn;
 }

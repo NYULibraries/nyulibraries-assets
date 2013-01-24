@@ -23,8 +23,8 @@ module BobcatHelper
   end
 
   def meta
-    content_tag(:meta, nil, :charset => "utf-8") +
-    content_tag(:meta, nil, :name => "viewport",
+    tag(:meta, :charset => "utf-8") +
+    tag(:meta, :name => "viewport",
       :content => "width=device-width, initial-scale=1.0")+
     csrf_meta_tags
   end
@@ -32,6 +32,12 @@ module BobcatHelper
   # Stylesheets for the layout.
   def stylesheets
     stylesheet_link_tag "application"
+  end
+
+  # Get the stylesheet base on the current
+  # institution.
+  def institutional_stylesheets
+    stylesheet_link_tag institution.views["css"]
   end
 
   # Javascripts to include.
