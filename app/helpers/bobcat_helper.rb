@@ -46,12 +46,12 @@ module BobcatHelper
   end
 
   # Login link and icon
-  def login
+  def login(params={})
     (current_user) ?
       content_tag(:i, nil, :class => "icons-famfamfam-lock") +
-        link_to("Log-out #{current_user.firstname}", logout_url, :class=>"logout") :
+        link_to("Log-out #{current_user.firstname}", logout_url(params), :class=>"logout") :
       content_tag(:i, nil, :class => "icons-famfamfam-lock_open") +
-        link_to("Login", login_url, :class=>"login")
+        link_to("Login", login_url(params), :class=>"login")
   end
 
   # Breadcrumbs
