@@ -1,27 +1,2 @@
-@import "bobcat";
-header {
-  background: {
-    image: url("https://library.nyu.edu/images/common/bobcat/ns/banner.gif");
-    color: #343434;
-  }
-  border-bottom:2px solid #da1c28;
-  height: 95px;
-}
-#ns_all_help{
-  display:none
-}
-#ns_tutorials{
-  display:none
-}
-#ns_aal_txt{
-  display:none
-}
-#ns_schedule{
-  display:none
-}
-.persistent_dialog{
-  display:none
-}
-#tags{
-  display:none
-}
+@import "nyulibraries_ns";
+@import "nyulibraries/bobcat";

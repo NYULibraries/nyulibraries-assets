@@ -121,3 +121,25 @@ NS:
         display: Course Reserves
         url: 'http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=NS&amp;tab=nscr'
         tip: 'Search for Reserves by title or instructor name'
+
+HSL:
+  name: NYU Health Sciences Library
+  auth:
+    code: HSL
+  views:
+    css: bobcat_hsl
+    dir: hsl
+    breadcrumbs:
+      title: NYU Health Sciences Library
+      url: http://hsl.med.nyu.edu/
+    tabs:
+      all:
+        display: HSLCat
+        url: "http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=HSL&tab=all"
+        tip: "Keyword search: library catalog"
+      eresources:
+        display: Search e-Resources
+        tip: "Title search: databases, ejournals, websites, etc."
+      journals:
+        display: Journals A-Z
+        tip: Locate journals by title or citation

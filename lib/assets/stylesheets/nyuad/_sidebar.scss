@@ -1,0 +1,18 @@
+// Sidebar
+.sidebar {
+  .sidebar-section {
+    h2 {
+      margin: 0px !important;
+    }
+    ul {
+      background: none !important;
+      padding: 0;
+      li {
+        margin-top: 0;
+        background-position: 0 10px!important;
+        padding: 3px 0 3px 10px!important;
+        background: url("https://nyuad.nyu.edu/content/dam/nyuad/departments/web-services/images/library/icon-double-arrow-fuscia.png") no-repeat scroll 0 11px transparent!important;
+      }
+    }
+  }
+}

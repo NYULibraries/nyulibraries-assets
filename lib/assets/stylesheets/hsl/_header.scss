@@ -1,0 +1,16 @@
+header {
+  background: url('http://hsl.med.nyu.edu/sites/default/files/css/hsl_banner2.gif') top left no-repeat;
+  background-color: #0f5e58;
+  margin: 0;
+  height: 67px;
+  border-bottom:5px solid #FFFFFF;
+  
+  a {
+    height: 38px;
+    width: 147px;
+    z-index: 100;
+    margin-top: 18px;
+    margin-left: 18px;
+    position: absolute;
+  }
+}

@@ -1,10 +1,2 @@
 @import "nyulibraries";
-.suite {
-  height: 67px;
-  width: 130px;
-  background: {
-    image: url("https://library.nyu.edu/images/common/bobcat_logo.png");
-    repeat: no-repeat;
-    position: center right;
-  }
-}
+@import "nyulibraries/bobcat";
