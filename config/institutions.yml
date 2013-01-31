@@ -13,7 +13,7 @@ NYU:
     tabs:
       all:
         display: 'Books & More'
-        url: http://bobcatdev.library.nyu.edu
+        url: http://bobcat.library.nyu.edu
         tip: 'Books & e-books, journals & e-journals, scripts, scores, archival materials, NYU dissertations, videos, sound recordings'
       remote:
         display: 'Articles & Databases'
@@ -28,7 +28,7 @@ NYU:
         tip: Find e-journals by title or locate a known article
       reserves:
         display: Course Reserves
-        url: 'http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=NYU&amp;tab=reserves'
+        url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=NYU&amp;tab=reserves'
         tip: 'Search by instructor, course name, course title, etc.'
 
 NYUAD:
@@ -42,7 +42,7 @@ NYUAD:
     tabs:
       all:
         display: 'Books & More'
-        url: http://bobcatdev.library.nyu.edu/nyuad
+        url: http://bobcat.library.nyu.edu/nyuad
         tip: 'Books, E-Books, Journal Titles, Audio, Video & More'
       remote:
         display: 'Articles & Databases'
@@ -57,7 +57,7 @@ NYUAD:
         tip: Find E-journals by Title or Locate a Known Article
       reserves:
         display: Course Reserves
-        url: 'http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYUAD&tab=nyuadcr'
+        url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYUAD&tab=nyuadcr'
         tip: 'Search by Course or Professor'
 
 CU:
@@ -73,18 +73,18 @@ CU:
     tabs:
       all:
         display: Consortium Catalog
-        url: http://bobcatdev.library.nyu.edu/cooper
+        url: http://bobcat.library.nyu.edu/cooper
         tip: 'Books & e-books, journals & e-journals, scripts, scores, archival materials, videos, sound recordings, and other materials in the Consortium libraries'
       cu:
         display: Cooper Library Catalog
-        url: "http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=CU&tab=cu"
+        url: "http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=CU&tab=cu"
         tip: 'Books & e-books, journals & e-journals, videos, and other materials in the Cooper Union Library'
       journals:
         display: E-Journals
         tip: Browse e-journals by title or search for a specific article
       reserves:
         display: Course Reserves
-        url: 'http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=CU&amp;tab=cucr'
+        url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=CU&amp;tab=cucr'
         tip: 'Search course reserves by instructor, course name or number, author, title, and other terms'
 
 NS:
@@ -100,11 +100,11 @@ NS:
     tabs:
       all:
         display: Find resources in All Consortium Libraries
-        url: http://bobcatdev.library.nyu.edu/newschool
+        url: http://bobcat.library.nyu.edu/newschool
         tip: Find resources in All Consortium Libraries
       ns:
         display: New School Resources
-        url: "http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NS&tab=ns"
+        url: "http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NS&tab=ns"
         tip: Find New School Resources
       remote:
         display: Articles and Databases
@@ -119,7 +119,7 @@ NS:
         tip: Locate journals by title or citation
       reserves:
         display: Course Reserves
-        url: 'http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=NS&amp;tab=nscr'
+        url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=NS&amp;tab=nscr'
         tip: 'Search for Reserves by title or instructor name'
 
 HSL:
@@ -135,7 +135,7 @@ HSL:
     tabs:
       all:
         display: HSLCat
-        url: "http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=HSL&tab=all"
+        url: "http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=HSL&tab=all"
         tip: "Keyword search: library catalog"
       eresources:
         display: Search e-Resources
