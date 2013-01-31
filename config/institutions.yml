@@ -17,11 +17,11 @@ NYU:
         tip: 'Books & e-books, journals & e-journals, scripts, scores, archival materials, NYU dissertations, videos, sound recordings'
       remote:
         display: 'Articles & Databases'
-        url: https://webdev1.library.nyu.edu/arch
+        url: https://arch.library.nyu.edu
         tip: by Subject and Content Type
       databases:
         display: Databases A-Z
-        url: https://webdev1.library.nyu.edu/arch/databases/alphabetical/
+        url: https://arch.library.nyu.edu/databases/alphabetical/
         tip: All databases by title
       journals:
         display: Journals
@@ -46,11 +46,11 @@ NYUAD:
         tip: 'Books, E-Books, Journal Titles, Audio, Video & More'
       remote:
         display: 'Articles & Databases'
-        url: https://webdev1.library.nyu.edu/arch/nyuad
+        url: https://arch.library.nyu.edu/nyuad
         tip: Sorted by Subject and Content Type
       databases:
         display: Databases A-Z
-        url: https://webdev1.library.nyu.edu/arch/nyuad/databases/alphabetical/
+        url: https://arch.library.nyu.edu/nyuad/databases/alphabetical/
         tip: All Databases by Title
       journals:
         display: Journals
@@ -108,11 +108,11 @@ NS:
         tip: Find New School Resources
       remote:
         display: Articles and Databases
-        url: https://webdev1.library.nyu.edu/arch/ns
+        url: https://arch.library.nyu.edu/ns
         tip: 'Search for articles, images and media by subject'
       databases:
         display: Databases A-Z
-        url: https://webdev1.library.nyu.edu/arch/ns/databases/alphabetical/
+        url: https://arch.library.nyu.edu/ns/databases/alphabetical/
         tip: All databases by title
       journals:
         display: Journals A-Z
