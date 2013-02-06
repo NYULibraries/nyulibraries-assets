@@ -123,14 +123,14 @@ NS:
         tip: 'Search for Reserves by title or instructor name'
 
 HSL:
-  name: NYU Health Sciences Library
+  name: NYU Health Sciences Libraries
   auth:
     code: HSL
   views:
     css: bobcat_hsl
     dir: hsl
     breadcrumbs:
-      title: NYU Health Sciences Library
+      title: NYU Health Sciences Libraries
       url: http://hsl.med.nyu.edu/
     tabs:
       all:
