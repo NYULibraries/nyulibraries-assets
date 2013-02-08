@@ -92,15 +92,14 @@ module BobcatHelper
     javascript_include_tag "https://libraryh3lp.com/js/libraryh3lp.js?multi"
   end
 
-  # Using Gauges?
-  def gauges?
-    Rails.env.eql? "production" and gauges_tracking_code
-  end
-
   # Gauges tracking code
   # Should be implemented per application
   def gauges_tracking_code
-    nil
+  end
+
+  # Using Gauges?
+  def gauges?
+    (Rails.env.eql?("production") and (not gauges_tracking_code.nil?))
   end
 
   def views
