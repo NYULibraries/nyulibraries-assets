@@ -59,7 +59,6 @@ module NyulibrariesHelper
 
   # Show tabs
   def show_tabs
-    p tabs.class
     return !tabs.empty?
   end
 
