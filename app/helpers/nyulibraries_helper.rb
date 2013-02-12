@@ -1,9 +1,8 @@
 # Assumes
 #     - Rails helper function
 #     - AuthPdsNyu controller methods
+require 'institutions'
 module NyulibrariesHelper
-  require 'institutions'
-
   # Title of application
   def title
     ""
@@ -60,31 +59,28 @@ module NyulibrariesHelper
 
   # Show tabs
   def show_tabs
-    !tabs.empty?
+    p tabs.class
+    return !tabs.empty?
   end
 
   # Tabs
   def tabs
-    tabs ||= views["tabs"].collect{|code, values|
+    @tabs ||= views["tabs"].collect{|code, values|
       values["code"] = code
       values["url"], values["klass"] = root_url, "active" if active_tab? code
       values["link"] = link_to_with_popover(values["display"], values["url"], values["tip"], "tab")
       values
     }
   end
+  alias all_tabs tabs
 
   def active_tab? code
     institution.active_tab.eql? code if institution.respond_to? :active_tab
   end
 
-  # Gauges tracking code
-  # Should be implemented per application
-  def gauges_tracking_code
-  end
-
   # Using Gauges?
   def gauges?
-    (Rails.env.eql?("production") and (not gauges_tracking_code.nil?))
+    (Rails.env.eql?("production") and respond_to?(:gauges_tracking_code) and (not gauges_tracking_code.nil?))
   end
 
   def views

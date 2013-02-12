@@ -14,10 +14,11 @@
         <div class="row-fluid">
           <div class="span3">
             <div id="sidebar" class="sidebar">
-              {{sidebar}}
+              {{> user/sidebar}}
             </div>
           </div>
           <div class="span9">
+            {{yield}}
           </div>
         </div>
       </div>

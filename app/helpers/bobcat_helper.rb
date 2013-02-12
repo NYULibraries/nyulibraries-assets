@@ -3,6 +3,7 @@
 #     - Rails helper function
 #     - AuthPdsNyu controller methods
 require 'active_support/concern'
+require 'institutions'
 module BobcatHelper
   extend ActiveSupport::Concern
   
@@ -15,12 +16,6 @@ module BobcatHelper
   # Title of application
   def title
     "BobCat"
-  end
-
-  # Sidebar partial
-  def sidebar
-    p "current_primary_institution : #{current_primary_institution}"
-    render :partial => "#{current_primary_institution.views["dir"]}/sidebar" unless current_primary_institution.nil?
   end
 
   # Footer

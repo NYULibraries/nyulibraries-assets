@@ -17,10 +17,6 @@ module EshelfHelper
     "BobCat"
   end
 
-  # Sidebar partial
-  def sidebar
-  end
-
   # Footer
   def footer
     javascript_include_tag "https://libraryh3lp.com/js/libraryh3lp.js?multi"
