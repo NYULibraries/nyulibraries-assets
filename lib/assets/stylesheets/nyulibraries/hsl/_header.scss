@@ -1,16 +1,25 @@
 header {
-  background: url('http://hsl.med.nyu.edu/sites/default/files/css/hsl_banner2.gif') top left no-repeat;
-  background-color: #0f5e58;
-  margin: 0;
-  height: 67px;
-  border-bottom:5px solid #FFFFFF;
+	background: url('http://hsl.med.nyu.edu/sites/default/files/primo/bg100.gif') top center repeat-x!important;
+	background-color: #0f5e58;
+	margin: 0;
+	height: 70px!important;
+	border-bottom:0px;
+	border-top:5px solid #4E4E4E;
   
   a {
-    height: 38px;
+    /*height: 38px;
     width: 147px;
     z-index: 100;
     margin-top: 18px;
     margin-left: 18px;
-    position: absolute;
+    position: absolute;*/
+	width: 461px!important;
+	height: 59px!important;
+	background-image: url('http://hsl.med.nyu.edu/sites/default/files/primo/nyuhsl_green_white_web_banner.png')!important;
+	background-position: center!important;
+	background-repeat: no-repeat!important;
+	margin-bottom:8px;
+	margin-top:10px;
   }
 }
+
