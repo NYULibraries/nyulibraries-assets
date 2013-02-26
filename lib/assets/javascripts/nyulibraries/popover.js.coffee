@@ -110,10 +110,10 @@ $ ->
   # Hide popover on click in page.
   $('[class!="popover"]').click (e) -> $(".popover").hide()
   # Continue to show popover when we enter it's area
-  $(".popover").live 'mouseenter', (e) ->
+  $(document).on 'mouseenter', ".popover", (e) ->
       $(@).show()
   # Hide popover when we leave it's area
-  $(".popover").live 'mouseleave', (e) ->
+  $(document).on 'mouseleave', ".popover", (e) ->
       $(@).hide()
 
   # Load hover popovers to any element that has 
