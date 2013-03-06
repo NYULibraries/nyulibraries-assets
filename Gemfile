@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gemspec
 group :development, :test do
+  gem 'coveralls', require: false
   platforms :jruby do
     gem 'therubyrhino', "~> 2.0.0"
   end
