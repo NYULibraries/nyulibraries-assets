@@ -3,8 +3,7 @@
 #     - Rails helper function
 #     - AuthPdsNyu controller methods
 require 'active_support/concern'
-require 'institutions'
-module BobcatHelper
+module EshelfHelper
   extend ActiveSupport::Concern
   
   included do |klass|

@@ -3,22 +3,24 @@
   <head>
     {{meta}}
     <title>{{title}}</title>
-    {{institutional_stylesheets}}
+    {{stylesheets}}
     {{javascripts}}
   </head>
-  <body>
-    {{> bobcat/header}}
+  <body{{#onload}} onload="{{onload}}"{{/onload}}{{#body_class}} class="{{body_class}}"{{/body_class}}{{#body_id}} id="{{body_id}}"{{/body_id}}>
+    {{prepend_body}}
+    {{> common/header}}
     {{> common/nav1}}
     <div class="nyu-container">
       <div class="container-fluid">
         <div class="row-fluid">
           <div class="span8">
             {{> common/tabs}}
+            {{prepend_yield}}
             {{yield}}
           </div>
           <div class="span4">
             <div id="sidebar" class="sidebar">
-              {{> bobcat/sidebar}}
+              {{> common/sidebar}}
             </div>
           </div>
         </div>
