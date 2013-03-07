@@ -12,14 +12,13 @@
     <div class="nyu-container">
       <div class="container-fluid">
         <div class="row-fluid">
-          <div class="span8">
-            {{> common/tabs}}
-            {{yield}}
-          </div>
-          <div class="span4">
+          <div class="span3">
             <div id="sidebar" class="sidebar">
-              {{> bobcat/sidebar}}
+              {{> user/sidebar}}
             </div>
+          </div>
+          <div class="span9">
+            {{yield}}
           </div>
         </div>
       </div>

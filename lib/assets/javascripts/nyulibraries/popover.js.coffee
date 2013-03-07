@@ -113,7 +113,7 @@ $ ->
   $(document).on 'mouseenter', ".popover", (e) ->
       $(@).show()
   # Hide popover when we leave it's area
-  $(document).on 'mouseleave', ".popover",(e) ->
+  $(document).on 'mouseleave', ".popover", (e) ->
       $(@).hide()
 
   # Load hover popovers to any element that has 

@@ -1,0 +1,19 @@
+{{#show_tabs}}
+{{! Use Twitter Bootstrap's responsive collapsible menu }}
+<div class="navbar navbar-tabs">
+  <div class="navbar-inner">
+    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+    <h4>{{tabs_header}}</h4>
+    <div class="nav-collapse collapse">
+      <ul class="nav nav-tabs">
+        {{# all_tabs}}
+          <li class="{{klass}}" id="{{code}}">{{link}}</li>
+        {{/ all_tabs}}
+      </ul>
+    </div>
+  </div>
+</div>
+{{/show_tabs}}
