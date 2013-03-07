@@ -28,7 +28,7 @@ NYU:
         tip: Find e-journals by title or locate a known article
       reserves:
         display: Course Reserves
-        url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=NYU&amp;tab=reserves'
+        url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYU&tab=reserves'
         tip: 'Search by instructor, course name, course title, etc.'
 
 NYUAD:
@@ -84,7 +84,7 @@ CU:
         tip: Browse e-journals by title or search for a specific article
       reserves:
         display: Course Reserves
-        url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=CU&amp;tab=cucr'
+        url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=CU&tab=cucr'
         tip: 'Search course reserves by instructor, course name or number, author, title, and other terms'
 
 NS:
@@ -119,7 +119,7 @@ NS:
         tip: Locate journals by title or citation
       reserves:
         display: Course Reserves
-        url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=NS&amp;tab=nscr'
+        url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NS&tab=nscr'
         tip: 'Search for Reserves by title or instructor name'
 
 HSL:
