@@ -54,11 +54,14 @@ class Popover extends Tooltip
   @_CONTENT_CALLBACK: (self, json_url) ->
     ()->
       element = $(@)
-      $.getJSON json_url + "&the_url=" + element.attr("href"),
-        (data)->
-          element.attr "data-content", self.wrap_html(data.theHtml, element.attr("data-class"))
-          element.popover('show')
-      "Loading..."
+      if(element.attr("data-content")?)
+        element.attr("data-content")
+      else
+        $.getJSON json_url + "&the_url=" + element.attr("href"),
+          (data)->
+            element.attr "data-content", self.wrap_html(data.theHtml, element.attr("data-class"))
+            element.popover('show')
+        "Loading..."
 
   options: () ->
     $.extend super(), 

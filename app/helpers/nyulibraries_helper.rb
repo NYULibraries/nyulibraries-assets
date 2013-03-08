@@ -97,7 +97,9 @@ module NyulibrariesHelper
   def link_to_with_popover(*args)
     klass = args.delete_at 3
     content = args.delete_at 2
-    args[2] = {"title" => args[0], "data-content" => "<div class=\"#{klass}\">#{content}</div>", :rel => "popover", :class => "#{klass}"}
+    args[2] = {"title" => args[0], 
+      "data-content" => "<div class=\"#{klass}\">#{content}</div>", 
+      :class => "#{klass}"}
     link_to(*args)
   end
 
