@@ -1,9 +1,10 @@
 .breadcrumb {
+  @include clearfix;
   color: lighten(black, 20%);
   background-color: $breadcrumbsBackgroundColor;
   padding: {
     top: $baseLineHeight/2 + 5;
-    bottom: $baseLineHeight * 1.5 + 5;
+    bottom: $baseLineHeight/2 + 5;
     left: 20px;
   }
 }
@@ -12,6 +13,7 @@ ul.nyu-breadcrumbs {
   @extend .pull-left;
   margin: {
     left: 0px;
+    bottom: 0px;
   }
   & > li {
     display: inline;
