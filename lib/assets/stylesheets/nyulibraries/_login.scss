@@ -1,6 +1,9 @@
 ul.nyu-login {
   @extend .pull-right;
-  margin-left: 0 !important;
+  margin: {
+    left: 0px;
+    bottom: 0px;
+  }
   li {
     display: inline;
   }
