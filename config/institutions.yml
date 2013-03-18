@@ -122,7 +122,7 @@ NS:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NS&tab=nscr'
         tip: 'Search for Reserves by title or instructor name'
 
-HSL:
+HSL: 216.165.0-127.*
   name: NYU Health Sciences Libraries
   auth:
     code: HSL
@@ -138,7 +138,7 @@ HSL:
         url: "http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=HSL&tab=all"
         tip: "Keyword search: library catalog"
       eresources:
-        display: Search e-Resources
+        display: e-Resources
         tip: "Title search: databases, ejournals, websites, etc."
       journals:
         display: Journals A-Z
