@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rake", "~> 10.0.2"
   s.add_dependency "compass", "~> 0.12.2"
-  s.add_dependency "bootstrap-sass", "~> 2.3.1"
+  #s.add_dependency "bootstrap-sass", "~> 2.3.1"
   s.add_dependency "institutions", "~> 0.0.5"
   s.add_development_dependency "coffee-script", "~> 2.2.0"
 end
