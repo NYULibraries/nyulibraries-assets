@@ -6,3 +6,4 @@ Gemfile.lock
 coverage/
 dummy/tmp
 dummy/log
+dummy/db/*.sqlite3
