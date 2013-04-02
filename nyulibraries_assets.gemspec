@@ -20,5 +20,10 @@ Gem::Specification.new do |s|
   s.add_dependency "compass", "~> 0.12.2"
   s.add_dependency "bootstrap-sass", "~> 2.3.1"
   s.add_dependency "institutions", "~> 0.0.5"
+  s.add_development_dependency "rails", "~> 3.2.13"
+  s.add_development_dependency "sqlite3", "~> 1.3.7"
+  s.add_development_dependency "compass-rails", "~> 1.0.3"
   s.add_development_dependency "coffee-script", "~> 2.2.0"
+  s.add_development_dependency  "sass-rails", "~> 3.2.6"
+  s.add_development_dependency "mustache-rails", "~> 0.2.3"
 end

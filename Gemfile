@@ -7,6 +7,6 @@ group :development, :test do
   end
 
   platforms :ruby do
-    gem 'therubyracer', "~> 0.10.0"
+    gem 'therubyracer', "~> 0.11.0"
   end
 end
