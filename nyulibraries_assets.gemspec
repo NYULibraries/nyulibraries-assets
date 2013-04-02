@@ -27,3 +27,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency  "sass-rails", "~> 3.2.6"
   s.add_development_dependency "mustache-rails", "~> 0.2.3"
 end
+
