@@ -104,14 +104,14 @@ module NyulibrariesHelper
   end
 
   def button_dropdown(title, list)
-    dropdown(title, list, {:class => ["btn-group"]}, {:class => ["btn"]})
+    dropdown(title, list, {:class => ["btn-group"]}, {:class => ["btn", "dropdown-toggle"]})
   end
 
   def right_button_dropdown(title, list)
-    dropdown(title, list, {:class => ["btn-group", "pull-right"]}, {:class => ["btn"]}, {:class => ["pull-right", "dropdown-menu"]})
+    dropdown(title, list, {:class => ["btn-group", "pull-right"]}, {:class => ["btn", "dropdown-toggle"]}, {:class => ["pull-right", "dropdown-menu"]})
   end
 
-  def dropdown(title, list, html_options = {:class => "dropdown"}, toggle_html_options = {}, menu_html_options={:class => "dropdown-menu"})
+  def dropdown(title, list, html_options = {:class => "dropdown"}, toggle_html_options = {:class => "dropdown-toggle"}, menu_html_options={:class => "dropdown-menu"})
     toggle_html_options.merge!({"data-toggle" => "dropdown"})
     content_tag(:div, html_options) {
       content_tag(:button, toggle_html_options) {
