@@ -1,24 +1,32 @@
 .sidebar {
-  h2 {
-    @include background-image(linear-gradient(color-stops($sidebarHeaderBackgroundColor, lighten($sidebarHeaderBackgroundColor, 5%))));
+  h2, h3 {
     @include sidebar;
-    font-weight: normal;
 
     margin: {
       top: 0px;
       bottom: 0px;
     }
+  }
+
+  h2 {
+    @include background-image(linear-gradient(color-stops($sidebarHeaderBackgroundColor, lighten($sidebarHeaderBackgroundColor, 5%))));
+    @include sidebar;
+    font-weight: normal;
 
     i {
       vertical-align: baseline;
     }
   }
 
+  h3 {
+    border-top: 2px solid $nyuLibrariesLightBorderColor;
+  }
+
   .sidebar-section {
     margin-bottom: $baseLineHeight;
+    @include background-image(linear-gradient(color-stops($sidebarBackgroundColor, darken($sidebarBackgroundColor, 5%))));
     ul {
       @include sidebar;
-      @include background-image(linear-gradient(color-stops($sidebarBackgroundColor, darken($sidebarBackgroundColor, 5%))));
       @extend .unstyled !optional;
       li {
         margin: {

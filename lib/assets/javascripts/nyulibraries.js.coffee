@@ -6,5 +6,6 @@
 #= require bootstrap-transition
 #= require bootstrap-collapse
 #= require bootstrap-alert
+#= require bootstrap-dropdown
 #= require_tree './nyulibraries'
 window.nyulibraries = {}
