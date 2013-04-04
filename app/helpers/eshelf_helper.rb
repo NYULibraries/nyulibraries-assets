@@ -5,7 +5,7 @@
 require 'active_support/concern'
 module EshelfHelper
   extend ActiveSupport::Concern
-  
+
   included do |klass|
     klass.class_eval {
       include NyulibrariesHelper
@@ -24,14 +24,14 @@ module EshelfHelper
 
   # Username
   def username
-    (current_user) ? 
+    (current_user) ?
       "#{current_user.firstname} #{current_user.lastname}" : "Guest"
   end
 
   def back_to
     content_tag("i", nil, :class => "icons-famfamfam-arrow_undo") + back_to_text
   end
-  
+
   def back_to_text
     "Back to results"
   end

@@ -40,7 +40,6 @@ We have a helper that includes all available javascripts without prepping BobCat
 You can also load individual modules, provided you sort out any related dependencies.
 
     //= require nyulibraries/popover
-    //= require nyulibraries/dropdown
 
 #### Tooltips and Popovers
 NYU Libraries Popovers use Twitter Bootstrap's [Tooltips](http://twitter.github.com/bootstrap/javascript.html#tooltips) 
@@ -61,20 +60,6 @@ There are 4 classes of Tooltips/Popovers
 `HoverPopover`s are enabled by default on any element that has a class with the substring "popover" (`[class*="popover"]`).
 
 In BobCat, `Popover`s are enabled for tab tooltips and a `HoverPopover` is enable for the My Workspace help icon.
-
-#### Dropdowns
-NYU Libraries Dropdowns use Twitter Bootstrap's [Dropdowns](http://twitter.github.com/bootstrap/javascript.html#dropdowns) 
-
-NYU Libraries Dropdowns leverage the Builder pattern to chain Bootstrap options (currently none) so you can do something like this
-    
-    $ ->
-      new window.nyulibraries.Dropdown('.someclass').init()
-
-There is one class of Dropdown
-
-1. `Dropdown` - Bootstrap dropdown
-
-In BobCat, `Dropdown`s are enabled for the Send/Share list.
 
 ### Icons and Sprites
 NYU Libraries assets have sprites built in.

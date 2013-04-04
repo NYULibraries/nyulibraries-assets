@@ -103,6 +103,29 @@ module NyulibrariesHelper
     link_to(*args)
   end
 
+  def button_dropdown(title, list)
+    dropdown(title, list, {:class => "btn-group"}, {:class => ["btn", "dropdown-toggle"]})
+  end
+
+  def right_button_dropdown(title, list)
+    dropdown(title, list, {:class => "btn-group pull-right"}, {:class => ["btn", "dropdown-toggle"]}, {:class => ["pull-right", "dropdown-menu"]})
+  end
+
+  def dropdown(title, list, html_options = {:class => "dropdown"}, toggle_html_options = {:class => "dropdown-toggle"}, menu_html_options={:class => "dropdown-menu"})
+    toggle_html_options.merge!({id: title.underscore, role: "button",href: "/", "data-toggle" => "dropdown", "data-target" => "#"})
+    menu_html_options.merge!({role: "menu", "aria-labelledby" => title.underscore})
+    content_tag(:div, html_options) {
+      content_tag(:a, toggle_html_options) {
+        title + content_tag(:b, nil, :class => "caret")
+      } +
+      content_tag(:ul, menu_html_options) {
+        list.collect { |member|
+          content_tag(:li){ member }
+        }.join.html_safe
+      }
+    }
+  end
+
   # Add onload code to body
   def onload ; false end
 

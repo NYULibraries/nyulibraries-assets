@@ -10,6 +10,9 @@ NYU:
     breadcrumbs:
       title: NYU Libraries
       url: http://library.nyu.edu
+    ill:
+      link_html: My interlibrary loan (ILL)
+      url: http://ill.library.nyu.edu
     tabs:
       all:
         display: 'Books & More'
@@ -39,6 +42,9 @@ NYUAD:
     breadcrumbs:
       title: NYUAD Library
       url: http://nyuad.nyu.edu/academics/library/index.html
+    ill:
+      link_html: My interlibrary loan (ILL)
+      url: http://ill.library.nyu.edu
     tabs:
       all:
         display: 'Books & More'
@@ -97,6 +103,9 @@ NS:
     breadcrumbs:
       title: New School Libraries
       url: http://library.newschool.edu
+    ill:
+      link_html: My interlibrary loan (ILL)
+      url: http://ill.library.nyu.edu
     tabs:
       all:
         display: Find resources in All Consortium Libraries
