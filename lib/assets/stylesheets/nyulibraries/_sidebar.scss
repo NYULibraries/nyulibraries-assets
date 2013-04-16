@@ -1,18 +1,14 @@
 .sidebar {
   h2, h3 {
     @include sidebar;
-
-    margin: {
-      top: 0px;
-      bottom: 0px;
-    }
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   h2 {
     @include background-image(linear-gradient(color-stops($sidebarHeaderBackgroundColor, lighten($sidebarHeaderBackgroundColor, 5%))));
     @include sidebar;
     font-weight: normal;
-
     i {
       vertical-align: baseline;
     }
@@ -23,6 +19,7 @@
   }
 
   .sidebar-section {
+    @include border-bottom-radius($baseBorderRadius);
     margin-bottom: $baseLineHeight;
     @include background-image(linear-gradient(color-stops($sidebarBackgroundColor, darken($sidebarBackgroundColor, 5%))));
     ul {
@@ -37,4 +34,3 @@
     }
   }
 }
-

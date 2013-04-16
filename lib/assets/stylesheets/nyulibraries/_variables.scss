@@ -1,4 +1,4 @@
-$baseFontSize:                              12px !default;
+$baseFontSize:                              14px;
 $fontSizeSmall:                             $baseFontSize - 1 !default;
 $fontSizeLarge:                             $baseFontSize + 2 !default;
 $baseLineHeight:                            16px !default;
@@ -27,5 +27,3 @@ $azBackgroundColor:                         white !default;
 $azHoverBackgroundColor:                    #EEEEEE !default;
 $paddingStandard:                           1.5em !default;
 // paddingLarge, paddingSmall & paddingMini are set in bootstrap without !default and so can't be overridden for bootstrap styles
-
-

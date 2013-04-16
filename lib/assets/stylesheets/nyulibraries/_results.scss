@@ -6,58 +6,56 @@
 .result {
   @extend .well;
   @extend .well-small;
-  margin: {
-    bottom: $baseLineHeight/2;
-  }
-  padding: {
-    top: 2px;
-    bottom: 2px;
-    left: 2px;
-    right: 2px;
-  }
+  margin-bottom: $baseLineHeight/2;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 2px;
 }
 
-.nyu-resource {
-  padding: {
-    top: 10px;
-    left: 10px;
+.record_tag_list {
+  a[id*="edit"] {
+    margin-left: 5px;
   }
-}
-
-.nyu-pagination {
-  @extend .pagination;
-  font-size: 125%;
+  a:hover.muted {
+    text-decoration: none;
+  }
+  .muted {
+    font-size: 90%;
+  }
+  label {
+    margin-left: 0px;
+  }
 }
 
 div.appetizer {
+  margin-right: 5px;
   div.number {
-    @extend .pull-left;
-    margin: {
-      right: $baseLineHeight;
-    }
+    margin-right: $baseLineHeight;
   }
-  a.content-type {
+  .content-type {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 10px;
     figure {
-      margin: {
-        top: 0px;
-        left: $baseLineHeight/2;
-        right: $baseLineHeight;
-      }
+      margin-top: 0px;
+      margin-left: $baseLineHeight/2;
+      margin-right: $baseLineHeight;
     }
-    @extend .pull-left;
     color: black;
     &:hover {
       text-decoration: none;
     }
   }
+  label {
+    margin-top: 0px;
+  }
 }
 
 div.entree {
-  margin-left: 85px;
+  margin-left: 0px;
   h2.title {
-    margin: {
-      top: 0px;
-    }
+    margin-top: 0px;
   }
   div.frbr {
     margin-bottom: $paddingStandard / 6;
@@ -76,7 +74,7 @@ div.entree {
     margin: ($paddingStandard / 3) 0;
     span {
       font-weight: bold;
-      &.getItText {	font-weight: normal; }
+      &.getItText { font-weight: normal; }
     }
   }
   div.save_record {

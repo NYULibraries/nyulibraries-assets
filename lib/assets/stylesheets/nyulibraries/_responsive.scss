@@ -1,11 +1,9 @@
 @media (max-width: 480px) {
   .nyu-container {
-    padding: {
-      left: 10px;
-      right: 10px;
-    }
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  
+
   .form-horizontal .controls {
     margin-left: 0;
     label {
@@ -16,35 +14,26 @@
   input[type="submit"] {
     width: 100%;
     padding: 10px;
-    margin: {
-      top: 5px;
-      bottom: 10px;
-    }
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
 
   label {
     margin: {
       left: 0px;
-    } 
+    }
   }
-  
+
   .control-label {
     width: auto !important;
     text-align: left !important;
   }
-
-  div.entree {
-    margin-left: 30%;
-  }
-
 }
 
 @media (max-width: 767px) {
   .sidebar {
     h2 {
-      margin: {
-        top: $baseLineHeight;
-      }
+      margin-top: $baseLineHeight;
     }
   }
 }
@@ -53,9 +42,7 @@
   .popover {
     display: none !important;
   }
-
   @include tabs-responsive;
-
   .sidebar {
     font: {
       size: $baseFontSize*1.25;
@@ -74,10 +61,10 @@
   }
 
   nav.breadcrumb {
-    ul { 
+    ul {
       &.nyu-login {
         height: $baseLineHeight;
-        [class*="icons"], { 
+        [class*="icons"], {
           background-image: none;
           padding: 0px;
         }
@@ -88,32 +75,33 @@
     }
   }
 
-  .nyu-resource {
+  .result {
     font: {
       size: $baseFontSize*1.25
     }
     line-height: $baseLineHeight*2;
     dl {
       dt, dd {
-        padding: {
-          top: $baseLineHeight;
-        }
+        padding-top: $baseLineHeight;
       }
     }
   }
-  
+
   form {
     display: block !important;
     float: none !important;
   }
+
+  div.entree {
+    margin-left: 80px;
+  }
 }
 
-@media (min-width: 979px) { 
+@media (min-width: 979px) {
   @include tabs-fullscreen;
 }
 
 @media (max-width: 1200px) {
-  
   .nyu-tip {
     float: none;
     width: auto;

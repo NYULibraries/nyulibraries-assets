@@ -1,0 +1,52 @@
+en:
+  record:
+    create_success: Record was successfully created.
+    destroy_html: Delete
+    destroy_success: Record was successfully destroyed.
+    getit_html: Check Availability @ GetIt
+    ris_html: Download as RIS
+    bibtex_html: Download as BibTex
+    refworks_html: Push to RefWorks
+    endnote_html: Push to EndNote Web
+    easybib_html: Push to EasyBib
+    tag_list:
+      add: "[add]"
+      edit: "[edit]"
+      save: "[save]"
+      label_html: "Labeled as:"
+      placeholder: Add comma delimitted labels
+      submit_html: "Save labels"
+    collection:
+      eshelf:
+        add_html: Add to Eshelf
+      delete:
+        title_html: Delete Records
+      email:
+        subject: BobCat results
+        title_html: Email
+        options:
+          brief: Brief
+          medium: Medium
+          full: Full
+      print:
+        title_html: Print
+        options:
+          brief: Brief
+          medium: Medium
+          full: Full
+      export:
+        title_html: Send/Share
+        options:
+          refworks: Push to RefWorks
+          endnote: Push to Endnote
+          easybib: Push to EasyBib
+          ris: Download as RIS
+          bibtex: Download as BibTex
+      per_page:
+        title_html: per page
+      sort:
+        title_html: Sort
+        options:
+          created_at: Date added
+          title: Title
+          author: Author

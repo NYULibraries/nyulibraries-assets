@@ -1,21 +1,16 @@
 .search {
+  // Search has a 5% linear gradient and rounded borders
+  background-color: $searchBackgroundColor;
   @include background-image(linear-gradient(color-stops($searchBackgroundColor, darken($searchBackgroundColor, 5%))));
-  background: {
-    color: $searchBackgroundColor;
-  }
-
+  @include border-radius($baseBorderRadius);
+  // Search is padded
   padding: $lineHeightLarge;
 
-  margin: {
-    top: 0px;
-  }
-
+  // Text boxes have a magnifier
   input[type="text"] {
-    padding:{ 
-      left: 24px;
-      top: 5px;
-      bottom: 5px;
-    }
+    padding-left: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background: {
       image: url(image_path("magnifier.png"));
       repeat: no-repeat;
@@ -23,12 +18,13 @@
     }
   }
 
+  // Search section is separated by a top border
   .search-section {
     border-top: 1px solid $searchBorderColor;
   }
-  
+
+  // The primary search section is not
   #primary-search {
     border-top: none;
   }
 }
-
