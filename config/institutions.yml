@@ -108,7 +108,7 @@ NS:
       url: http://ill.library.nyu.edu
     tabs:
       all:
-        display: Find resources in All Consortium Libraries
+        display: Consortium Libraries
         url: http://bobcat.library.nyu.edu/newschool
         tip: Find resources in All Consortium Libraries
       ns:
