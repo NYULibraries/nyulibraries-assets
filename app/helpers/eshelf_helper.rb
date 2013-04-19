@@ -29,7 +29,7 @@ module EshelfHelper
   end
 
   def back_to
-    (content_tag("i", nil, :class => "icons-famfamfam-arrow_undo") + link_to_back) if link_to_back
+    (icon_tag(:back) + link_to_back) if link_to_back
   end
 
   def link_to_back

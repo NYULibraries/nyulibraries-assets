@@ -38,7 +38,7 @@ en:
         title_html: Send/Share
         options:
           refworks: Push to RefWorks
-          endnote: Push to Endnote
+          endnote: Push to EndNote
           easybib: Push to EasyBib
           ris: Download as RIS
           bibtex: Download as BibTex
