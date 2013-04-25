@@ -115,7 +115,7 @@ module NyulibrariesHelper
   def dropdown(title, list, html_options = {:class => "dropdown"}, toggle_html_options = {class: "dropdown-toggle"}, menu_html_options={class: "dropdown-menu"})
     toggle_html_options.merge!({"data-toggle" => "dropdown"})
     content_tag(:div, html_options) {
-      content_tag(:button, title, class: "btn", "data-toggle" => "dropdown") +
+      content_tag(:button, title, class: "btn") +
       # Need to explicitly add margin-top for firefox. WTF?
       content_tag(:button, toggle_html_options) { content_tag(:span, nil, class: "caret", style: "margin-top: 8px;") } +
       content_tag(:ul, menu_html_options.merge(role: "menu")) {
