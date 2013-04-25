@@ -126,6 +126,29 @@ module NyulibrariesHelper
     }
   end
 
+  # Returns a sidebar section, complete with responsive navbar and collapsing.
+  # Example1:
+  #     <%= sidebar_section("help", content_tag(:h2, "Need help?")) do %>
+  #       <ul class="nav-list">
+  #         <li><a href="http://library.nyu.edu/help/ejournals.html" target="_blank">Help using the E-Journals A-Z tab</a></li>
+  #         <li><a href="http://library.nyu.edu/research/tutorials/" target="_blank">Tutorials and self help</a></li>
+  #         <li><a href="http://library.nyu.edu/ask" target="_blank" id="ny_aal">Ask a Librarian</a></li>
+  #       </ul>
+  #     <% end %>
+  # Example2:
+  #     <%= sidebar_section("help", content_tag(:h2, "3 Squares", title: "for breakfast")) do %>
+  #       <%= content_tag(:h3, "First Breakfast") %>
+  #       <p>Coffee and eggs</p>
+  #       <%= content_tag(:h3, "Second Breakfast") %>
+  #       <ul>
+  #         <li>Oatmeal</li>
+  #         <li>More Coffee</li>
+  #       </ul>
+  #       <%= content_tag(:h3, "Third Breakfast") %>
+  #       <ul>
+  #         <%= content_tag(:li, "Pancakes") %>
+  #       </ul>
+  #     <% end %>
   def sidebar_section(id, header, &block)
     content_tag(:div, class: "navbar") {
       content_tag(:a, class: ["btn", "btn-navbar"], data: {toggle: "collapse", target: "##{id}.nav-collapse"}) {
