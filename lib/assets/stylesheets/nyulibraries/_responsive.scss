@@ -1,9 +1,4 @@
 @media (max-width: 480px) {
-  .nyu-container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
   .form-horizontal .controls {
     margin-left: 0;
     label {
@@ -27,14 +22,6 @@
   .control-label {
     width: auto !important;
     text-align: left !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .sidebar {
-    h2 {
-      margin-top: $baseLineHeight;
-    }
   }
 }
 
@@ -76,9 +63,7 @@
   }
 
   .result {
-    font: {
-      size: $baseFontSize*1.25
-    }
+    font-size: $baseFontSize*1.25;
     line-height: $baseLineHeight*2;
     dl {
       dt, dd {
@@ -92,18 +77,71 @@
     float: none !important;
   }
 
+  div.appetizer {
+    .content-type figcaption {
+      font-size: 75%;
+    }
+  }
+
   div.entree {
-    margin-left: 80px;
+    padding-left: 5.8011% - 2.5643%;
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nyu-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .sidebar {
+    h2 {
+      margin-top: $baseLineHeight;
+    }
+  }
+  div.appetizer {
+    width: 11% !important;
+    .content-type {
+      margin-left: 0px;
+      figcaption {
+        display: none;
+      }
+    }
+  }
+  div.entree {
+    margin-left: 12% !important;
+    padding-left: 5% !important;
+    width: 87% !important;
   }
 }
 
 @media (min-width: 979px) {
   @include tabs-fullscreen;
+  .search {
+    &.with-tabs {
+      @include border-top-left-radius(0);
+    }
+  }
 }
 
 @media (max-width: 1200px) {
   .nyu-tip {
     float: none;
     width: auto;
+  }
+  
+  div.btn-toolbar {
+    div.btn-group {
+      float: none !important;
+      margin-left: 0;
+      margin-left: $baseLineHeight/2;
+      margin-bottom: $baseLineHeight/2;
+    }
+    ul {
+      // float: none !important
+      right: auto !important;
+      left: 0px !important;
+    }
   }
 }

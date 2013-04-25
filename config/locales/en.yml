@@ -1,4 +1,7 @@
 en:
+  workspace:
+    header_html: My Workspace
+    title_html: What is My Workspace?
   record:
     create_success: Record was successfully created.
     destroy_html: Delete
@@ -10,9 +13,9 @@ en:
     endnote_html: Push to EndNote Web
     easybib_html: Push to EasyBib
     tag_list:
-      add: "[add]"
-      edit: "[edit]"
-      save: "[save]"
+      add: "add"
+      edit: "edit"
+      save: "save"
       label_html: "Labeled as:"
       placeholder: Add comma delimitted labels
       submit_html: "Save labels"
@@ -45,8 +48,8 @@ en:
       per_page:
         title_html: per page
       sort:
-        title_html: Sort
+        title_html: Sort by
         options:
-          created_at: Date added
-          title: Title
-          author: Author
+          created_at: date added
+          title_sort: title
+          author: author

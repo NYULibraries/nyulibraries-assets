@@ -45,10 +45,8 @@ module NyulibrariesHelper
   # Login link and icon
   def login(params={})
     (current_user) ?
-      content_tag(:i, nil, :class => "icons-famfamfam-lock") +
-        link_to("Log-out #{current_user.firstname}", logout_url(params), :class=>"logout") :
-      content_tag(:i, nil, :class => "icons-famfamfam-lock_open") +
-        link_to("Login", login_url(params), :class=>"login")
+      icon_tag(:logout) + link_to("Log-out #{current_user.firstname}", logout_url(params), class: "logout") :
+        icon_tag(:login) + link_to("Login", login_url(params), class: "login")
   end
 
   # Breadcrumbs
@@ -102,24 +100,24 @@ module NyulibrariesHelper
     content = args.delete_at 2
     args[2] = {"title" => args[0], 
       "data-content" => "<div class=\"#{klass}\">#{content}</div>", 
-      :class => "#{klass}"}
+      class: "#{klass}"}
     link_to(*args)
   end
 
   def button_dropdown(title, list)
-    dropdown(title, list, {:class => ["btn-group"]}, {:class => ["btn", "dropdown-toggle"]})
+    dropdown(title, list, {class: ["btn-group"]}, {class: ["btn", "dropdown-toggle"]})
   end
 
   def right_button_dropdown(title, list)
-    dropdown(title, list, {:class => ["btn-group", "pull-right"]}, {:class => ["btn", "dropdown-toggle"]}, {:class => ["pull-right", "dropdown-menu"]})
+    dropdown(title, list, {class: ["btn-group", "pull-right"]}, {class: ["btn", "dropdown-toggle"]}, {class: ["pull-right", "dropdown-menu"]})
   end
 
-  def dropdown(title, list, html_options = {:class => "dropdown"}, toggle_html_options = {:class => "dropdown-toggle"}, menu_html_options={:class => "dropdown-menu"})
+  def dropdown(title, list, html_options = {:class => "dropdown"}, toggle_html_options = {class: "dropdown-toggle"}, menu_html_options={class: "dropdown-menu"})
     toggle_html_options.merge!({"data-toggle" => "dropdown"})
     content_tag(:div, html_options) {
-      content_tag(:button, toggle_html_options) {
-        title + content_tag(:b, nil, :class => "caret")
-      } +
+      content_tag(:button, title, class: "btn", "data-toggle" => "dropdown") +
+      # Need to explicitly add margin-top for firefox. WTF?
+      content_tag(:button, toggle_html_options) { content_tag(:span, nil, class: "caret", style: "margin-top: 8px;") } +
       content_tag(:ul, menu_html_options.merge(role: "menu")) {
         list.collect { |member|
           content_tag(:li){ member }
@@ -127,7 +125,16 @@ module NyulibrariesHelper
       }
     }
   end
-  
+
+  def sidebar_section(id, header, &block)
+    content_tag(:div, class: "navbar") {
+      content_tag(:a, class: ["btn", "btn-navbar"], data: {toggle: "collapse", target: "##{id}.nav-collapse"}) {
+        content_tag(:span, nil, class: "icon-bar") + content_tag(:span, nil, class: "icon-bar")
+      } + header +
+      content_tag(:div, id: id, class: ["nav-collapse", "collapse", "sidebar-section"]) { yield }
+    }
+  end
+
   # Will output HTML pagination controls. Modeled after blacklight helpers/blacklight/catalog_helper_behavior.rb#paginate_rsolr_response
   # Equivalent to kaminari "paginate", but takes a Sunspot response as first argument. 
   # Will convert it to something kaminari can deal with (using #paginate_params), and
@@ -137,12 +144,12 @@ module NyulibrariesHelper
     per_page = response.results.count
     per_page = 1 if per_page < 1
     current_page = (response.results.offset / per_page).ceil + 1
-    page_entries_info Kaminari.paginate_array(response.results, :total_count => response.total).page(current_page).per(per_page), options, &block
+    page_entries_info Kaminari.paginate_array(response.results, total_count: response.total).page(current_page).per(per_page), options, &block
   end
 
   # Retrieve a value matching a key to an icon class name
   def icons key
-    icons_info[key.to_s]
+    (icons_info[key.to_s] || key)
   end
   
   # Load the icons YAML info file
@@ -161,7 +168,14 @@ module NyulibrariesHelper
   def tooltip_tag content, title, url = "#", placement = "right", css_classes = "help-inline record-help"
     link_to(content, url, :class => css_classes, :data => { :placement => placement }, :rel => "tooltip", :target => "_blank", :title => title)
   end
-  
+
+  def content_type_tag content_type
+    content_tag(:figure, class: "content-type") do
+      content_tag(:i, nil, class: "icons-nyu-content-type-#{content_type.downcase}") +
+        content_tag(:figcaption, content_type.capitalize.gsub("_", " "))
+    end
+  end
+
   # Generate an icon tag with class key
   def icon_tag key
     content_tag :i, "", :class => icons(key)

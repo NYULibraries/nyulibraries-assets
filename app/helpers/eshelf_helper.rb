@@ -28,6 +28,16 @@ module EshelfHelper
       "#{current_user.firstname} #{current_user.lastname}" : "Guest"
   end
 
+  def workspace_header
+    content_tag(:h2, class: "workspace") do
+      content_tag(:span, "#{t('workspace.header_html')} ") + workspace_info
+    end
+  end
+
+  def workspace_info
+    link_to_workspace_info("http://library.nyu.edu/info/eshelf.html", "right")
+  end
+
   def back_to
     (icon_tag(:back) + link_to_back) if link_to_back
   end

@@ -1,6 +1,5 @@
-<div id="account" class="sidebar-section">
-  <h2><a href="http://library.nyu.edu/info/myworkspace.html" title="What is My Workspace?" data-placement="left"><i class="icons-famfamfam-help"></i></a> My Workspace</h2>
-  <ul>
+<%= sidebar_section("account", workspace_header) do %>
+  <ul class="nav-list">
     <% if current_user %>
       <li><a href="https://eshelf.library.nyu.edu?institution=<%= current_primary_institution.code unless current_primary_institution.nil? %>">My e-shelf</a></li>
       <li><a href="https://eshelf.library.nyu.edu/account?institution=<%= current_primary_institution.code unless current_primary_institution.nil? %>">My library account</a></li>
@@ -9,5 +8,5 @@
       <li><a href="https://eshelf.library.nyu.edu?institution=<%= current_primary_institution.code unless current_primary_institution.nil? %>">Guest e-shelf (log in for more options)</a></li>
     <% end %>
   </ul>
-</div>
+<% end %>
 <%= render :partial => "#{current_primary_institution.views["dir"]}/sidebar" unless current_primary_institution.nil? %>

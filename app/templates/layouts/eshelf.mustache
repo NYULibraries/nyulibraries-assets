@@ -12,11 +12,13 @@
     <div class="nyu-container">
       <div class="container-fluid">
         <div class="row-fluid">
-          <div class="span10 eshelf-header">
-            <h1><span>e-Shelf</span></h1>
-            <span class="username">for {{username}}</span>
+          <div class="span10 eshelf-header hidden-phone">
+            <h1 class="hidden-phone"><span>e-Shelf</span></h1>
+            <span class="username hidden-phone">for {{username}}</span>
           </div>
-          <div class="span2 back-to">{{back_to}}</div>
+          {{#back_to}}
+            <div class="span2 back-to">{{back_to}}</div>
+          {{/back_to}}
         </div>
         <div class="row-fluid">
           <div class="span3">

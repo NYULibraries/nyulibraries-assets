@@ -7,9 +7,6 @@
   @extend .well;
   @extend .well-small;
   margin-bottom: $baseLineHeight/2;
-  padding-top: 10px;
-  padding-bottom: 2px;
-  padding-left: 10px;
   padding-right: 2px;
 }
 
@@ -29,19 +26,13 @@
 }
 
 div.appetizer {
-  margin-right: 5px;
+  float: left !important;
   div.number {
     margin-right: $baseLineHeight;
   }
   .content-type {
     margin-top: 10px;
     margin-left: 5px;
-    margin-right: 10px;
-    figure {
-      margin-top: 0px;
-      margin-left: $baseLineHeight/2;
-      margin-right: $baseLineHeight;
-    }
     color: black;
     &:hover {
       text-decoration: none;
@@ -53,7 +44,8 @@ div.appetizer {
 }
 
 div.entree {
-  margin-left: 0px;
+  padding-left:  6.38298% - 2.5642%;
+  border-left: 1px solid lighten($nyuLibrariesLightBorderColor, 8%);
   h2.title {
     margin-top: 0px;
   }
