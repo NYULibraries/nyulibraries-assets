@@ -78,8 +78,11 @@
   }
 
   div.appetizer {
-    .content-type figcaption {
-      font-size: 75%;
+    .content-type {
+      margin-left: 0px;
+      figcaption {
+        display: none;
+      }
     }
   }
 
@@ -102,12 +105,6 @@
   }
   div.appetizer {
     width: 11% !important;
-    .content-type {
-      margin-left: 0px;
-      figcaption {
-        display: none;
-      }
-    }
   }
   div.entree {
     margin-left: 12% !important;
