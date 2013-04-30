@@ -4,6 +4,7 @@ NYU:
   name: NYU Libraries
   auth:
     code: NYU
+  getit_url: https://getit.library.nyu.edu/nyu/resolve?
   views:
     css: application
     dir: nyu
@@ -36,6 +37,7 @@ NYU:
 
 NYUAD:
   name: NYU Abu Dhabi Library
+  getit_url: https://getit.library.nyu.edu/nyuad/resolve?
   views:
     css: application_nyuad
     dir: nyuad
@@ -68,6 +70,7 @@ NYUAD:
 
 CU:
   name: The Cooper Union Library
+  getit_url: https://getit.library.nyu.edu/cu/resolve?
   auth:
     code: CU
   views:
@@ -95,6 +98,7 @@ CU:
 
 NS:
   name: New School Libraries
+  getit_url: https://getit.library.nyu.edu/ns/resolve?
   auth:
     code: NS
   views:
@@ -133,6 +137,7 @@ NS:
 
 HSL:
   name: NYU Health Sciences Libraries
+  getit_url: https://getit.library.nyu.edu/hsl/resolve?
   auth:
     code: HSL
   views:
