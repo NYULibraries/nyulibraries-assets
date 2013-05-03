@@ -21,4 +21,7 @@
 @import "nyulibraries/tables";
 @import "nyulibraries/footer";
 @import "jquery/jquery-ui";
+@media print {
+  @import "nyulibraries/print";
+}
 
