@@ -28,13 +28,13 @@ module NyulibrariesHelper
 
   # Stylesheets for the layout.
   def stylesheets
-    stylesheet_link_tag "application"
+    stylesheet_link_tag "application", :media => "all"
   end
  
   # Get the stylesheet base on the current
   # institution.
   def institutional_stylesheets
-    stylesheet_link_tag institution.views["css"]
+    stylesheet_link_tag institution.views["css"], :media => "all"
   end
 
   # Javascripts to include.
