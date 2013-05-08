@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rake", "~> 10.0.2"
   s.add_dependency "compass", "~> 0.12.2"
-  s.add_dependency "bootstrap-sass", "2.3.1.0"
+  s.add_dependency "bootstrap-sass", ">= 2.2.0", "< 2.4"
   s.add_dependency "institutions", "~> 0.0.5"
   s.add_development_dependency "rails", "~> 3.2.13"
   s.add_development_dependency "compass-rails", "~> 1.0.3"
