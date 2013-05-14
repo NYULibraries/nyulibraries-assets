@@ -1,4 +1,4 @@
-<%= sidebar_section("account", workspace_header) do %>
+<%= sidebar_section("account", workspace_header, true) do %>
   <ul class="nav-list">
     <% if current_user %>
       <li><a href="https://eshelf.library.nyu.edu?institution=<%= current_primary_institution.code unless current_primary_institution.nil? %>">My e-shelf</a></li>

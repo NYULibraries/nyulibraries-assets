@@ -135,7 +135,7 @@ module NyulibrariesHelper
   end
 
   # Returns a sidebar section, complete with responsive navbar and collapsing.
-  # Example1:
+  # Example1 - closed sidebar section:
   #     <%= sidebar_section("help", content_tag(:h2, "Need help?")) do %>
   #       <ul class="nav-list">
   #         <li><a href="http://library.nyu.edu/help/ejournals.html" target="_blank">Help using the E-Journals A-Z tab</a></li>
@@ -143,8 +143,8 @@ module NyulibrariesHelper
   #         <li><a href="http://library.nyu.edu/ask" target="_blank" id="ny_aal">Ask a Librarian</a></li>
   #       </ul>
   #     <% end %>
-  # Example2:
-  #     <%= sidebar_section("help", content_tag(:h2, "3 Squares", title: "for breakfast")) do %>
+  # Example2 - Open sidebar section:
+  #     <%= sidebar_section("help", content_tag(:h2, "3 Squares", title: "for breakfast"), true) do %>
   #       <%= content_tag(:h3, "First Breakfast") %>
   #       <p>Coffee and eggs</p>
   #       <%= content_tag(:h3, "Second Breakfast") %>
@@ -157,12 +157,18 @@ module NyulibrariesHelper
   #         <%= content_tag(:li, "Pancakes") %>
   #       </ul>
   #     <% end %>
-  def sidebar_section(id, header, &block)
+  def sidebar_section(id, header, open = false, &block)
+    collapse_classes = ["nav-collapse", "collapse", "sidebar-section"]
+    style = ""
+    if open
+      collapse_classes << "in"
+      style = "height: auto;"
+    end
     content_tag(:div, class: "navbar") {
       content_tag(:a, class: ["btn", "btn-navbar"], data: {toggle: "collapse", target: "##{id}.nav-collapse"}) {
         content_tag(:span, nil, class: "icon-bar") + content_tag(:span, nil, class: "icon-bar")
       } + header +
-      content_tag(:div, id: id, class: ["nav-collapse", "collapse", "sidebar-section"]) { yield }
+      content_tag(:div, id: id, class: collapse_classes, style: style) { yield }
     }
   end
 
