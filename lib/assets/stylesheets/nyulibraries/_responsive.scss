@@ -1,39 +1,54 @@
-@media (max-width: 480px) {
-  .form-horizontal .controls {
-    margin-left: 0;
-    label {
-      display: block;
+// Landscape tablets
+@media (max-width: 1200px) {
+  .nyu-tip {
+    float: none;
+    width: auto;
+  }
+
+  div.btn-toolbar {
+    div.btn-group {
+      float: none !important;
+      margin-left: 0;
+      margin-left: $baseLineHeight/2;
+      margin-bottom: $baseLineHeight/2;
     }
-  }
 
-  input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-  }
-
-  label {
-    margin: {
-      left: 0px;
+    ul {
+      // float: none !important
+      right: auto !important;
+      left: 0px !important;
     }
-  }
-
-  .control-label {
-    width: auto !important;
-    text-align: left !important;
   }
 }
 
+// Only landscape tablets and large screens
+@media (min-width: 979px) {
+  @include tabs-fullscreen;
+  .search {
+    &.with-tabs {
+      @include border-top-left-radius(0);
+    }
+  }
+}
+
+// Portrait tables
 @media (max-width: 979px) {
+  // Don't show popovers
   .popover {
     display: none !important;
   }
+
+  // Collapse tabs
   @include tabs-responsive;
+
+  // Sidebar styles
   .sidebar {
+    // Bump the font for easier touch interaction
     font: {
       size: $baseFontSize*1.25;
     }
+
+    // Adjust spacing for easier touch interaction
     .sidebar-section {
       margin-bottom: $baseLineHeight;
       ul {
@@ -47,8 +62,11 @@
     }
   }
 
+  // Breadcrumb styles
   nav.breadcrumb {
     ul {
+      // Don't show icon
+      // to save space
       &.nyu-login {
         height: $baseLineHeight;
         [class*="icons"], {
@@ -56,12 +74,17 @@
           padding: 0px;
         }
       }
+
+      // Don't show the first breadcrumb
+      // to save space
       &.nyu-breadcrumbs {
         li:first-child {display: none;}
       }
     }
   }
 
+  // Bump the font and adjust spacing for easier touch interaction
+  // in results
   .result {
     font-size: $baseFontSize*1.25;
     line-height: $baseLineHeight*2;
@@ -72,9 +95,15 @@
     }
   }
 
+  // Make form display a bit more predictable
   form {
     display: block !important;
     float: none !important;
+  }
+
+  // Make xlarge inputs a bit smaller for tablets
+  .input-xlarge {
+    width: 270px - 24px;
   }
 
   div.appetizer {
@@ -92,20 +121,30 @@
   }
 }
 
+// Phones to tablets
 @media (max-width: 767px) {
+  // Adjust spacing for easier touch interaction
   .nyu-container {
     padding-left: 10px;
     padding-right: 10px;
   }
 
+  // Adjust spacing for easier touch interaction
   .sidebar {
     h2 {
       margin-top: $baseLineHeight;
     }
   }
+
+  // Make xlarge inputs a bit larger for phones
+  .input-xlarge {
+    width: 270px !important;
+  }
+
   div.appetizer {
     width: 11% !important;
   }
+
   div.entree {
     margin-left: 12% !important;
     padding-left: 5% !important;
@@ -113,32 +152,28 @@
   }
 }
 
-@media (min-width: 979px) {
-  @include tabs-fullscreen;
-  .search {
-    &.with-tabs {
-      @include border-top-left-radius(0);
+// Phones
+@media (max-width: 480px) {
+  .form-horizontal .controls {
+    margin-left: 0;
+    label {
+      display: block;
     }
   }
-}
 
-@media (max-width: 1200px) {
-  .nyu-tip {
-    float: none;
-    width: auto;
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
-  
-  div.btn-toolbar {
-    div.btn-group {
-      float: none !important;
-      margin-left: 0;
-      margin-left: $baseLineHeight/2;
-      margin-bottom: $baseLineHeight/2;
-    }
-    ul {
-      // float: none !important
-      right: auto !important;
-      left: 0px !important;
-    }
+
+  label {
+    margin-left: 0px;
+  }
+
+  .control-label {
+    width: auto !important;
+    text-align: left !important;
   }
 }
