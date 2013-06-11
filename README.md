@@ -1,8 +1,8 @@
 # NYU Libraries Assets
-[![Build Status](https://secure.travis-ci.org/NYULibraries/nyulibraries_assets.png?branch=master)](http://travis-ci.org/NYULibraries/nyulibraries_assets?branch=development)
+[![Build Status](https://secure.travis-ci.org/NYULibraries/nyulibraries_assets.png?branch=master)](http://travis-ci.org/NYULibraries/nyulibraries_assets?branch=master)
 [![Dependency Status](https://gemnasium.com/NYULibraries/nyulibraries_assets.png)](https://gemnasium.com/NYULibraries/nyulibraries_assets)
 [![Code Climate](https://codeclimate.com/github/NYULibraries/nyulibraries_assets.png)](https://codeclimate.com/github/NYULibraries/nyulibraries_assets)
-[![Coverage Status](https://coveralls.io/repos/NYULibraries/nyulibraries_assets/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/nyulibraries_assets?branch=development)
+[![Coverage Status](https://coveralls.io/repos/NYULibraries/nyulibraries_assets/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/nyulibraries_assets?branch=master)
 
 ## Usage
 ### Rails
