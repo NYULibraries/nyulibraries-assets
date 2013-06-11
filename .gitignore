@@ -4,6 +4,6 @@ Gemfile.lock
 *.bak
 .DS_Store
 coverage/
-dummy/tmp
-dummy/log
-dummy/db/*.sqlite3
+test/dummy/tmp
+test/dummy/log
+test/dummy/db/*.sqlite3
