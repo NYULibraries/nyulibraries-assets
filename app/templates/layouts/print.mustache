@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{meta}}
+    <title>{{title}}</title>
+    {{print_stylesheet}}
+    {{print_javascript}}
+  </head>
+  <body>
+    <h1>{{print_title}}</h1>
+    {{yield}}
+    {{> common/gauges}}
+  </body>
+</html>

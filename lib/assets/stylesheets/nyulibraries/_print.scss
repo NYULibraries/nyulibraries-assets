@@ -1,3 +1,13 @@
+// Hide header, navigation, sidebar, controls, appetizer
+// "select something" div, tag controls and modal
+header, nav, div#sidebar, 
+div#controls, div.appetizer, 
+div#select_something, 
+span[class$="_tag_controls"], div#modal {
+  display: none !important;
+}
+
+// Print CSS
 body {
   font-family: Helvetica, arial, sans-serif;
   font-size: 14px;

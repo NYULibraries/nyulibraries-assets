@@ -1,6 +1,6 @@
 module Views
   module Layouts
-    class Bobcat < ActionView::Mustache
+    class Print < ActionView::Mustache
     end
   end
 end

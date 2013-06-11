@@ -3,13 +3,13 @@
   <head>
     {{meta}}
     <title>{{title}}</title>
-    {{stylesheets}}
-    {{javascripts}}
+    {{application_stylesheet}}
+    {{application_javascript}}
   </head>
   <body{{#onload}} onload="{{onload}}"{{/onload}}{{#body_class}} class="{{body_class}}"{{/body_class}}{{#body_id}} id="{{body_id}}"{{/body_id}}>
     {{prepend_body}}
     {{> common/header}}
-    {{> common/nav1}}
+    {{> common/nav}}
     <div class="nyu-container">
       <div class="container-fluid">
         <div class="row-fluid">
@@ -26,7 +26,6 @@
         </div>
       </div>
     </div>
-    {{footer}}
-    {{> common/gauges}}
+    {{> common/footer}}
   </body>
 </html>

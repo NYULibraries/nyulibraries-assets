@@ -1,11 +1,24 @@
 en:
+  bobcat:
+    title_html: BobCat
   workspace:
     header_html: My Workspace
     title_html: What is My Workspace?
+    guest_user_name_html: Guest
   record:
-    create_success: Record was successfully created.
+    flash:
+      actions:
+        create:
+          notice: "Record was successfully created."
+        create_email:
+          notice: "Records were successfully emailed."
+        update:
+          notice: "Record was successfully updated."
+        destroy:
+          notice: "Records successfully destroyed."
     destroy_html: Delete
-    destroy_success: Record was successfully destroyed.
+    email_html: Email
+    print_html: Print
     getit_html: Check Availability @ GetIt
     ris_html: Download as RIS
     bibtex_html: Download as BibTex
@@ -24,9 +37,13 @@ en:
         add_html: Add to Eshelf
       delete:
         title_html: Delete Records
+        confirmation_html: Are you sure you want to delete these records?
       email:
         subject: BobCat results
         title_html: Email
+        submit_html: Send
+        to_address_html: "Send to"
+        format_html: "with format"
         options:
           brief: Brief
           medium: Medium

@@ -3,21 +3,25 @@
   <head>
     {{meta}}
     <title>{{title}}</title>
-    {{institutional_stylesheets}}
+    {{institutional_stylesheet}}
     {{#print_stylesheet?}}
     {{print_stylesheet}}
     {{/print_stylesheet?}}
-    {{javascripts}}
+    {{application_javascript}}
   </head>
   <body>
     {{> bobcat/header}}
-    {{> common/nav1}}
+    {{> common/nav}}
     <div class="nyu-container">
       <div class="container-fluid">
         <div class="row-fluid">
           <div class="span10 eshelf-header hidden-phone">
             <h1 class="hidden-phone"><span>e-Shelf</span></h1>
-            <span class="username hidden-phone">for {{username}}</span>
+            <span class="username hidden-phone">
+              for
+              {{#current_user_name}}{{current_user_name}}{{/current_user_name}}
+              {{^current_user_name}}{{guest_user_name}}{{/current_user_name}}
+            </span>
           </div>
           {{#back_to}}
             <div class="span2 back-to">{{back_to}}</div>
@@ -35,7 +39,6 @@
         </div>
       </div>
     </div>
-    {{footer}}
-    {{> common/gauges}}
+    {{> common/footer}}
   </body>
 </html>
