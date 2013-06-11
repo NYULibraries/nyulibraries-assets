@@ -11,6 +11,6 @@ group :development, :test do
   platforms :ruby do
     gem 'therubyracer', "~> 0.11.0"
     gem "sqlite3", "~> 1.3.7"
-    gem "debugger", "~> 1.6.0"
   end
+  gem "debugger", "~> 1.6.0", platform: :mri
 end
