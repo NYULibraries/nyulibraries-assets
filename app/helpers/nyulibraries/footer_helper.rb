@@ -8,7 +8,6 @@ module Nyulibraries
 
     # Using Gauges? Only in production!
     def gauges?
-      return true
       Rails.env.production?
     end
 
