@@ -2,18 +2,15 @@ module Nyulibraries
   # Helper for 
   module ApplicationHelper
 
-    def title
-      ""
-    end
-
     # Root of this gem
     def nyulibraries_assets_root
       Rails.application.railties.engines.find{ |engine| engine.class.name.eql? NYULibrariesAssets::Rails::Engine.name}.root
     end
 
     # Application title
+    # Returns application.title_html from the locale
     def application_title
-      title
+      t('application.title_html')
     end
 
     # Application stylesheet
