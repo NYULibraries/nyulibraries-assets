@@ -8,20 +8,5 @@ module Nyulibraries
     test "guest user name" do
       assert_equal "Guest", guest_user_name
     end
-
-    # Add for testing
-    def current_user
-      DummyUser.new
-    end
-
-    class DummyUser
-      def firstname
-        "Dummy"
-      end
-
-      def lastname
-        "User"
-      end
-    end
   end
 end

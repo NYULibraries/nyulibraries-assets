@@ -13,8 +13,9 @@ Gem::Specification.new do |s|
   s.summary     = "Shared assets for http://library.nyu.edu and related sites based on Twitter Bootstrap."
   s.description = "Shared assets for http://library.nyu.edu and related sites based on Twitter Bootstrap. Requires Rails and/or Compass."
 
-  s.files         = `git ls-files`.split($\)
-  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
+  s.files       = `git ls-files`.split($\)
+  s.test_files  = s.files.grep(%r{^(test|spec|features)/})
+  s.files.reject!{ |fn| s.test_files.include? fn }
 
   s.add_dependency "rake", "~> 10.0.2"
   s.add_dependency "compass", "~> 0.12.2"

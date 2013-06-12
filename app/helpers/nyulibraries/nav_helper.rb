@@ -12,9 +12,19 @@ module Nyulibraries
 
     # Login link and icon
     def login(params={})
-      (current_user) ?
-        icon_tag(:logout) + link_to("Log-out #{current_user.firstname}", logout_url(params), class: "logout") :
-          icon_tag(:login) + link_to("Login", login_url(params), class: "login")
+      (current_user) ? link_to_logout : link_to_login
+    end
+
+    # Link to logout
+    def link_to_logout
+      icon_tag(:logout) +
+        link_to("Log-out #{current_user.firstname}", 
+          logout_url(params), class: "logout")
+    end
+
+    # Link to logout
+    def link_to_login
+      icon_tag(:login) + link_to("Login", login_url(params), class: "login")
     end
   end
 end

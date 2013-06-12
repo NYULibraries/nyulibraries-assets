@@ -12,3 +12,23 @@ require "rails/test_help"
 require File.expand_path("../../lib/nyulibraries_assets.rb",  __FILE__)
 require 'coveralls'
 Coveralls.wear!
+
+class ActionView::TestCase
+  def current_user
+    DummyUser.new
+  end
+
+  def current_primary_institution
+    Institutions.defaults.first
+  end
+end
+
+class DummyUser
+  def firstname
+    "Dummy"
+  end
+
+  def lastname
+    "User"
+  end
+end
