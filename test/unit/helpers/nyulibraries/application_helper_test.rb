@@ -13,8 +13,7 @@ module Nyulibraries
 
     test "application javascript" do
       assert_equal("<script src=\"/javascripts/application.js\" " +
-        "type=\"text/javascript\"></script>", 
-          application_javascript)
+        "type=\"text/javascript\"></script>", application_javascript)
     end
   end
 end
