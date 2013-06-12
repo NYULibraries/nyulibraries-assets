@@ -2,7 +2,7 @@ module Nyulibraries
   module FooterHelper
 
     # Library H3lp javascript
-    def library_h3lp_footer
+    def library_h3lp
       javascript_include_tag "https://libraryh3lp.com/js/libraryh3lp.js?multi"
     end
 
