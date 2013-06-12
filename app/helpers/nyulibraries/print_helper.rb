@@ -1,9 +1,13 @@
 module Nyulibraries
   module PrintHelper
 
+    def print_title
+      application_title
+    end
+
     # Print stylesheet
     # Media type defaults to print
-    def print_stylesheet(media = 'print')
+    def print_stylesheet(media = :print)
       stylesheet_link_tag "print", media: media
     end
 
