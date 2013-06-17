@@ -4,8 +4,14 @@ module NYULibrariesAssets
       require 'compass-rails'
       require 'bootstrap-sass'
       require 'mustache/railtie'
+      require 'institutions'
       initializer "#{engine_name}.asset_pipeline" do |app|
         app.config.assets.precompile += ['print.css']
+        # Precompile institutional stylesheets
+        Institutions.institutions.each do |institution|
+          stylesheet = institution.views["css"]
+          app.config.assets.precompile << stylesheet unless (stylesheet.blank? or config.assets.precompile.include?(stylesheet))
+        end
         app.config.compass.sprite_load_path << File.join(self.root, "lib", "assets", "images")
         path = self.root
         ActiveSupport.on_load(:action_controller) do
