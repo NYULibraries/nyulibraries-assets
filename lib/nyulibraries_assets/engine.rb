@@ -8,7 +8,7 @@ module NYULibrariesAssets
       initializer "#{engine_name}.asset_pipeline" do |app|
         app.config.assets.precompile += ['print.css']
         # Precompile institutional stylesheets
-        Institutions.institutions.each do |institution|
+        Institutions.institutions.each_value do |institution|
           stylesheet = institution.views["css"]
           app.config.assets.precompile << stylesheet unless (stylesheet.blank? or config.assets.precompile.include?(stylesheet))
         end
