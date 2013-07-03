@@ -22,7 +22,7 @@ module NYULibrariesAssets
     base = File.join(File.dirname(__FILE__), '/assets')
     styles = File.join(base, "stylesheets")
     images = File.join('lib', 'assets', "images")
-    ::Compass::Frameworks.register('nyulibraries', :path => base, :stylesheets_directory => styles)
+    ::Compass::Frameworks.register('nyulibraries_assets', :path => base, :stylesheets_directory => styles)
     ::Compass.configuration.sprite_load_path << images
   end
 
