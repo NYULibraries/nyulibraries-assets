@@ -1,4 +1,6 @@
 en:
+  footer:
+    footer_html: NYU Division of Libraries
   application:
     title_html: "Application Title (should be overridden in local application!)"
   bobcat:

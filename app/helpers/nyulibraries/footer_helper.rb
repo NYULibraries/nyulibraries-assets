@@ -8,11 +8,15 @@ module Nyulibraries
 
     # Using Gauges? Only in production!
     def gauges?
-      Rails.env.production?
+      Rails.env.development?
     end
 
     # Placeholder.
     def gauges_tracking_code
+    end
+    
+    def footer_html
+      t('footer.footer_html')
     end
   end
 end
