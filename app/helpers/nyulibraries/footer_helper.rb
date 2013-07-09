@@ -8,7 +8,7 @@ module Nyulibraries
 
     # Using Gauges? Only in production!
     def gauges?
-      Rails.env.development?
+      Rails.env.production?
     end
 
     # Placeholder.
