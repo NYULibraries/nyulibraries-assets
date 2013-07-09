@@ -49,7 +49,7 @@ class Tooltip
 
 # Class for basic Popovers
 class Popover extends Tooltip
-  _JSON_URL: 'https://webapps.library.nyu.edu/common/retrieve_file_contents_as_json.php?full_html=true&callback=?'
+  _JSON_URL: 'https://web1.library.nyu.edu/common/retrieve_file_contents_as_json.php?full_html=true&callback=?'
   # Callback method for content, returns a function
   @_CONTENT_CALLBACK: (self, json_url) ->
     ()->
@@ -94,13 +94,15 @@ class HoverPopover extends Popover
 
 # Class for partial HTML retrieval
 class PartialHoverPopover extends HoverPopover
-  _JSON_URL: 'https://webapps.library.nyu.edu/common/retrieve_file_contents_as_json.php?callback=?'
+  _JSON_URL: 'https://web1.library.nyu.edu/common/retrieve_file_contents_as_json.php?callback=?'
   # Contructor (obviously)
   constructor: (@selector) ->
     this.content(Popover._CONTENT_CALLBACK(@, @_JSON_URL))
 
 # Load on jquery document ready
 $ ->
+  # Make a globally accessible thingy
+  window.nyulibraries ||= {}
   # Make the Tooltip accessible
   window.nyulibraries.Tooltip = Tooltip
   # Make the Popover accessible
