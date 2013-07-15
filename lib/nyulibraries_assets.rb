@@ -19,10 +19,13 @@ module NYULibrariesAssets
   end
 
   def self.register_compass_extension
-    base = File.join(File.dirname(__FILE__), '/assets')
-    styles = File.join(base, "stylesheets")
-    images = File.join('lib', 'assets', "images")
-    ::Compass::Frameworks.register('nyulibraries', :path => base, :stylesheets_directory => styles)
+    require 'bootstrap-sass'
+    base = File.join(File.dirname(__FILE__), "..")
+    styles = File.join(base, "lib", "assets", "stylesheets")
+    images = File.join(base, "lib", "assets", "images")
+    templates = File.join(base, "templates")
+    ::Compass::Frameworks.register('nyulibraries_assets', path: base, 
+      stylesheets_directory: styles, templates_directory: templates)
     ::Compass.configuration.sprite_load_path << images
   end
 

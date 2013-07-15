@@ -14,5 +14,9 @@ module Nyulibraries
     # Placeholder.
     def gauges_tracking_code
     end
+    
+    def footer_html
+      t('footer.footer_html')
+    end
   end
 end
