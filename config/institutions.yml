@@ -157,3 +157,28 @@ HSL:
       journals:
         display: Journals A-Z
         tip: Locate journals by title or citation
+
+NYSID:
+  name: New York School of Interior Design
+  views:
+    css: application_nysid
+    dir: nysid
+    breadcrumbs:
+      title: New York School of Interior Design Library
+      url: http://nysidlibrary.org/
+    ill:
+      link_html: My interlibrary loan (ILL)
+      url: http://ill.library.nyu.edu
+    tabs:
+      nysid:
+        display: NYSID Resources
+        url: http://bobcat.library.nyu.edu/nysid
+        tip: Find New York School of Interior Design Resources
+      all:
+        display: 'Books & More'
+        url: http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYSID&tab=all
+        tip: 'Find Resources in All BobCat Libraries'
+      reserves:
+        display: Course Reserves
+        url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYSID&tab=reserves'
+        tip: 'Search for books on reserve by instructor, course name or number, author, title, and other terms."'

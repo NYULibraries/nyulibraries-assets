@@ -15,5 +15,9 @@ module Nyulibraries
       assert_equal("<script src=\"/javascripts/application.js\" " +
         "type=\"text/javascript\"></script>", application_javascript)
     end
+    
+    test "delayed job" do
+      assert !delayed_jobs_running?
+    end
   end
 end
