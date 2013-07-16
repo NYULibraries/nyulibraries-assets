@@ -1,19 +1,23 @@
 .header {
 	background: {
-		image: url('https://library.nyu.edu/images/common/bobcat/nysid/header.jpg');
+		image: url('https://library.nyu.edu/images/common/bobcat/nysid/header.jpg'), url('https://library.nyu.edu/images/common/bobcat/nysid/header_bg.jpg');
 		color: transparent;
+		repeat: no-repeat, repeat-x;
 	}
 	border-bottom:1px solid #ef4135;
 	height: 80px;
 }
 #content {
-	background-image:url('https://library.nyu.edu/images/common/bobcat/nysid/header_bg.jpg');
-	background-repeat:repeat-x
+	background: {
+		image: url('https://library.nyu.edu/images/common/bobcat/nysid/header_bg.jpg');
+		repeat: repeat-x;
+	}
 }
 #header {
 	background: {
-		image: url('https://library.nyu.edu/images/common/bobcat/nysid/header.jpg');
+		image: url('https://library.nyu.edu/images/common/bobcat/nysid/header.jpg'), url('https://library.nyu.edu/images/common/bobcat/nysid/header_bg.jpg');
 		color: transparent;
+		repeat: no-repeat, repeat-x;
 	}
 	height:97px;
 	border-bottom:0;
