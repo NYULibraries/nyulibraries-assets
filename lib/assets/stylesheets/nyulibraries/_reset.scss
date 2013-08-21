@@ -43,3 +43,7 @@ label {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+a {
+  @include transition(color 0.3s ease-in-out, background-image 0.3s ease-in-out);
+}
