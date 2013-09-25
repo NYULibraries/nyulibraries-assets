@@ -1,3 +1,3 @@
 module NYULibrariesAssets
-  VERSION = "1.1.15"
+  VERSION = "1.2.0"
 end
