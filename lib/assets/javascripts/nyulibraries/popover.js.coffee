@@ -1,12 +1,13 @@
-# Requires bootstrap-tooltip and bootstrap-popover scripts to be included in your script.
-# If you're using sprockets can include them with the following require directives:
+# Requires bootstrap-tooltip and bootstrap-popover scripts to be
+# included in your script. If you're using sprockets can include
+# them with the following require directives:
 #   For .js files:
 #     //= require bootstrap-tooltip
 #     //= require bootstrap-popover
 #   For .coffee files:
 #     #= require bootstrap-tooltip
 #     #= require bootstrap-popover
-# 
+#
 # Basic Tooltip
 class Tooltip
   # Default options
@@ -16,8 +17,11 @@ class Tooltip
     delay: { show: 500, hide: 100 }
     placement: () ->
       element = arguments[1]
-      if ($(element).offset().left > $(document).width() * .75) then 'left' else 'right'
-  
+      if ($(element).offset().left > $(document).width() * .75)
+        'left'
+      else
+        'right'
+
   # Tooltip options function
   options: () ->
     html: (() -> @_html ? @default.html).call(@)
@@ -49,7 +53,8 @@ class Tooltip
 
 # Class for basic Popovers
 class Popover extends Tooltip
-  _JSON_URL: 'https://web1.library.nyu.edu/common/retrieve_file_contents_as_json.php?full_html=true&callback=?'
+  _JSON_URL: 'https://web1.library.nyu.edu/common/' +
+    'retrieve_file_contents_as_json.php?full_html=true&callback=?'
   # Callback method for content, returns a function
   @_CONTENT_CALLBACK: (self, json_url) ->
     ()->
@@ -57,14 +62,14 @@ class Popover extends Tooltip
       if(element.attr("data-content")?)
         element.attr("data-content")
       else
-        $.getJSON json_url + "&the_url=" + element.attr("href"),
-          (data)->
-            element.attr "data-content", self.wrap_html(data.theHtml, element.attr("data-class"))
-            element.popover('show')
+        $.getJSON json_url + "&the_url=" + element.attr("href"), (data)->
+          element.attr "data-content",
+            self.wrapHTML(data.theHtml, element.attr("data-class"))
+          element.popover('show')
         "Loading..."
 
   options: () ->
-    $.extend super(), 
+    $.extend super(),
       content: @_content
 
   init: () ->
@@ -78,23 +83,26 @@ class Popover extends Tooltip
     @content(Popover._CONTENT_CALLBACK(@, @_JSON_URL))
 
   # Crappy hack to append an extra class
-  wrap_html: (html, klass) ->
-    if klass? then $("<p>").append($("<div>").addClass(klass).append(html)).html() else html
+  wrapHTML: (html, klass) ->
+    if klass?
+      $("<p>").append($("<div>").addClass(klass).append(html)).html()
+    else
+      html
 
 # Class for Popovers with augmented hover features
 class HoverPopover extends Popover
   init: () ->
     @trigger('manual')
-    $(@selector).popover(@options()).hover (e) ->
-        e.preventDefault()
-      .mouseenter (e) ->
-        $(@).popover('show')
+    $(@selector).popover(@options()).hover((e) -> e.preventDefault())
+      .mouseenter((e) -> $(@).popover('show'))
       .mouseleave (e) ->
-        $(@).popover('hide') unless $(e.relatedTarget).parent().hasClass("popover")
+        unless $(e.relatedTarget).parent().hasClass("popover")
+          $(@).popover('hide')
 
 # Class for partial HTML retrieval
 class PartialHoverPopover extends HoverPopover
-  _JSON_URL: 'https://web1.library.nyu.edu/common/retrieve_file_contents_as_json.php?callback=?'
+  _JSON_URL: 'https://web1.library.nyu.edu/common/' +
+    'retrieve_file_contents_as_json.php?callback=?'
   # Contructor (obviously)
   constructor: (@selector) ->
     this.content(Popover._CONTENT_CALLBACK(@, @_JSON_URL))
@@ -116,11 +124,11 @@ $ ->
   $('[class!="popover"]').click (e) -> $(".popover").hide()
   # Continue to show popover when we enter it's area
   $(document).on 'mouseenter', ".popover", (e) ->
-      $(@).show()
+    $(@).show()
   # Hide popover when we leave it's area
   $(document).on 'mouseleave', ".popover", (e) ->
-      $(@).hide()
+    $(@).hide()
 
-  # Load hover popovers to any element that has 
+  # Load hover popovers to any element that has
   # substring popover in the class
   new window.nyulibraries.HoverPopover('[class*="popover"]').init()

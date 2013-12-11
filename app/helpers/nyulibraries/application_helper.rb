@@ -1,10 +1,17 @@
+# Rails helper module for applcations 
 module Nyulibraries
-  # Helper for 
   module ApplicationHelper
 
-    # Root of this gem
+    # This engine
+    def nyulibraries_assets
+      Rails.application.railties.engines.find do |engine|
+        engine.class.name.eql? NyuLibraries::Assets::Rails::Engine.name
+      end
+    end
+
+    # Root of this engine
     def nyulibraries_assets_root
-      Rails.application.railties.engines.find{ |engine| engine.class.name.eql? NYULibrariesAssets::Rails::Engine.name}.root
+      nyulibraries_assets.root unless nyulibraries_assets.blank?
     end
 
     # Application title

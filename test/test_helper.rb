@@ -11,7 +11,7 @@ require 'coffee-script'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../dummy/config/environment", __FILE__)
 require "rails/test_help"
-require File.expand_path("../../lib/nyulibraries_assets.rb",  __FILE__)
+require File.expand_path("../../lib/nyulibraries-assets.rb",  __FILE__)
 
 class ActionView::TestCase
   def current_user

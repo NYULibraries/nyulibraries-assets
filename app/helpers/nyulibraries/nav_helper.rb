@@ -1,3 +1,4 @@
+# Rails helper module for navigation
 module Nyulibraries
   module NavHelper
 

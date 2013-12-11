@@ -1,7 +1,4 @@
-# Rails helper module for bobcat layout.
-# Assumes
-#     - Rails helper function
-#     - AuthPdsNyu controller methods
+# Rails helper module for "My Workspace"
 module Nyulibraries
   module WorkspaceHelper
 

@@ -1,3 +1,4 @@
+# Rails helper module for tabs
 module Nyulibraries
   module TabsHelper
 

@@ -1,4 +1,4 @@
-# Require 'nyulibraries' 
+# Require 'nyulibraries'
 #= require nyulibraries
 $ ->
   # BobCat Tabs Tips

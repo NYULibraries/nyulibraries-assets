@@ -1,3 +1,4 @@
+# Rails helper module for HTML
 module Nyulibraries
   module HtmlHelper
 

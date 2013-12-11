@@ -1,3 +1,4 @@
+# Rails helper module for printing
 module Nyulibraries
   module PrintHelper
 

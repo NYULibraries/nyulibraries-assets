@@ -1,6 +1,7 @@
+# Rails helper module for institutions
 module Nyulibraries
-  require 'institutions'
   module InstitutionHelper
+    require 'institutions'
 
     # Get the stylesheet base on the current institution.
     def institutional_stylesheet
