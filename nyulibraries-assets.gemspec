@@ -6,7 +6,7 @@ require "nyulibraries/assets/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "nyulibraries-assets"
-  s.version     = NyuLibraries::Assets::VERSION
+  s.version     = Nyulibraries::Assets::VERSION
   s.authors     = ["Scot Dalton"]
   s.email       = ["scot.dalton@nyu.edu"]
   s.homepage    = "https://github.com/NYULibraries/nyulibraries-assets"

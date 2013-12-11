@@ -1,4 +1,4 @@
-module NyuLibraries
+module Nyulibraries
   module Assets
     class FrameworkNotFound < StandardError; end
 
@@ -37,4 +37,4 @@ module NyuLibraries
   end
 end
 # Load 'em up
-NyuLibraries::Assets.load!
+Nyulibraries::Assets.load!
