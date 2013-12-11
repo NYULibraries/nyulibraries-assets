@@ -26,5 +26,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "compass-rails", "~> 1.0.3"
   s.add_development_dependency "coffee-script", "~> 2.2.0"
   s.add_development_dependency "sass-rails", "~> 3.2.6"
+  # Fix to 0.99.4 cuz 0.99.5 broke my shit.
+  s.add_development_dependency "mustache", "0.99.4"
   s.add_development_dependency "mustache-rails", "~> 0.2.3"
 end
