@@ -1,15 +1,15 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "nyulibraries_assets/version"
+require "nyulibraries/assets/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "nyulibraries_assets"
-  s.version     = NYULibrariesAssets::VERSION
+  s.name        = "nyulibraries-assets"
+  s.version     = Nyulibraries::Assets::VERSION
   s.authors     = ["Scot Dalton"]
   s.email       = ["scot.dalton@nyu.edu"]
-  s.homepage    = "https://github.com/NYULibraries/nyulibraries_assets"
+  s.homepage    = "https://github.com/NYULibraries/nyulibraries-assets"
   s.summary     = "Shared assets for http://library.nyu.edu and related sites based on Twitter Bootstrap."
   s.description = "Shared assets for http://library.nyu.edu and related sites based on Twitter Bootstrap. Requires Rails and/or Compass."
   s.license     = 'MIT'
@@ -26,5 +26,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "compass-rails", "~> 1.0.3"
   s.add_development_dependency "coffee-script", "~> 2.2.0"
   s.add_development_dependency "sass-rails", "~> 3.2.6"
+  # Fix to 0.99.4 cuz 0.99.5 broke my shit.
+  s.add_development_dependency "mustache", "0.99.4"
   s.add_development_dependency "mustache-rails", "~> 0.2.3"
 end

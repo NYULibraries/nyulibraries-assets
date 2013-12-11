@@ -1,5 +1,5 @@
-module NYULibrariesAssets
-  module Rails
+module Nyulibraries
+  module Assets
     class Engine < ::Rails::Engine
       require 'compass-rails'
       require 'bootstrap-sass'

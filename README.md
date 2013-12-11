@@ -1,8 +1,8 @@
 # NYU Libraries Assets
-[![Build Status](https://secure.travis-ci.org/NYULibraries/nyulibraries_assets.png?branch=master)](http://travis-ci.org/NYULibraries/nyulibraries_assets?branch=master)
-[![Dependency Status](https://gemnasium.com/NYULibraries/nyulibraries_assets.png)](https://gemnasium.com/NYULibraries/nyulibraries_assets)
-[![Code Climate](https://codeclimate.com/github/NYULibraries/nyulibraries_assets.png)](https://codeclimate.com/github/NYULibraries/nyulibraries_assets)
-[![Coverage Status](https://coveralls.io/repos/NYULibraries/nyulibraries_assets/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/nyulibraries_assets?branch=master)
+[![Build Status](https://secure.travis-ci.org/NYULibraries/nyulibraries-assets.png?branch=master)](http://travis-ci.org/NYULibraries/nyulibraries-assets?branch=master)
+[![Dependency Status](https://gemnasium.com/NYULibraries/nyulibraries-assets.png)](https://gemnasium.com/NYULibraries/nyulibraries-assets)
+[![Code Climate](https://codeclimate.com/github/NYULibraries/nyulibraries-assets.png)](https://codeclimate.com/github/NYULibraries/nyulibraries-assets)
+[![Coverage Status](https://coveralls.io/repos/NYULibraries/nyulibraries-assets/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/nyulibraries-assets?branch=master)
 
 ## Usage
 ### Rails
@@ -12,7 +12,7 @@ In your gemfile,
       ...
       gem 'sass-rails', "~> 3.2.5"
       gem 'compass-rails', "~> 1.0.3"
-      gem 'nyulibraries_assets', :git => "git://github.com/NYULibraries/nyulibraries_assets.git"
+      gem 'nyulibraries-assets', :git => "git://github.com/NYULibraries/nyulibraries-assets.git"
       ...
     end
 
