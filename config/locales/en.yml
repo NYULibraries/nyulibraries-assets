@@ -23,7 +23,7 @@ en:
     destroy_html: Delete
     email_html: Email
     print_html: Print
-    getit_html: Check Availability @ GetIt
+    getit_html: Check Availability
     ris_html: Download as RIS
     bibtex_html: Download as BibTex
     refworks_html: Push to RefWorks
