@@ -3,6 +3,7 @@ Dummy::Application.routes.draw do
   get "nyulibraries/bobcat"
   get "nyulibraries/eshelf"
   get "nyulibraries/print"
+  get "nyulibraries/login"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
