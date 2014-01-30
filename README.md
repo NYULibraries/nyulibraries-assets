@@ -13,6 +13,7 @@ In your gemfile,
       gem 'sass-rails', "~> 3.2.5"
       gem 'compass-rails', "~> 1.0.3"
       gem 'nyulibraries-assets', :git => "git://github.com/NYULibraries/nyulibraries-assets.git"
+      gem 'mustache-rails", ~> 0.2.3"
       ...
     end
 
