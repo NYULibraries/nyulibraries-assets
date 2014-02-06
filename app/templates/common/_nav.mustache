@@ -1,6 +1,8 @@
 <nav id="nav1" class="breadcrumb">
   {{> common/breadcrumbs }}
-  <ul class="nyu-login">
-    <li>{{login}}</li>
-  </ul>
+  {{#login}}
+    <ul class="nyu-login">
+      <li>{{login}}</li>
+    </ul>
+  {{/login}}
 </nav>
