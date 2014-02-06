@@ -194,7 +194,7 @@ NS:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NS&tab=nscr'
         tip: 'Search for Reserves by title or instructor name'
     login:
-      primary: ns_ldap
+      primary: newschool_ldap
       secondary:
         - nyu
         - cu
