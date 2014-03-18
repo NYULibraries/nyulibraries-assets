@@ -43,8 +43,13 @@
   height: 39;
 }
 
+.icons-nyu-content-type-website {
+  width: 26;
+  height: 24;
+}
+
 .icons-nyu-content-type-book_chapter {
-  @extend .icons-nyu-content-type-book
+  @extend .icons-nyu-content-type-book;
 }
 
 .icons-nyu-content-type-conference_paper,
@@ -52,11 +57,16 @@
 .icons-nyu-content-type-dissertation,
 .icons-nyu-content-type-thesis,
 .icons-nyu-content-type-working_paper, {
-  @extend .icons-nyu-content-type-essay
+  @extend .icons-nyu-content-type-essay;
 }
 
 .icons-nyu-content-type-book_review,
 .icons-nyu-content-type-film_review, {
-  @extend .icons-nyu-content-type-review
+  @extend .icons-nyu-content-type-review;
 }
 
+[class^=".icons-nyu-content-type-"][class$="_plus"],
+[class*=" .icons-nyu-content-type-"][class$="_plus"] {
+  width: 35;
+  height: 32;
+}
