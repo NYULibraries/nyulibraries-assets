@@ -3,6 +3,7 @@ gemspec
 group :development, :test do
   gem 'coveralls', :require => false
   gem "pry"
+  gem "mustache-rails", github: "josh/mustache-rails", require: "mustache/railtie"
 
   platforms :jruby do
     gem 'therubyrhino', "~> 2.0.0"
