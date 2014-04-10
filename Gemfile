@@ -4,6 +4,7 @@ group :development, :test do
   gem 'coveralls', :require => false
   gem "pry"
   gem "mustache-rails", github: "josh/mustache-rails", require: "mustache/railtie"
+  gem "jquery-rails"
 
   platforms :jruby do
     gem 'therubyrhino', "~> 2.0.0"

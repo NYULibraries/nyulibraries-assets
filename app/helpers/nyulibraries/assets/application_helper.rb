@@ -5,7 +5,7 @@ module Nyulibraries
 
       # This engine
       def nyulibraries_assets
-        ::Rails::Engine::Railties.engines.find do |railtie|
+        ::Rails::Engine.subclasses.map(&:instance).find do |railtie|
           railtie.class.name.eql? Nyulibraries::Assets::Engine.name
         end
       end

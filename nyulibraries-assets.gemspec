@@ -28,4 +28,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "sass-rails", ">= 3.2.6"
   # Fix to 0.99.4 cuz 0.99.5 broke my shit.
   s.add_development_dependency "mustache", "0.99.4"
+  s.add_development_dependency "test-unit"
 end
