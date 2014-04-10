@@ -154,6 +154,8 @@
 
 // Phones
 @media (max-width: 480px) {
+  #header .suite { display: none; }
+  
   .form-horizontal .controls {
     margin-left: 0;
     label {
