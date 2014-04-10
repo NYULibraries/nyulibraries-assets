@@ -1,11 +1,11 @@
-# Rails helper module for applcations 
+# Rails helper module for applcations
 module Nyulibraries
   module Assets
     module ApplicationHelper
 
       # This engine
       def nyulibraries_assets
-        ::Rails.application.railties.find do |railtie|
+        ::Rails::Engine::Railties.engines.find do |railtie|
           railtie.class.name.eql? Nyulibraries::Assets::Engine.name
         end
       end
