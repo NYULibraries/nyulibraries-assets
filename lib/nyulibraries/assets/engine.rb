@@ -17,22 +17,11 @@ module Nyulibraries
         ActiveSupport.on_load(:action_controller) do
           append_view_path File.join(path, "app", "templates")
         end
-
-
-        module Sass::Script::FunctionsPatch
+        class Sass::Script::Functions::EvaluationContext
           def generated_image_url(path, only_path = nil)
-            cachebust_generated_images
             path
           end
-
-          def cachebust_generated_images
-            generated_images_path = Rails.root.join(Compass.configuration.generated_images_dir).to_s
-          end
         end
-        class Sass::Script::Functions::EvaluationContext
-          include Sass::Script::FunctionsPatch
-        end
-
       end
     end
   end
