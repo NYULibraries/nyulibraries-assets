@@ -17,6 +17,8 @@ module Nyulibraries
         ActiveSupport.on_load(:action_controller) do
           append_view_path File.join(path, "app", "templates")
         end
+        # For Rails 4, Sass::Script::Functions::EvaluationContext#generated_image_url tries
+        # to do cachebusting, which causes problems (it may be outdated). This overrides that.
         if ActiveRecord::VERSION::MAJOR > 3
           Sass::Script::Functions::EvaluationContext.class_eval do
             include Sprockets::SassFunctions
