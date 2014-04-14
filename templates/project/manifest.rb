@@ -7,8 +7,8 @@ stylesheet 'styles.scss'
 # Other Bootstrap assets
 basedir = '../../lib/assets'
 
-# Glyphicons sprites
-%w(magnifier move).each do |file|
+# Images
+%w(magnifier move nyu).each do |file|
   image "#{basedir}/images/#{file}.png", :to => "#{file}.png"
 end
 

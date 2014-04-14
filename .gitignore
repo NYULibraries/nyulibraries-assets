@@ -7,3 +7,6 @@ coverage/
 test/dummy/tmp
 test/dummy/log
 test/dummy/db/*.sqlite3
+
+# Ignore ruby version
+.ruby-version

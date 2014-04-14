@@ -30,7 +30,9 @@ Dummy::Application.configure do
   config.action_mailer.delivery_method = :test
 
   # Raise exception on mass assignment protection for Active Record models
-  config.active_record.mass_assignment_sanitizer = :strict
+  if ActiveRecord::VERSION::MAJOR < 4
+    config.active_record.mass_assignment_sanitizer = :strict
+  end
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr

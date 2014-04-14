@@ -3,8 +3,8 @@ module Nyulibraries
     class Engine < ::Rails::Engine
       require 'compass-rails'
       require 'bootstrap-sass'
-      require 'mustache/railtie'
       require 'institutions'
+      require 'sprockets/railtie'
       initializer "#{engine_name}.asset_pipeline" do |app|
         app.config.assets.precompile += ['print.css']
         # Precompile institutional stylesheets
@@ -16,6 +16,17 @@ module Nyulibraries
         path = self.root
         ActiveSupport.on_load(:action_controller) do
           append_view_path File.join(path, "app", "templates")
+        end
+        # For Rails 4, Sass::Script::Functions::EvaluationContext#generated_image_url tries
+        # to do cachebusting, which causes problems (it may be outdated). This overrides that.
+        if ActiveRecord::VERSION::MAJOR > 3
+          Sass::Script::Functions::EvaluationContext.class_eval do
+            include Sprockets::SassFunctions
+            include ActionView::Helpers::AssetUrlHelper
+            def generated_image_url(path, only_path = nil)
+              Sass::Script::String.new(asset_url path)
+            end
+          end
         end
       end
     end
