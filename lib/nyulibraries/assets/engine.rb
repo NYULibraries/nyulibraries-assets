@@ -17,9 +17,13 @@ module Nyulibraries
         ActiveSupport.on_load(:action_controller) do
           append_view_path File.join(path, "app", "templates")
         end
-        class Sass::Script::Functions::EvaluationContext
-          def generated_image_url(path, only_path = nil)
-            path
+        if ActiveRecord::VERSION::MAJOR > 3
+          Sass::Script::Functions::EvaluationContext.class_eval do
+            include Sprockets::SassFunctions
+            include ActionView::Helpers::AssetUrlHelper
+            def generated_image_url(path, only_path = nil)
+              Sass::Script::String.new(asset_url path)
+            end
           end
         end
       end
