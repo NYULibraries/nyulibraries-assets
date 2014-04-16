@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class CompilationTest < Test::Unit::TestCase
-  def test_scss_compilation
+class CompilationTest < ActiveSupport::TestCase
+  test "test scss compilation" do
     ::Compass.configuration.images_dir = 'lib/assets/images'
     path = 'lib/assets/stylesheets'
     compiler = Compass::Compiler.new(path, path, path, :sass => Compass.sass_engine_options)
@@ -15,7 +15,7 @@ class CompilationTest < Test::Unit::TestCase
   def test_coffee_script_compilation
     coffee_compile_each "lib/assets/javascripts/"
   end
-  
+
   private
   def coffee_compile_each(path)
     Dir.foreach(path).each do |filename|
