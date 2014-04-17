@@ -1,13 +1,12 @@
 require 'test_helper'
 
 class CompilationTest < ActiveSupport::TestCase
-  test "test scss compilation" do
+  test "scss compilation" do
     ::Compass.configuration.images_dir = 'lib/assets/images'
     path = 'lib/assets/stylesheets'
-    compiler = Compass::Compiler.new(path, path, path, :sass => Compass.sass_engine_options)
     %w(nyulibraries).each do |file|
       assert_nothing_raised("Compass stylesheet(s) do not compile.") do
-        compiler.engine("#{path}/_#{file}.scss", "#{path}/_#{file}.css").render
+        ::Compass.compiler.engine("#{path}/_#{file}.scss", "#{path}/_#{file}.css").render
       end
     end
   end
