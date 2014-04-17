@@ -1,6 +1,6 @@
 header {
   background: {
-    image: url(image-url("nyulibraries/nyu/header.gif"));
+    image: image-url("nyulibraries/nyu/header.gif");
     position: top left;
     repeat: no-repeat;
     color: $nyuLibrariesDarkBrown;
