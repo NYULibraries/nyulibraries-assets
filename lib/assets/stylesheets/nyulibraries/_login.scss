@@ -53,9 +53,9 @@ a.nyulibraries-help-icon {
       line-height: $baseLineHeight;
       font-weight: normal;
       max-height: 280px;
-      overflow: -moz-scrollbars-vertical; 
-      -ms-overflow-y: scroll; 
-      overflow-y: scroll; 
+      overflow: -moz-scrollbars-vertical;
+      -ms-overflow-y: scroll;
+      overflow-y: scroll;
       &::-webkit-scrollbar {
         width: 6px;
       }
@@ -81,7 +81,7 @@ a.nyulibraries-help-icon {
     & > a {
       @extend .btn
     }
-    
+
   }
 }
 
