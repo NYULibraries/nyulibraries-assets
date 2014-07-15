@@ -1,16 +1,16 @@
 header {
   background: {
-    image: image-url("nyulibraries/nyu/header.gif");
-    position: top left;
+    image: image-url("nyulibraries/nyu/header.png");
+    position: 21px 21px;
     repeat: no-repeat;
-    color: $nyuLibrariesDarkBrown;
+    color: $nyuPurple;
   }
-  height: 67px;
+  height: 69px;
 
   a {
     @extend .pull-left;
-    height: 67px;
-    width: 150px;
+    height: 69px;
+    width: 209px;
   }
 
   span {
