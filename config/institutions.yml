@@ -89,7 +89,7 @@ NYUAD:
     css: application_nyuad
     dir: nyuad
     breadcrumbs:
-      title: NYUAD Library
+      title: NYU Abu Dhabi Library
       url: http://nyuad.nyu.edu/academics/library/index.html
     ill:
       link_html: My interlibrary loan (ILL)
