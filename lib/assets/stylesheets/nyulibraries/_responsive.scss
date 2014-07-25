@@ -154,6 +154,7 @@
 
 // Phones
 @media (max-width: 480px) {
+  #header .institution { float: none; }
   
   .form-horizontal .controls {
     margin-left: 0;
