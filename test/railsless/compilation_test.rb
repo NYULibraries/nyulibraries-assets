@@ -1,10 +1,11 @@
 require 'test_helper'
-
+require 'coffee-script'
+require 'sass/plugin'
 class CompilationTest < Test::Unit::TestCase
   def test_scss_compilation
     ::Compass.configuration.images_dir = 'lib/assets/images'
     path = 'lib/assets/stylesheets'
-    compiler = Compass::Compiler.new(path, path, path, :sass => Compass.sass_engine_options)
+    compiler = Compass::Compiler.new(path, path, path, sass: Compass.sass_engine_options)
     %w(nyulibraries).each do |file|
       assert_nothing_raised("Compass stylesheet(s) do not compile.") do
         compiler.engine("#{path}/_#{file}.scss", "#{path}/_#{file}.css").render
