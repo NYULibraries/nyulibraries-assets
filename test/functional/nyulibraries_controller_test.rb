@@ -6,7 +6,6 @@ class NyulibrariesControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "Dummy Application"
     assert_select "header", 1
-    assert_select "header > div.suite > span", 0
     assert_select "header > div.application > span", {count: 1, text: "Dummy Application"}
     assert_select "nav > ul.nyu-breadcrumbs", 1
     assert_select "nav > ul.nyu-breadcrumbs > li > a", 2
@@ -19,7 +18,6 @@ class NyulibrariesControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "BobCat"
     assert_select "header", 1
-    assert_select "header > div.suite > span", {count: 1, text: "BobCat"}
     assert_select "header > div.application > span", {count: 1, text: "Dummy Application"}
     assert_select "nav > ul.nyu-breadcrumbs", 1
     assert_select "nav > ul.nyu-breadcrumbs > li > a", 2
@@ -33,7 +31,6 @@ class NyulibrariesControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "BobCat"
     assert_select "header", 1
-    assert_select "header > div.suite > span", {count: 1, text: "BobCat"}
     assert_select "header > div.application > span", {count: 1, text: "Dummy Application"}
     assert_select "nav", 1
     assert_select "nav > ul.nyu-breadcrumbs", 1
@@ -57,7 +54,6 @@ class NyulibrariesControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "BobCat"
     assert_select "header", 1
-    assert_select "header > div.suite > span", {count: 1, text: "BobCat"}
     assert_select "header > div.application > span", {count: 1, text: "Dummy Application"}
     assert_select "nav", 1
     assert_select "nav > ul.nyu-breadcrumbs", 1
