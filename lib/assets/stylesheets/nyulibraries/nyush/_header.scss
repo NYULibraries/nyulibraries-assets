@@ -1,0 +1,29 @@
+header {
+  .institution {
+    background: {
+      image: url(image_path("nyulibraries/nyush/shanghai.png"));
+      repeat: no-repeat;
+      position: 0px 21px;
+      color: $nyuPurple;
+    }
+    height: 69px;
+    width: 182px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    background: {
+      position: 21px 10px;
+    }
+    height: 40px * 2 + 10;
+    .parent a { height: 40px; }
+    .institution {
+      clear: both;
+      height: 40px;
+      background: {
+        position: 0px 10px;
+      }
+    }
+  }
+}
