@@ -2,8 +2,6 @@ module Nyulibraries
   module Assets
     class Engine < ::Rails::Engine
       require 'compass-rails'
-      require 'bootstrap-sass'
-      require 'institutions'
       require 'sprockets/railtie'
       initializer "#{engine_name}.asset_pipeline" do |app|
         app.config.assets.precompile += ['print.css']

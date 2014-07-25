@@ -3,6 +3,7 @@ module Nyulibraries
     class FrameworkNotFound < StandardError; end
 
     require 'compass'
+    require 'bootstrap-sass'
     require 'institutions'
 
     # Inspired by {bootstrap-sass}[https://github.com/thomas-mcdonald/bootstrap-sass]
@@ -21,7 +22,6 @@ module Nyulibraries
     end
 
     def self.register_compass_extension
-      require 'bootstrap-sass'
       base = File.join(File.dirname(__FILE__), "..")
       styles = File.join(base, "lib", "assets", "stylesheets")
       images = File.join(base, "lib", "assets", "images")
