@@ -8,7 +8,7 @@ header {
   height: 69px;
 
   a {
-    @extend .pull-left;
+    float: left;
     height: 69px;
     width: 209px;
   }
