@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'rails_helper'
 module Nyulibraries
   module Assets
     class HtmlHelperTest < ActionView::TestCase

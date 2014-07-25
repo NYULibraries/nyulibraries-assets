@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'rails_helper'
 
 class NyulibrariesControllerTest < ActionController::TestCase
   test "should get application" do
