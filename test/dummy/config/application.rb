@@ -9,7 +9,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-require 'nyulibraries-assets'
+load 'nyulibraries-assets.rb'
 
 module Dummy
   class Application < Rails::Application
