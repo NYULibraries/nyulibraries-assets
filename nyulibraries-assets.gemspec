@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["scot.dalton@nyu.edu"]
   s.homepage    = "https://github.com/NYULibraries/nyulibraries-assets"
   s.summary     = "Shared assets for http://library.nyu.edu and related sites based on Twitter Bootstrap."
-  s.description = "Shared assets for http://library.nyu.edu and related sites based on Twitter Bootstrap. Requires Rails and/or Compass."
+  s.description = "Shared assets for http://library.nyu.edu and related sites based on Twitter Bootstrap. Requires Compass. Rails is optional."
   s.license     = 'MIT'
 
   s.files       = `git ls-files`.split($\)
