@@ -17,7 +17,7 @@ header {
     visibility: hidden;
   }
 
-  .suite {
-    @extend .pull-right;
+  .institution {
+    float: right;
   }
 }
