@@ -2,33 +2,5 @@ require 'coveralls'
 Coveralls.wear!
 $:.unshift("#{File.dirname(__FILE__)}/..")
 require 'test/unit'
-require 'sass'
-require 'sass/plugin'
-require 'sass/rails'
-require 'compass'
-require 'bootstrap-sass'
-require 'coffee-script'
-ENV["RAILS_ENV"] ||= 'test'
-require File.expand_path("../dummy/config/environment", __FILE__)
-require "rails/test_help"
+require 'pry'
 require File.expand_path("../../lib/nyulibraries-assets.rb",  __FILE__)
-
-class ActionView::TestCase
-  def current_user
-    DummyUser.new
-  end
-
-  def current_primary_institution
-    Institutions.defaults.first
-  end
-end
-
-class DummyUser
-  def firstname
-    "Dummy"
-  end
-
-  def lastname
-    "User"
-  end
-end
