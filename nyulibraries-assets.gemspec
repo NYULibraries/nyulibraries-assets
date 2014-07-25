@@ -21,14 +21,14 @@ Gem::Specification.new do |s|
   s.add_dependency "bootstrap-sass", ">= 2.2.0", "< 2.3.2"
   s.add_dependency "institutions", "~> 0.1.1"
 
-  s.add_development_dependency "rails", ">= 3.2.14"
-  s.add_development_dependency "compass-rails", ">= 1.0.3"
-  s.add_development_dependency "coffee-script", ">= 2.2.0"
-  s.add_development_dependency "sass-rails", ">= 3.2.6"
   s.add_development_dependency "rake"
+  s.add_development_dependency "rails", "~> 3.2.19"
+  s.add_development_dependency "compass-rails"
+  s.add_development_dependency "coffee-script"
+  s.add_development_dependency "sass-rails"
   # Fix to 0.99.4 cuz 0.99.5 broke my shit.
   s.add_development_dependency "mustache", "0.99.4"
   s.add_development_dependency "test-unit"
-  s.add_development_dependency "sprockets-rails", "2.1.3"
+  s.add_development_dependency "sprockets-rails"
   s.add_development_dependency "jquery-rails"
 end
