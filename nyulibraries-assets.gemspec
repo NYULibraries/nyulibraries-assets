@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files  = s.files.grep(%r{^(test|spec|features)/})
 
   s.add_dependency "compass", "~> 0.12.2"
-  s.add_dependency "bootstrap-sass", ">= 2.2.0", "< 2.3.1.1"
+  s.add_dependency "bootstrap-sass", ">= 2.2.0", "< 2.3.2"
   s.add_dependency "institutions", "~> 0.1.1"
 
   s.add_development_dependency "rake", "~> 10.1.0"
