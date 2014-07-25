@@ -30,4 +30,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "mustache", "0.99.4"
   s.add_development_dependency "test-unit"
   s.add_development_dependency "sprockets-rails", "2.1.3"
+  s.add_development_dependency "jquery-rails"
 end
