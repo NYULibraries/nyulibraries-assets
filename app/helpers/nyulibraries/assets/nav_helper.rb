@@ -20,13 +20,21 @@ module Nyulibraries
       # Link to logout
       def link_to_logout(params={})
         icon_tag(:logout) +
-          link_to("Log-out #{current_user.username}", 
+          link_to("Log-out #{username}",
             logout_url(params), class: "logout")
       end
 
       # Link to login
       def link_to_login(params={})
         icon_tag(:login) + link_to("Login", login_url(params), class: "login")
+      end
+
+      def username
+        if current_user.respond_to?(:firstname)
+          current_user.firstname
+        else
+          current_user.username
+        end
       end
     end
   end
