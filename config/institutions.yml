@@ -37,10 +37,10 @@ NYU:
     login:
       primary: nyu_shibboleth
       secondary:
-        - ns
-        - cu
-        - nysid
         - bobst
+        - nysid
+        - cu
+        - ns
       general_public: true
 
 NYUSH:
@@ -259,4 +259,3 @@ NYSID:
         - nyu
         - ns
         - cu
-        
