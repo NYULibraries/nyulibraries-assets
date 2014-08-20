@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+#logins {
+  .facebook, .twitter {
+    display: inline;
+  }
+  font-family: 'Montserrat', sans-serif;
+  h1 {
+    margin: 2% 0 3% 0;
+    font-weight: normal;
+    font-size: 150%;
+  }
+  h2.help {
+    position: relative;
+    font-weight: bold;
+    margin: 3% 0 2% 0;
+    span.circle {
+      display: inline-block;
+      background-color: #006699;
+      color: white;
+      text-align: center;
+      font-size: 32px !important;
+      font-weight: normal;
+      padding: 10px 10px 10px 8px;
+      border-radius: 100px;
+      width: 15px;
+      height: 13px;
+      line-height: 13px;
+      margin: 0 .3em 0 0;
+    }
+    span.help_text {
+      position: absolute;
+      top: 20%;
+    }
+    a {
+      color: #006699;
+    }
+  }
+  div.row-fluid {
+    margin-bottom: 2%;
+  }
+  div.primary-login, div.alt-login {
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: center;
+    min-height: 125px;
+    font-size: 220%;
+    .alt-login-link {
+      display: table-cell; /* Fix for Opera and Firefox */
+      text-align: center;
+      vertical-align: middle;
+      width: 100%;
+      > span {
+        color: white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); /* Works in IE */
+        -webkit-transform: translateY(-50%); /* Safari fix */
+        width: 100%;
+      }
+      a {
+        span { display: none; }
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: absolute;
+        z-index: 100;
+        &:hover {
+          text-decoration: none;
+        }
+        &:active {
+          color: white;
+        }
+        &:visited {
+          color: white
+        }
+      }
+    }
+    &.square, &#nyu_shibboleth-login {
+      height: 0;
+      padding-bottom: 23%;
+      position: relative;
+    }
+    &#nyu_shibboleth-login {
+      font-size: 500%;
+      background-color: #57068C;
+    }
+    &#bobst-login {
+      background-color: #AA97C2;
+    }
+    &#nysid-login {
+      background-color: #EF4135;
+    }
+    &#cu-login {
+      background-color: #730000;
+    }
+    &#ns-login {
+      background-color: #F58026;
+    }
+    &#visitor-login {
+      background-color: #48AFE3;
+    }
+  }
+}
+
+// Responsive fonts and margins
+@media only screen and (min-width: 1200px) {
+  #logins {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #logins {
+    div.row-fluid {
+      margin-bottom: 0;
+    }
+  }
+}
