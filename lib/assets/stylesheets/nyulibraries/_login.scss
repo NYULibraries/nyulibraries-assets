@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 #logins {
+  max-width: 1024px;
   .facebook, .twitter {
     display: inline;
   }
@@ -103,13 +104,8 @@
   }
 }
 
-// Responsive fonts and margins
-@media only screen and (min-width: 1200px) {
-  #logins {
-    font-size: 18px;
-  }
-}
-@media only screen and (max-width: 768px) {
+// Responsive
+@media only screen and (max-width: 767px) {
   #logins {
     div.row-fluid {
       margin-bottom: 0;
