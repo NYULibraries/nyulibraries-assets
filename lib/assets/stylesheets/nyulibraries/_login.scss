@@ -1,12 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-.container-fluid {
+#logins {
   margin-right: auto;
   margin-left: auto;
   max-width: 1024px;
-}
-
-#logins {
   .facebook, .twitter {
     display: inline;
   }
