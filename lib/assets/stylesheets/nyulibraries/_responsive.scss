@@ -63,23 +63,19 @@
   }
 
   // Breadcrumb styles
-  nav.breadcrumb {
-    ul {
-      // Don't show icon
-      // to save space
-      &.nyu-login {
-        height: $baseLineHeight;
-        [class*="icons"], {
-          background-image: none;
-          padding: 0px;
-        }
+  .nyu-breadcrumbs {
+    li.nyu-login {
+      height: $baseLineHeight;
+      [class*="icons"], {
+        background-image: none;
+        padding: 0px;
       }
-
-      // Don't show the first breadcrumb
-      // to save space
-      &.nyu-breadcrumbs {
-        li:first-child {display: none;}
-      }
+    }
+    // Don't show the first breadcrumb
+    // to save space
+    li:first-child {display: none;}
+    li:nth-child(2):before {
+      content: "";
     }
   }
 

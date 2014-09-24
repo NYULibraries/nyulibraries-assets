@@ -1,4 +1,5 @@
-.breadcrumb {
+.nyu-breadcrumbs {
+  @extend .breadcrumb;
   @include clearfix;
   color: lighten(black, 20%);
   background-color: $breadcrumbsBackgroundColor;
@@ -7,22 +8,8 @@
     bottom: $baseLineHeight/2 + 5;
     left: 20px;
   }
-}
-
-ul.nyu-breadcrumbs {
-  @extend .pull-left;
-  margin: {
-    left: 0px;
-    bottom: 0px;
-  }
-  & > li {
-    display: inline;
-  }
-  & > li:after {
+  > li+li:before {
     content: " > ";
     color: darken($breadcrumbsBackgroundColor, 50%);
-  }
-  & > li:last-child:after {
-    content: "" !important;
   }
 }

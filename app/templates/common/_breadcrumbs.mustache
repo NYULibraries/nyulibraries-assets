@@ -1,5 +1,8 @@
-<ul class="nyu-breadcrumbs">
+<ol class="nyu-breadcrumbs">
   {{#context.breadcrumbs}}
     <li>{{.}}</li>
   {{/context.breadcrumbs}}
-</ul>
+  {{#context.login}}
+    <li class="nyu-login">{{login}}</li>
+  {{/context.login}}
+</ol>
