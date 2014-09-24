@@ -19,12 +19,12 @@
   }
 
   .sidebar-section {
-    @include border-bottom-radius($baseBorderRadius);
+    @include border-bottom-radius($border-radius-base);
     margin-bottom: $baseLineHeight;
     @include background-image(linear-gradient(color-stops($sidebarBackgroundColor, darken($sidebarBackgroundColor, 5%))));
     ul {
       @include sidebar;
-      @extend .unstyled !optional;
+      @extend .list-unstyled !optional;
       li {
         margin: {
           top: $baseLineHeight;

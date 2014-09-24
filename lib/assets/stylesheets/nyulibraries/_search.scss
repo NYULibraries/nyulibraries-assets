@@ -2,7 +2,7 @@
   // Search has a 5% linear gradient and rounded borders
   background-color: $searchBackgroundColor;
   @include background-image(linear-gradient(color-stops($searchBackgroundColor, darken($searchBackgroundColor, 5%))));
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
   // Search is padded
   padding: $lineHeightLarge;
 

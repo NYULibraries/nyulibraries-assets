@@ -8,6 +8,7 @@
   @extend .well-small;
   margin-bottom: $baseLineHeight/2;
   padding-right: 2px;
+  @include clearfix;
 }
 
 .record_tag_list {
@@ -46,7 +47,8 @@ div.appetizer {
 
 div.entree {
   min-height: 94px !important;
-  padding-left:  6.38298% - 2.5642%;
+  margin-left: 10%;
+  padding-left: 3%;
   border-left: 1px solid;
   border-left: 1px solid lighten($nyuLibrariesLightBorderColor, 8%);
   h2.title {
