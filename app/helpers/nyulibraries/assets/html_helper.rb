@@ -72,64 +72,12 @@ module Nyulibraries
           style = "height: auto;"
         end
         content_tag(:nav, class: "navbar") {
-          content_tag(:div, class: "container-fluid") {
-
-            content_tag(:button, class: ["navbar-toggle", "collapsed"], type: "button", data: {toggle: "collapse", target: "##{id}.navbar-collapse"}) {
-              content_tag(:span, nil, class: "icon-bar") + content_tag(:span, nil, class: "icon-bar")
-            } + header +
-            content_tag(:div, id: id, class: collapse_classes, style: style) { yield }
-          }
+          content_tag(:button, class: ["navbar-toggle", "collapsed"], type: "button", data: {toggle: "collapse", target: "##{id}.navbar-collapse"}) {
+            content_tag(:span, nil, class: "icon-bar") + content_tag(:span, nil, class: "icon-bar")
+          } + header +
+          content_tag(:div, id: id, class: collapse_classes, style: style) { yield }
         }
       end
-    #   <nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation">
-    #   <div class="container-fluid">
-    #     <div class="navbar-header">
-    #       <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
-    #         <span class="sr-only">Toggle navigation</span>
-    #         <span class="icon-bar"></span>
-    #         <span class="icon-bar"></span>
-    #         <span class="icon-bar"></span>
-    #       </button>
-    #       <a class="navbar-brand" href="#">Project Name</a>
-    #     </div>
-    #     <div class="navbar-collapse bs-example-js-navbar-collapse collapse" style="height: 1px;">
-    #       <ul class="nav navbar-nav">
-    #         <li class="dropdown">
-    #           <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-    #           <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
-    #             <li role="presentation" class="divider"></li>
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Separated link</a></li>
-    #           </ul>
-    #         </li>
-    #         <li class="dropdown">
-    #           <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown 2 <span class="caret"></span></a>
-    #           <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
-    #             <li role="presentation" class="divider"></li>
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Separated link</a></li>
-    #           </ul>
-    #         </li>
-    #       </ul>
-    #       <ul class="nav navbar-nav navbar-right">
-    #         <li id="fat-menu" class="dropdown">
-    #           <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown 3 <span class="caret"></span></a>
-    #           <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
-    #             <li role="presentation" class="divider"></li>
-    #             <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Separated link</a></li>
-    #           </ul>
-    #         </li>
-    #       </ul>
-    #     </div><!-- /.nav-collapse -->
-    #   </div><!-- /.container-fluid -->
-    # </nav>
 
       # Will output HTML pagination controls. Modeled after blacklight helpers/blacklight/catalog_helper_behavior.rb#paginate_rsolr_response
       # Equivalent to kaminari "paginate", but takes a Sunspot response as first argument.
