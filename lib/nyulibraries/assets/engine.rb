@@ -17,16 +17,6 @@ module Nyulibraries
         ActiveSupport.on_load(:action_controller) do
           append_view_path File.join(path, "app", "templates")
         end
-        module Sass::Script::Functions
-          include ActionView::Helpers::AssetUrlHelper
-          def generated_image_url(path, only_path = nil)
-            cachebust_generated_images
-            Sass::Script::String.new(asset_url(path),:string)
-          end
-          def image_path(source, options = {})
-            ::Sass::Script::String.new asset_url(source).to_s, :string
-          end
-        end
       end
     end
   end
