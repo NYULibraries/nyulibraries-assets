@@ -12,14 +12,14 @@
     {{> common/nav}}
     <div class="nyu-container">
       <div class="container-fluid">
-        <div class="row-fluid">
-          <div class="span8">
+        <div class="row">
+          <div class="col-md-8">
             {{> common/alerts }}
             {{> common/tabs}}
             {{prepend_yield}}
             {{yield}}
           </div>
-          <div class="span4">
+          <div class="col-md-4">
             <div id="sidebar" class="sidebar">
               {{> common/sidebar}}
             </div>
