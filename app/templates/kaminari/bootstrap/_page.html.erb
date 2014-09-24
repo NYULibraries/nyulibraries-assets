@@ -7,7 +7,7 @@
     per_page:      number of items to fetch per page
     remote:        data-remote
 -%>
-<li class="page<%= ' current' if page.current? %><%= ' hidden-phone' unless page.current? %>">
+<li class="page<%= ' current' if page.current? %><%= ' hidden-xs' unless page.current? %>">
   <% if page.current? %>
   <%= content_tag :span, page%>
   <% else %>
