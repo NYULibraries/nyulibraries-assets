@@ -122,6 +122,11 @@
 
 // Phones to tablets
 @media (max-width: 767px) {
+  .form-horizontal .control-label {
+    text-align: left;
+    width: auto;
+    margin-left: 0;
+  }
   // Adjust spacing for easier touch interaction
   .nyu-container {
     padding-left: 10px;

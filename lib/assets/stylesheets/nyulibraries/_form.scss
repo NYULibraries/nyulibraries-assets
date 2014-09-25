@@ -8,7 +8,7 @@
     }
   }
   .form-group {
-    margin-bottom: 0px;
+    margin-bottom: 1em;
     clear: left;
   }
   .control-label {
@@ -16,13 +16,6 @@
     padding-top: 1px;
     text-align: right;
   }
-  // .controls {
-  //   margin-left: $maxSearchLabelWidth + 20;
-  //   padding-top: 5px;
-  //   label {
-  //     display: inline;
-  //   }
-  // }
   .submit-group {
     @extend .form-group;
     margin: {
