@@ -50,11 +50,12 @@
 
 @mixin tabs-fullscreen {
   .navbar-tabs {
+    border: none;
     margin:0;
     h4 {
       display: none;
     }
-    .navbar-inner, .container {
+    .navbar-collapse, .container {
       background-color: transparent;
       background-image: none !important;
       padding:0;
@@ -65,12 +66,15 @@
     }
     .nav-tabs {
       margin-bottom: 0px;
+      border-bottom: none;
+    }
+    .nav-tabs > li {
+      margin-bottom: 0;
     }
     .nav-tabs > li > a {
       background-color: $tabBackgroundColor;
       color: lighten(black, 20%);
     }
-
     .nav-tabs > li > a:hover {
       background-color: darken($tabBackgroundColor, 5%);
     }
@@ -95,13 +99,22 @@
 
 @mixin tabs-responsive {
   .navbar-tabs {
-    h4 { display: block; }
+    border-top: 1px solid $tabBorderColor;
+    border-bottom: 1px solid $tabBorderColor;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    h4 {
+      display: block;
+      margin: .8em;
+    }
     ul.nav-tabs {
       border: none;
       margin-bottom: 0;
       li {
+        float: none;
+        border-top: 1px solid $tabBorderColor;
         a {
-          border-top: 1px solid $tabBorderColor;
           -webkit-border-radius: 0;
              -moz-border-radius: 0;
                   border-radius: 0;
@@ -132,13 +145,13 @@
       }
     }
 
-    .navbar-inner {
+    .navbar-collapse {
+      overflow: hidden;
+      border: none;
       min-height: auto;
       background-image: none !important;
-      margin-bottom:1em;
       padding: 0;
       background-color: transparent !important;
-      border: 1px solid $tabBorderColor;
 
       h5, h4 {
         display: block;

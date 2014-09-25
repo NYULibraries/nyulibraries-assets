@@ -1,4 +1,9 @@
 .navbar-tabs {
+  min-height: inherit !important;
+  background-color: transparent;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
   h4 { color: $tabHeaderColor; }
 }
 /* Tabs mixins are in mixins.scss */

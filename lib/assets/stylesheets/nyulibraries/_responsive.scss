@@ -1,9 +1,26 @@
+// Only large screens
+@media (min-width: 1200px) {
+  @include tabs-fullscreen;
+  .search {
+    &.with-tabs {
+      @include border-top-left-radius(0);
+    }
+  }
+}
+
 // Landscape tablets
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
+  // Don't show popovers
+  .popover {
+    display: none !important;
+  }
   .nyu-tip {
     float: none;
     width: auto;
   }
+
+  // Collapse tabs
+  @include tabs-responsive;
 
   div.btn-toolbar {
     div.btn-group {
@@ -23,24 +40,10 @@
 
 // Only landscape tablets and large screens
 @media (min-width: 979px) {
-  @include tabs-fullscreen;
-  .search {
-    &.with-tabs {
-      @include border-top-left-radius(0);
-    }
-  }
 }
 
 // Portrait tables
 @media (max-width: 979px) {
-  // Don't show popovers
-  .popover {
-    display: none !important;
-  }
-
-  // Collapse tabs
-  @include tabs-responsive;
-
   // Sidebar styles
   .sidebar {
     // Bump the font for easier touch interaction
