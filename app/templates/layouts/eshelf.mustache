@@ -15,7 +15,7 @@
     <div class="nyu-container">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-10 eshelf-header hidden-xs">
+          <div class="col-sm-10 eshelf-header hidden-xs">
             <h1 class="hidden-xs"><span>e-Shelf</span></h1>
             <span class="username hidden-xs">
               for
@@ -24,16 +24,16 @@
             </span>
           </div>
           {{#back_to}}
-            <div class="col-md-2 back-to">{{back_to}}</div>
+            <div class="col-sm-2 back-to">{{back_to}}</div>
           {{/back_to}}
         </div>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-sm-3">
             <div id="sidebar" class="navbar sidebar" data-spy="affix-top" data-offset-top="200">
               {{> users/shelf}}
             </div>
           </div>
-          <div class="col-md-9">
+          <div class="col-sm-9">
             {{> common/alerts }}
             {{yield}}
           </div>
