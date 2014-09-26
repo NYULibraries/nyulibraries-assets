@@ -1,6 +1,6 @@
 .form-horizontal {
   fieldset {
-    margin-bottom: $baseLineHeight;
+    margin-bottom: $line-height-computed;
   }
   label {
     margin: {
@@ -12,7 +12,7 @@
     clear: left;
   }
   .control-label {
-    width: $maxSearchLabelWidth;
+    width: $search-label-max-width;
     padding-top: 1px;
     text-align: right;
   }
@@ -30,12 +30,12 @@
 .form-inline.form-very-inline  {
   .form-group {
     display: inline-block;
-    line-height: ($baseLineHeight * 2);
-    margin-right: $baseLineHeight;
+    line-height: ($line-height-computed * 2);
+    margin-right: $line-height-computed;
   }
   .control-sub-group {
     display: inline-block;
-    margin-right: $baseLineHeight;
+    margin-right: $line-height-computed;
   }
   label, select, text-area, input, .uneditable-input {
     vertical-align: bottom;

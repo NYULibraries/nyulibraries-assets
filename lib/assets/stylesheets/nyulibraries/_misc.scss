@@ -1,6 +1,6 @@
 .separator {
   margin-top: 5px;
-  border-top: 1px solid $searchBorderColor;
+  border-top: 1px solid $search-border-color;
   padding: {
     top: 15px;
   }
@@ -12,8 +12,7 @@
 }
 
 .popover {
-  width: auto;
-  max-width: 100%;
+  min-width: 200px;
 }
 
 .nyu-tip {
@@ -38,6 +37,5 @@
 }
 
 .btn {
-  line-height: $lineHeightLarge;
+  line-height: $line-height-large-computed;
 }
-

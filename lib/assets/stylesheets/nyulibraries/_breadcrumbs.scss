@@ -5,14 +5,14 @@
      -moz-border-radius: 0;
           border-radius: 0;
   color: lighten(black, 20%);
-  background-color: $breadcrumbsBackgroundColor;
+  background-color: $breadcrumb-bg;
   padding: {
-    top: $baseLineHeight/2 + 5;
-    bottom: $baseLineHeight/2 + 5;
+    top: $line-height-computed/2 + 5;
+    bottom: $line-height-computed/2 + 5;
     left: 20px;
   }
   > li+li:before {
     content: " > ";
-    color: darken($breadcrumbsBackgroundColor, 50%);
+    color: darken($breadcrumb-bg, 50%);
   }
 }

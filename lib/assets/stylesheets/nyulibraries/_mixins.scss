@@ -72,15 +72,15 @@
       margin-bottom: 0;
     }
     .nav-tabs > li > a {
-      background-color: $tabBackgroundColor;
+      background-color: $tab-bg;
       color: lighten(black, 20%);
     }
     .nav-tabs > li > a:hover {
-      background-color: darken($tabBackgroundColor, 5%);
+      background-color: darken($tab-bg, 5%);
     }
     .nav-tabs > .active > a,
     .nav-tabs > .active > a:hover {
-      background-color: $searchBackgroundColor;
+      background-color: $search-bg;
       color: black;
       -webkit-box-shadow: none !important;
          -moz-box-shadow: none !important;
@@ -90,17 +90,13 @@
     #sidebar_tabs {
       display: none;
     }
-
-    .popover .tab {
-      width: 300px;
-    }
   }
 }
 
 @mixin tabs-responsive {
   .navbar-tabs {
-    border-top: 1px solid $tabBorderColor;
-    border-bottom: 1px solid $tabBorderColor;
+    border-top: 1px solid $tab-border-color;
+    border-bottom: 1px solid $tab-border-color;
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
             border-radius: 4px;
@@ -113,7 +109,7 @@
       margin-bottom: 0;
       li {
         float: none;
-        border-top: 1px solid $tabBorderColor;
+        border-top: 1px solid $tab-border-color;
         a {
           -webkit-border-radius: 0;
              -moz-border-radius: 0;
@@ -121,21 +117,21 @@
           margin-right: 0;
           margin-bottom: 0;
           font-size: 15px;
-          color: $tabHeaderColor;
+          color: $tab-header-color;
         }
         &:hover {
           a {
-            background-color: $tabActiveBackgroundColor;
+            background-color: $tab-active-bg;
           }
         }
         &.active {
           a {
-            color: $tabHeaderColor;
+            color: $tab-header-color;
             -webkit-box-shadow: none !important;
                -moz-box-shadow: none !important;
                     box-shadow: none !important;
           }
-          background-color: $tabActiveBackgroundColor;
+          background-color: $tab-active-bg;
         }
       }
       li:last-child {

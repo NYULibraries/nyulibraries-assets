@@ -26,8 +26,8 @@
     div.btn-group {
       float: none !important;
       margin-left: 0;
-      margin-left: $baseLineHeight/2;
-      margin-bottom: $baseLineHeight/2;
+      margin-left: $line-height-computed/2;
+      margin-bottom: $line-height-computed/2;
     }
 
     ul {
@@ -48,17 +48,17 @@
   .sidebar {
     // Bump the font for easier touch interaction
     font: {
-      size: $baseFontSize*1.25;
+      size: $font-size-base*1.25;
     }
 
     // Adjust spacing for easier touch interaction
     .sidebar-section {
-      margin-bottom: $baseLineHeight;
+      margin-bottom: $line-height-computed;
       ul {
         li {
           margin: {
-            top: $baseLineHeight*1.25;
-            bottom: $baseLineHeight*1.25;
+            top: $line-height-computed*1.25;
+            bottom: $line-height-computed*1.25;
           }
         }
       }
@@ -68,7 +68,7 @@
   // Breadcrumb styles
   .nyu-breadcrumbs {
     li.nyu-login {
-      height: $baseLineHeight;
+      height: $line-height-computed;
       [class*="icons"], {
         background-image: none;
         padding: 0px;
@@ -85,11 +85,11 @@
   // Bump the font and adjust spacing for easier touch interaction
   // in results
   .result {
-    font-size: $baseFontSize*1.25;
-    line-height: $baseLineHeight*2;
+    font-size: $font-size-base*1.25;
+    line-height: $line-height-computed*2;
     dl {
       dt, dd {
-        padding-top: $baseLineHeight;
+        padding-top: $line-height-computed;
       }
     }
   }

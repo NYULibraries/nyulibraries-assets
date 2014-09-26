@@ -12,8 +12,8 @@
     font-size: 300%;
     display: inline;
     font-weight: normal;
-    height: $eshelfHeaderHeight;
-    line-height: $eshelfHeaderLineHeight;
+    height: $eshelf-header-height;
+    line-height: $eshelf-header-line-height;
   }
 
   .username {
@@ -24,8 +24,8 @@
 
 .back-to {
   text-align: right;
-  height: $eshelfHeaderHeight;
-  line-height: $eshelfHeaderLineHeight;
+  height: $eshelf-header-height;
+  line-height: $eshelf-header-line-height;
   padding-bottom: 0;
   margin-bottom: 0;
 }

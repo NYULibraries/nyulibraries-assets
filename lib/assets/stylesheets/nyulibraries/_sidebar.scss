@@ -8,7 +8,7 @@
         padding: 5px;
         margin-top: 5px;
         margin-bottom: 0;
-        background-color: $breadcrumbsBackgroundColor;
+        background-color: $breadcrumb-bg;
       }
     }
   }
@@ -19,7 +19,7 @@
   }
 
   h2 {
-    @include background-image(linear-gradient(color-stops($sidebarHeaderBackgroundColor, lighten($sidebarHeaderBackgroundColor, 5%))));
+    @include background-image(linear-gradient(color-stops($sidebar-header-bg, lighten($sidebar-header-bg, 5%))));
     @include sidebar;
     font-weight: normal;
     i {
@@ -28,20 +28,20 @@
   }
 
   h3 {
-    border-top: 2px solid $nyuLibrariesLightBorderColor;
+    border-top: 2px solid $nyulibraries-border-color-light;
   }
 
   .sidebar-section {
     @include border-bottom-radius($border-radius-base);
-    margin-bottom: $baseLineHeight;
-    @include background-image(linear-gradient(color-stops($sidebarBackgroundColor, darken($sidebarBackgroundColor, 5%))));
+    margin-bottom: $line-height-computed;
+    @include background-image(linear-gradient(color-stops($sidebar-bg, darken($sidebar-bg, 5%))));
     ul {
       @include sidebar;
       @extend .list-unstyled !optional;
       li {
         margin: {
-          top: $baseLineHeight;
-          bottom: $baseLineHeight;
+          top: $line-height-computed;
+          bottom: $line-height-computed;
         }
       }
     }

@@ -1,12 +1,12 @@
 .results {
   @extend .separator;
-  background-color: $resultsBackgroundColor;
+  background-color: $results-bg;
 }
 
 .result {
   @extend .well;
-  @extend .well-small;
-  margin-bottom: $baseLineHeight/2;
+  @extend .well-sm;
+  margin-bottom: $line-height-computed/2;
   padding-right: 2px;
   @include clearfix;
 }
@@ -30,7 +30,7 @@ div.appetizer {
   min-height: 94px !important;
   float: left !important;
   div.number {
-    margin-right: $baseLineHeight;
+    margin-right: $line-height-computed;
   }
   .content-type {
     margin-top: 10px;
@@ -50,25 +50,25 @@ div.entree {
   margin-left: 10%;
   padding-left: 3%;
   border-left: 1px solid;
-  border-left: 1px solid lighten($nyuLibrariesLightBorderColor, 8%);
+  border-left: 1px solid lighten($nyulibraries-border-color-light, 8%);
   h2.title {
     margin-top: 0px;
   }
   div.frbr {
-    margin-bottom: $paddingStandard / 6;
+    margin-bottom: $padding-base-vertical / 6;
   }
   div.fulldetails {
-    margin-top: $paddingStandard / 3;
+    margin-top: $padding-base-vertical / 3;
   }
   div.author {
-    margin-bottom: $paddingStandard / 6;
+    margin-bottom: $padding-base-vertical / 6;
   }
   div.locations {
-    margin: ($paddingStandard / 3) 0;
+    margin: ($padding-base-vertical / 3) 0;
   }
   div.delivery {
     font-size: 125%;
-    margin: ($paddingStandard / 3) 0;
+    margin: ($padding-base-vertical / 3) 0;
     span {
       font-weight: bold;
       &.getItText { font-weight: normal; }
@@ -84,12 +84,12 @@ div.entree {
         @include no-padding;
         @include no-margin;
         display: inline;
-        &.separator {	margin: 0 ($paddingStandard / 6); }
+        &.separator {	margin: 0 ($padding-base-horizontal / 6); }
       }
     }
   }
   div.dessert, div.desert {
     @include float-right;
-    margin-left: $paddingStandard * (2/3);
+    margin-left: $padding-base-horizontal * (2/3);
   }
 }
