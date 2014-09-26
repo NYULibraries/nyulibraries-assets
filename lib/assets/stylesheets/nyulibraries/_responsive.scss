@@ -133,13 +133,6 @@
     padding-right: 10px;
   }
 
-  // Adjust spacing for easier touch interaction
-  .sidebar {
-    h2 {
-      margin-top: $baseLineHeight;
-    }
-  }
-
   // Make xlarge inputs a bit larger for phones
   .input-xlarge {
     width: 270px !important;

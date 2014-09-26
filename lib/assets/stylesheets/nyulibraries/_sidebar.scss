@@ -1,4 +1,17 @@
 .sidebar {
+  .navbar.navbar-default {
+    background-color: transparent;
+    border: 0;
+    .navbar-header {
+      float: none;
+      button.navbar-toggle {
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        background-color: $breadcrumbsBackgroundColor;
+      }
+    }
+  }
   h2, h3 {
     @include sidebar;
     margin-top: 0px;

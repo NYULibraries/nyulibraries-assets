@@ -71,11 +71,12 @@ module Nyulibraries
           collapse_classes << "in"
           style = "height: auto;"
         end
-        content_tag(:nav, class: "navbar") {
-          content_tag(:button, class: ["navbar-toggle", "collapsed"], type: "button", data: {toggle: "collapse", target: "##{id}.navbar-collapse"}) {
-            content_tag(:span, nil, class: "icon-bar") + content_tag(:span, nil, class: "icon-bar")
-          } + header +
-          content_tag(:div, id: id, class: collapse_classes, style: style) { yield }
+        content_tag(:nav, class: ["navbar", "navbar-default"]) {
+          content_tag(:div, class: "navbar-header") {
+            content_tag(:button, class: ["navbar-toggle", "collapsed"], type: "button", data: {toggle: "collapse", target: "##{id}.navbar-collapse"}) {
+              content_tag(:span, nil, class: "icon-bar") + content_tag(:span, nil, class: "icon-bar")
+            }+header
+          }+content_tag(:div, id: id, class: collapse_classes, style: style) { yield }
         }
       end
 
