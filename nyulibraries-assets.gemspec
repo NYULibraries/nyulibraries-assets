@@ -18,13 +18,13 @@ Gem::Specification.new do |s|
   s.test_files  = s.files.grep(%r{^(test|spec|features)/})
 
   s.add_dependency "compass", "~> 1.0.1"
-  s.add_dependency "bootstrap-sass", "~> 3.2.0"
+  s.add_dependency "bootstrap-sass", "~> 3.2.0.2"
   s.add_dependency "institutions", "~> 0.1.3"
 
   s.add_development_dependency "rake", "10.1.1"
   s.add_development_dependency "rails", "~> 4.1.0"
-  s.add_development_dependency "compass-rails", ">= 2.0.0"
-  s.add_development_dependency "coffee-script", "2.2.0"
+  s.add_development_dependency "compass-rails", "~> 2.0.0"
+  s.add_development_dependency "coffee-script", "~> 2.3.0"
   s.add_development_dependency "sass-rails", ">= 5.0.0.beta1"
   # Fix to 0.99.4 cuz 0.99.5 broke my shit.
   s.add_development_dependency "mustache", "0.99.4"

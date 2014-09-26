@@ -8,10 +8,10 @@ class NyulibrariesControllerTest < ActionController::TestCase
     assert_select "header", 1
     assert_select "header > div.institution > span", {count: 1, text: "NYU"}
     assert_select "header > div.application > span", {count: 1, text: "Dummy Application"}
-    assert_select "nav > ul.nyu-breadcrumbs", 1
-    assert_select "nav > ul.nyu-breadcrumbs > li > a", 2
-    assert_select "nav > ul.nyu-login", 1
-    assert_select "nav > ul.nyu-login > li > a", {count: 1, text: "Login"}
+    assert_select "nav > ol.nyu-breadcrumbs", 1
+    assert_select "nav > ol.nyu-breadcrumbs > li > a", 3
+    assert_select "nav > ol.nyu-breadcrumbs > li.nyu-login", 1
+    assert_select "nav > ol.nyu-breadcrumbs > li.nyu-login > a", {count: 1, text: "Login"}
   end
 
   test "should get bobcat" do
@@ -21,10 +21,10 @@ class NyulibrariesControllerTest < ActionController::TestCase
     assert_select "header", 1
     assert_select "header > div.institution > span", {count: 1, text: "NYU"}
     assert_select "header > div.application > span", {count: 1, text: "Dummy Application"}
-    assert_select "nav > ul.nyu-breadcrumbs", 1
-    assert_select "nav > ul.nyu-breadcrumbs > li > a", 2
-    assert_select "nav > ul.nyu-login", 1
-    assert_select "nav > ul.nyu-login > li > a", {count: 1, text: "Login"}
+    assert_select "nav > ol.nyu-breadcrumbs", 1
+    assert_select "nav > ol.nyu-breadcrumbs > li > a", 3
+    assert_select "nav > ol.nyu-breadcrumbs > li.nyu-login", 1
+    assert_select "nav > ol.nyu-breadcrumbs > li.nyu-login > a", {count: 1, text: "Login"}
     assert_select "footer", 1
   end
 
@@ -36,10 +36,10 @@ class NyulibrariesControllerTest < ActionController::TestCase
     assert_select "header > div.institution > span", {count: 1, text: "NYU"}
     assert_select "header > div.application > span", {count: 1, text: "Dummy Application"}
     assert_select "nav", 1
-    assert_select "nav > ul.nyu-breadcrumbs", 1
-    assert_select "nav > ul.nyu-breadcrumbs > li > a", 2
-    assert_select "nav > ul.nyu-login", 1
-    assert_select "nav > ul.nyu-login > li > a", {count: 1, text: "Login"}
+    assert_select "nav > ol.nyu-breadcrumbs", 1
+    assert_select "nav > ol.nyu-breadcrumbs > li > a", 3
+    assert_select "nav > ol.nyu-breadcrumbs > li.nyu-login", 1
+    assert_select "nav > ol.nyu-breadcrumbs > li.nyu-login > a", {count: 1, text: "Login"}
     assert_select "footer", 1
   end
 
@@ -60,8 +60,8 @@ class NyulibrariesControllerTest < ActionController::TestCase
     assert_select "header > div.institution > span", {count: 1, text: "NYU"}
     assert_select "header > div.application > span", {count: 1, text: "Dummy Application"}
     assert_select "nav", 1
-    assert_select "nav > ul.nyu-breadcrumbs", 1
-    assert_select "nav > ul.nyu-breadcrumbs > li > a", 2
+    assert_select "nav > ol.nyu-breadcrumbs", 1
+    assert_select "nav > ol.nyu-breadcrumbs > li > a", 3
     assert_select "footer", 1
   end
 end
