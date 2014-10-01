@@ -12,7 +12,7 @@
     clear: left;
   }
   .control-label {
-    width: $search-label-max-width;
+    max-width: $search-label-max-width;
     padding-top: 1px;
     text-align: right;
   }
