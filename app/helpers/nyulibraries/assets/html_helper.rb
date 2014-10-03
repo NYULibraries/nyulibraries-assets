@@ -7,8 +7,8 @@ module Nyulibraries
       def link_to_with_popover(*args)
         klass = args.delete_at 3
         content = args.delete_at 2
-        args[2] = {"title" => args[0], 
-          "data-content" => "<div class=\"#{klass}\">#{content}</div>", 
+        args[2] = {"title" => args[0],
+          "data-content" => "<div class=\"#{klass}\">#{content}</div>",
           class: "#{klass}"}
         link_to(*args)
       end
@@ -65,25 +65,26 @@ module Nyulibraries
       #       </ul>
       #     <% end %>
       def sidebar_section(id, header, open = false, &block)
-        collapse_classes = ["nav-collapse", "collapse", "sidebar-section"]
+        collapse_classes = ["navbar-collapse", "collapse", "sidebar-section"]
         style = ""
         if open
           collapse_classes << "in"
           style = "height: auto;"
         end
-        content_tag(:div, class: "navbar") {
-          content_tag(:a, class: ["btn", "btn-navbar"], data: {toggle: "collapse", target: "##{id}.nav-collapse"}) {
-            content_tag(:span, nil, class: "icon-bar") + content_tag(:span, nil, class: "icon-bar")
-          } + header +
-          content_tag(:div, id: id, class: collapse_classes, style: style) { yield }
+        content_tag(:nav, class: ["navbar", "navbar-default"]) {
+          content_tag(:div, class: "navbar-header") {
+            content_tag(:button, class: ["navbar-toggle", "collapsed"], type: "button", data: {toggle: "collapse", target: "##{id}.navbar-collapse"}) {
+              content_tag(:span, nil, class: "icon-bar") + content_tag(:span, nil, class: "icon-bar")
+            }+header
+          }+content_tag(:div, id: id, class: collapse_classes, style: style) { yield }
         }
       end
 
       # Will output HTML pagination controls. Modeled after blacklight helpers/blacklight/catalog_helper_behavior.rb#paginate_rsolr_response
-      # Equivalent to kaminari "paginate", but takes a Sunspot response as first argument. 
+      # Equivalent to kaminari "paginate", but takes a Sunspot response as first argument.
       # Will convert it to something kaminari can deal with (using #paginate_params), and
       # then call kaminari page_entries_info with that. Other arguments (options and block) same as
-      # kaminari paginate, passed on through. 
+      # kaminari paginate, passed on through.
       def page_entries_info_sunspot(response, options = {}, &block)
         per_page = response.results.count
         per_page = 1 if per_page < 1

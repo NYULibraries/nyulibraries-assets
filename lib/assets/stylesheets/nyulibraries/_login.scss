@@ -6,13 +6,13 @@
       width: 150px;
       line-height: 290px;
       font-size: 20px;
-      color: $linkColor;
+      color: $link-color;
       background-repeat: no-repeat;
       background-color: darken(whitesmoke, 10%);
       @include background-image(image-url("nyu.png"),linear-gradient(color-stops(darken(whitesmoke, 10%), darken(whitesmoke, 5%))));
       background-position: center 6px;
       &:hover, &:focus {
-        color: $linkColor;
+        color: $link-color;
         text-decoration: underline;
         background-image: image-url("nyu.png");
         background-position: center 6px;
@@ -29,15 +29,14 @@ a.nyulibraries-help-icon {
   font-weight: normal;
   padding: 6px 3px;
   background-color: white;
-  color: $linkColor;
+  color: $link-color;
   vertical-align: top;
-  border: 1px solid $linkColor;
+  border: 1px solid $link-color;
   @include border-radius(20px);
   &:hover, &:focus, &:active {
     // text-decoration: none;
   }
 }
-
 
 .popover {
   max-width: 300px;
@@ -47,10 +46,10 @@ a.nyulibraries-help-icon {
 #logins {
   max-width: 1100px;
   h2 {
-    line-height: $baseLineHeight * 1.75;
+    line-height: $line-height-computed * 1.75;
     .popover-content {
-      font-size: $baseFontSize;
-      line-height: $baseLineHeight;
+      font-size: $font-size-base;
+      line-height: $line-height-computed;
       font-weight: normal;
       max-height: 280px;
       overflow: -moz-scrollbars-vertical;

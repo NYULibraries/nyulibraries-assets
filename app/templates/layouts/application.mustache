@@ -11,19 +11,15 @@
     {{> common/header}}
     {{> common/nav}}
     <div class="nyu-container">
-      <div class="container-fluid">
-        <div class="row-fluid">
-          <div class="span8">
-            {{> common/alerts }}
-            {{> common/tabs}}
-            {{prepend_yield}}
-            {{yield}}
-          </div>
-          <div class="span4">
-            <div id="sidebar" class="sidebar">
-              {{> common/sidebar}}
-            </div>
-          </div>
+      <div class="col-sm-8">
+        {{> common/alerts }}
+        {{> common/tabs}}
+        {{prepend_yield}}
+        {{yield}}
+      </div>
+      <div class="col-sm-4">
+        <div id="sidebar" class="sidebar">
+          {{> common/sidebar}}
         </div>
       </div>
     </div>

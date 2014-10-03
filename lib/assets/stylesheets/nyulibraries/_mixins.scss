@@ -18,7 +18,6 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  @include ie7-restore-right-whitespace();
   line-height: 16px;
   vertical-align: middle;
   margin-top: 1px;
@@ -51,11 +50,12 @@
 
 @mixin tabs-fullscreen {
   .navbar-tabs {
+    border: none;
     margin:0;
     h4 {
       display: none;
     }
-    .navbar-inner, .container {
+    .navbar-collapse, .container {
       background-color: transparent;
       background-image: none !important;
       padding:0;
@@ -66,18 +66,21 @@
     }
     .nav-tabs {
       margin-bottom: 0px;
+      border-bottom: none;
+    }
+    .nav-tabs > li {
+      margin-bottom: 0;
     }
     .nav-tabs > li > a {
-      background-color: $tabBackgroundColor;
+      background-color: $tab-bg;
       color: lighten(black, 20%);
     }
-
     .nav-tabs > li > a:hover {
-      background-color: darken($tabBackgroundColor, 5%);
+      background-color: darken($tab-bg, 5%);
     }
     .nav-tabs > .active > a,
     .nav-tabs > .active > a:hover {
-      background-color: $searchBackgroundColor;
+      background-color: $search-bg;
       color: black;
       -webkit-box-shadow: none !important;
          -moz-box-shadow: none !important;
@@ -87,43 +90,48 @@
     #sidebar_tabs {
       display: none;
     }
-
-    .popover .tab {
-      width: 300px;
-    }
   }
 }
 
 @mixin tabs-responsive {
   .navbar-tabs {
-    h4 { display: block; }
+    border-top: 1px solid $tab-border-color;
+    border-bottom: 1px solid $tab-border-color;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    h4 {
+      display: block;
+      margin: .8em;
+    }
     ul.nav-tabs {
       border: none;
       margin-bottom: 0;
       li {
+        float: none;
+        border-top: 1px solid $tab-border-color;
         a {
-          border-top: 1px solid $tabBorderColor;
           -webkit-border-radius: 0;
              -moz-border-radius: 0;
                   border-radius: 0;
           margin-right: 0;
           margin-bottom: 0;
           font-size: 15px;
-          color: $tabHeaderColor;
+          color: $tab-header-color;
         }
         &:hover {
           a {
-            background-color: $tabActiveBackgroundColor;
+            background-color: $tab-active-bg;
           }
         }
         &.active {
           a {
-            color: $tabHeaderColor;
+            color: $tab-header-color;
             -webkit-box-shadow: none !important;
                -moz-box-shadow: none !important;
                     box-shadow: none !important;
           }
-          background-color: $tabActiveBackgroundColor;
+          background-color: $tab-active-bg;
         }
       }
       li:last-child {
@@ -133,14 +141,14 @@
       }
     }
 
-    .navbar-inner {
+    .navbar-collapse {
+      overflow: hidden;
+      border: none;
       min-height: auto;
       background-image: none !important;
-      margin-bottom:1em;
       padding: 0;
       background-color: transparent !important;
-      border: 1px solid $tabBorderColor;
-  
+
       h5, h4 {
         display: block;
         *width: 190px;

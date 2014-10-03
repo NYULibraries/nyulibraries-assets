@@ -2,11 +2,11 @@
 # included in your script. If you're using sprockets can include
 # them with the following require directives:
 #   For .js files:
-#     //= require bootstrap-tooltip
-#     //= require bootstrap-popover
+#     //= require bootstrap/tooltip
+#     //= require bootstrap/popover
 #   For .coffee files:
-#     #= require bootstrap-tooltip
-#     #= require bootstrap-popover
+#     #= require bootstrap/tooltip
+#     #= require bootstrap/popover
 #
 # Basic Tooltip
 class Tooltip
