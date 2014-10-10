@@ -68,9 +68,6 @@ $login-label-color: #9B9B9B;
       color: $login-help-color;
     }
   }
-  .facebook, .twitter {
-    display: inline;
-  }
   div.row {
     margin-bottom: 15px;
   }
@@ -111,7 +108,7 @@ $login-label-color: #9B9B9B;
         }
       }
     }
-    &.square, &#nyu_shibboleth-login {
+    &.square, &.primary-login {
       height: 0;
       position: relative;
       padding-bottom: 23%;
@@ -122,8 +119,10 @@ $login-label-color: #9B9B9B;
       border-right: $login-box-spacing-half solid white;
       border-left: $login-box-spacing-half solid white;
     }
-    &#nyu_shibboleth-login {
+    &.primary-login {
       font-size: 500%;
+    }
+    &#nyu_shibboleth-login {
       background-color: $nyu-purple;
     }
     &#bobst-login {
@@ -140,6 +139,17 @@ $login-label-color: #9B9B9B;
     }
     &#visitor-login {
       background-color: $visitor-bg;
+    }
+    &#facebook-login {
+      background-color: $facebook-bg;
+      padding-bottom: 30.6%;
+    }
+    &#twitter-login {
+      background-color: $twitter-bg;
+      padding-bottom: 30.6%;
+    }
+    &#facebook-login, &#twitter-login {
+      font-size: 200%;
     }
   }
 
@@ -189,6 +199,9 @@ $login-label-color: #9B9B9B;
     }
     &.auth-container {
       padding: 0 25px;
+    }
+    div.primary-login {
+      font-size: 220% !important;
     }
   }
 }
