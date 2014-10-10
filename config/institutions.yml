@@ -80,9 +80,7 @@ NYUSH:
       name: NYU
       primary: nyu_shibboleth
       secondary:
-        - ns
-        - cu
-        - nysid
+        - bobst
 
 NYUAD:
   name: NYU Abu Dhabi Library
@@ -120,9 +118,7 @@ NYUAD:
       name: NYU
       primary: nyu_shibboleth
       secondary:
-        - ns
-        - cu
-        - nysid
+        - bobst
 
 CU:
   name: The Cooper Union Library
@@ -157,6 +153,8 @@ CU:
       secondary:
         - nyu
         - ns
+        - nysid
+      general_public: true
 
 
 NS:
@@ -204,6 +202,7 @@ NS:
         - nyu
         - cu
         - nysid
+      general_public: true
 
 HSL:
   name: NYU Health Sciences Libraries
@@ -231,9 +230,7 @@ HSL:
       name: NYU
       primary: nyu_shibboleth
       secondary:
-        - ns
-        - cu
-        - nysid
+        - bobst
 
 NYSID:
   name: New York School of Interior Design
@@ -266,3 +263,4 @@ NYSID:
         - nyu
         - ns
         - cu
+      general_public: true
