@@ -121,6 +121,9 @@ $login-label-color: #9B9B9B;
     }
     &.primary-login {
       font-size: 500%;
+      &#ns-login {
+        font-size: 400%;
+      }
     }
     &#nyu_shibboleth-login {
       background-color: $nyu-purple;
