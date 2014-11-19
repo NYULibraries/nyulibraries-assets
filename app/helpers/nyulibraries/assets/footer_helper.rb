@@ -16,7 +16,16 @@ module Nyulibraries
       # Placeholder.
       def gauges_tracking_code
       end
-  
+
+      # Using Google Analytics? Only in production!
+      def google_analytics?
+        Rails.env.production?
+      end
+
+      # Placeholder.
+      def google_analytics_tracking_code
+      end
+
       def footer_html
         t('footer.footer_html')
       end
