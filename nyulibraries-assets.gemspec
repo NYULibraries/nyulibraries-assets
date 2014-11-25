@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "compass", "~> 1.0.1"
   s.add_dependency "bootstrap-sass", "~> 3.2.0.2"
+  s.add_dependency "font-awesome-rails", "~> 4.2.0.0"
   s.add_dependency "institutions", "~> 0.1.3"
 
   s.add_development_dependency "rake", "10.1.1"

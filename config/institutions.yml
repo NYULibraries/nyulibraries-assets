@@ -35,12 +35,13 @@ NYU:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYU&tab=reserves'
         tip: 'Search by instructor, course name, course title, etc.'
     login:
+      name: NYU
       primary: nyu_shibboleth
       secondary:
-        - ns
-        - cu
-        - nysid
         - bobst
+        - nysid
+        - cu
+        - ns
       general_public: true
 
 NYUSH:
@@ -76,11 +77,10 @@ NYUSH:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYUSH&tab=nyushcr'
         tip: 'Search by instructor, course name, course title, etc.'
     login:
+      name: NYU
       primary: nyu_shibboleth
       secondary:
-        - ns
-        - cu
-        - nysid
+        - bobst
 
 NYUAD:
   name: NYU Abu Dhabi Library
@@ -115,11 +115,10 @@ NYUAD:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYUAD&tab=nyuadcr'
         tip: 'Search by Course or Professor'
     login:
+      name: NYU
       primary: nyu_shibboleth
       secondary:
-        - ns
-        - cu
-        - nysid
+        - bobst
 
 CU:
   name: The Cooper Union Library
@@ -149,10 +148,13 @@ CU:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=CU&tab=cucr'
         tip: 'Search course reserves by instructor, course name or number, author, title, and other terms'
     login:
+      name: Cooper Union
       primary: aleph
       secondary:
         - nyu
         - ns
+        - nysid
+      general_public: true
 
 
 NS:
@@ -194,11 +196,13 @@ NS:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NS&tab=nscr'
         tip: 'Search for Reserves by title or instructor name'
     login:
+      name: The New School
       primary: new_school_ldap
       secondary:
         - nyu
         - cu
         - nysid
+      general_public: true
 
 HSL:
   name: NYU Health Sciences Libraries
@@ -223,11 +227,10 @@ HSL:
         display: Journals A-Z
         tip: Locate journals by title or citation
     login:
+      name: NYU
       primary: nyu_shibboleth
       secondary:
-        - ns
-        - cu
-        - nysid
+        - bobst
 
 NYSID:
   name: New York School of Interior Design
@@ -254,9 +257,10 @@ NYSID:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYSID&tab=reserves'
         tip: 'Search for books on reserve by instructor, course name or number, author, title, and other terms."'
     login:
+      name: NYSID
       primary: aleph
       secondary:
         - nyu
         - ns
         - cu
-        
+      general_public: true
