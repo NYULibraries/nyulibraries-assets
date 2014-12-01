@@ -6,6 +6,7 @@ $login-box-spacing: $login-box-spacing-half*2;
 $login-help-color: #008996;
 $login-box-shadow-color: rgba(172,172,172,.64);
 $login-label-color: #9B9B9B;
+$login-text-color: #4a4a4a;
 
 @mixin container-box() {
   // Shadow around it
@@ -191,7 +192,29 @@ $login-label-color: #9B9B9B;
       }
     }
   }
-
+  // Popover
+  .popover {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: $login-text-color;
+    .footer-help {
+      width: 20em;
+    }
+    h3 {
+      font-size: 100%;
+      margin: 0;
+      padding: 9px 14px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.5em;
+      font-weight: normal;
+    }
+    max-width: 50em;
+    a {
+      font-weight: bold;
+      color: $nyu-purple !important;
+    }
+  }
 }
 
 // Change spacing between rows for phones
