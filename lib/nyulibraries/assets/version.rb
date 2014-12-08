@@ -1,5 +1,5 @@
 module Nyulibraries
   module Assets
-    VERSION = "4.1.0"
+    VERSION = "4.1.3"
   end
 end
