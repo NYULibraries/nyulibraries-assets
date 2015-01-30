@@ -32,7 +32,7 @@ module Nyulibraries
         content_tag(:div, html_options) {
           content_tag(:button, title, button_html_options) +
           # Need to explicitly add margin-top for firefox. WTF?
-          content_tag(:button, toggle_html_options) { content_tag(:span, nil, class: "caret", style: "margin-top: 8px;") } +
+          content_tag(:button, toggle_html_options) { content_tag(:span, nil, class: "caret") } +
           content_tag(:ul, menu_html_options.merge(role: "menu")) {
             list.collect { |member|
               content_tag(:li){ member }
