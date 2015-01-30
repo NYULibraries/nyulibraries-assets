@@ -15,19 +15,19 @@ module Nyulibraries
 
       # Returns a Bootstrap button dropdown menu
       def button_dropdown(title, list, toggle_button = true)
-        dropdown(title, list, toggle_button, {class: ["btn-group"]}, {class: ["btn", "dropdown-toggle"]})
+        dropdown(title, list, toggle_button, {class: ["btn-group"]}, {class: ["btn", "btn-default", "dropdown-toggle"]})
       end
 
       # Returns a Bootstrap button dropdown menu, pulled right
       def right_button_dropdown(title, list, toggle_button = true)
-        dropdown(title, list, toggle_button, {class: ["btn-group", "pull-right"]}, {class: ["btn", "dropdown-toggle"]}, {class: ["pull-right", "dropdown-menu"]})
+        dropdown(title, list, toggle_button, {class: ["btn-group", "pull-right"]}, {class: ["btn", "btn-default", "dropdown-toggle"]}, {class: ["pull-right", "dropdown-menu"]})
       end
 
       # Returns a Bootstrap dropdown
       def dropdown(title, list, toggle_button = true, html_options = {:class => "dropdown"}, toggle_html_options = {class: "dropdown-toggle"}, menu_html_options={class: "dropdown-menu"})
         data_toggle_option = {data: {toggle: "dropdown"}}
         toggle_html_options.merge!(data_toggle_option)
-        button_html_options = {class: "btn"}
+        button_html_options = {class: ["btn", "btn-default"]}
         button_html_options.merge!(data_toggle_option) if toggle_button
         content_tag(:div, html_options) {
           content_tag(:button, title, button_html_options) +
