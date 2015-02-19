@@ -5,7 +5,7 @@
      -moz-border-radius: 0;
           border-radius: 0;
   color: lighten(black, 20%);
-  background-color: $breadcrumb-bg;
+  background-color: $breadcrumbs-bg;
   padding: {
     top: $line-height-computed/2 + 5;
     bottom: $line-height-computed/2 + 5;
@@ -13,6 +13,6 @@
   }
   > li+li:before {
     content: " > ";
-    color: darken($breadcrumb-bg, 50%);
+    color: darken($breadcrumbs-bg, 50%);
   }
 }
