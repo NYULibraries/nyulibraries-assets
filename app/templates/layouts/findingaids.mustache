@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{meta}}
+    <title>{{application_title}}</title>
+    {{application_stylesheet}}
+    {{application_javascript}}
+  </head>
+  <body{{#onload}} onload="{{onload}}"{{/onload}}{{#body_class}} class="{{body_class}}"{{/body_class}}{{#body_id}} id="{{body_id}}"{{/body_id}}>
+    {{prepend_body}}
+    {{> common/header}}
+    {{> common/nav}}
+    <div class="nyu-container">
+      {{#left_sidebar}}
+      <div class="col-sm-3">
+        {{> common/left_sidebar}}
+      </div>
+      <div class="col-sm-7">
+        {{> common/alerts }}
+        {{> common/tabs}}
+        {{prepend_yield}}
+        {{yield}}
+      </div>
+      {{/left_sidebar}}
+      {{^left_sidebar}}
+      <div class="col-sm-10">
+        {{> common/alerts }}
+        {{> common/tabs}}
+        {{prepend_yield}}
+        {{yield}}
+      </div>
+      {{/left_sidebar}}
+      <div class="col-sm-2">
+        <div id="sidebar" class="sidebar">
+          {{> common/right_sidebar}}
+        </div>
+      </div>
+    </div>
+    {{> common/footer}}
+  </body>
+</html>
