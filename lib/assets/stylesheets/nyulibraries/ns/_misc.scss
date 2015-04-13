@@ -22,7 +22,12 @@ a {
     text-decoration: none;
 }
 
-a.hover {
+a:hover {
+    color: #C01F14;
+    text-decoration: underline;
+}
+
+a:focus {
     color: #C01F14;
     text-decoration: underline;
 }
