@@ -236,7 +236,7 @@ NYSID:
     dir: nysid
     breadcrumbs:
       title: New York School of Interior Design Library
-      url: http://nysidlibrary.org/
+      url: http://library.nysid.edu/library
     ill:
       link_html: My interlibrary loan (ILL)
       url: http://ill.library.nyu.edu
