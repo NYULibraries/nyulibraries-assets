@@ -18,30 +18,29 @@ NYU:
       all:
         display: 'Books & More'
         url: http://bobcat.library.nyu.edu
-        tip: 'Search NYU’s catalog for books, journals, scripts, scores, archival materials, NYU dissertations, videos, sound recordings'
+        tip: 'Books & e-books, journals & e-journals, scripts, scores, archival materials, NYU dissertations, videos, sound recordings'
       remote:
         display: 'Articles & Databases'
         url: https://arch.library.nyu.edu
-        tip: Search databases for articles or browse databases by subject
+        tip: by Subject and Content Type
       databases:
         display: Databases A-Z
         url: https://arch.library.nyu.edu/databases/alphabetical/
-        tip: Search for databases by title
+        tip: All databases by title
       journals:
         display: Journals
-        tip: Search for journals by title or for articles by citation
+        tip: Find e-journals by title or locate a known article
       reserves:
         display: Course Reserves
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYU&tab=reserves'
-        tip: 'Search for library materials that are held at one location for a particular course'
+        tip: 'Search by instructor, course name, course title, etc.'
     login:
-      name: NYU
       primary: nyu_shibboleth
       secondary:
-        - bobst
-        - nysid
-        - cu
         - ns
+        - cu
+        - nysid
+        - bobst
       general_public: true
 
 NYUSH:
@@ -77,10 +76,11 @@ NYUSH:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYUSH&tab=nyushcr'
         tip: 'Search by instructor, course name, course title, etc.'
     login:
-      name: NYU
       primary: nyu_shibboleth
       secondary:
-        - bobst
+        - ns
+        - cu
+        - nysid
 
 NYUAD:
   name: NYU Abu Dhabi Library
@@ -115,10 +115,11 @@ NYUAD:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYUAD&tab=nyuadcr'
         tip: 'Search by Course or Professor'
     login:
-      name: NYU
       primary: nyu_shibboleth
       secondary:
-        - bobst
+        - ns
+        - cu
+        - nysid
 
 CU:
   name: The Cooper Union Library
@@ -148,13 +149,10 @@ CU:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=CU&tab=cucr'
         tip: 'Search course reserves by instructor, course name or number, author, title, and other terms'
     login:
-      name: Cooper Union
       primary: aleph
       secondary:
         - nyu
         - ns
-        - nysid
-      general_public: true
 
 
 NS:
@@ -196,13 +194,11 @@ NS:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NS&tab=nscr'
         tip: 'Search for Reserves by title or instructor name'
     login:
-      name: The New School
       primary: new_school_ldap
       secondary:
         - nyu
         - cu
         - nysid
-      general_public: true
 
 HSL:
   name: NYU Health Sciences Libraries
@@ -227,10 +223,11 @@ HSL:
         display: Journals A-Z
         tip: Locate journals by title or citation
     login:
-      name: NYU
       primary: nyu_shibboleth
       secondary:
-        - bobst
+        - ns
+        - cu
+        - nysid
 
 NYSID:
   name: New York School of Interior Design
@@ -239,7 +236,7 @@ NYSID:
     dir: nysid
     breadcrumbs:
       title: New York School of Interior Design Library
-      url: http://nysidlibrary.org/
+      url: http://library.nysid.edu/library
     ill:
       link_html: My interlibrary loan (ILL)
       url: http://ill.library.nyu.edu
@@ -257,10 +254,8 @@ NYSID:
         url: 'http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYSID&tab=reserves'
         tip: 'Search for books on reserve by instructor, course name or number, author, title, and other terms."'
     login:
-      name: NYSID
       primary: aleph
       secondary:
         - nyu
         - ns
         - cu
-      general_public: true
