@@ -1,18 +1,28 @@
 #ns_all_help{
-  display:none
+  display:none;
 }
 #ns_tutorials{
-  display:none
+  display:none;
 }
 #ns_aal_txt{
-  display:none
+  display:none;
 }
 #ns_schedule{
-  display:none
+  display:none;
 }
 .persistent_dialog{
-  display:none
+  display:none;
 }
 #tags{
-  display:none
+  display:none;
+}
+
+a {
+    color: #E82E21;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C01F14;
+    text-decoration: underline;
 }
