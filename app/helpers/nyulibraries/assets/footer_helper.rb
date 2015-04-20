@@ -26,6 +26,15 @@ module Nyulibraries
       def google_analytics_tracking_code
       end
 
+      # Using Crazyegg? Only in production!
+      def crazyegg?
+        Rails.env.production?
+      end
+
+      # Placeholder.
+      def crazyegg_tracking_code
+      end
+
       def footer_html
         t('footer.footer_html')
       end
