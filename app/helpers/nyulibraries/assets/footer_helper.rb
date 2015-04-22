@@ -26,13 +26,9 @@ module Nyulibraries
       def google_analytics_tracking_code
       end
 
-      # Using Crazyegg? Only in production!
+      # Using Crazyegg? Only in production! and when CRAZYEGG env var is set
       def crazyegg?
-        Rails.env.production?
-      end
-
-      # Placeholder.
-      def crazyegg_tracking_code
+        Rails.env.production? && ENV["CRAZYEGG"]
       end
 
       def footer_html
