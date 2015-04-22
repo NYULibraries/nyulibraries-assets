@@ -5,27 +5,42 @@
 [![Coverage Status](https://coveralls.io/repos/NYULibraries/nyulibraries-assets/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/nyulibraries-assets?branch=master)
 
 ## Usage
-### Rails
+### Rails 4.1.x and Bootstrap 3
+
+No more `:assets` group in Gemfile:
+```ruby
+gem 'sass-rails', '~> 5.0.0'
+gem 'compass-rails', '~> 2.0.0'
+gem 'mustache', '0.99.4'
+gem 'mustache-rails', git: 'git://github.com/josh/mustache-rails.git', :require => 'mustache/railtie'
+gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.4.0'
+```
+
+Note that mustache has been locked into `0.99.4`. That's because `> 0.99.4` broke the functionality and semantic versioning, clearly not a backwards compatible patch. There have since been updates but this gem has not been updated to reflect those changes yet.
+
+### Rails 3.x and Bootstrap 2
 In your gemfile,
 
-    group :assets do
-      ...
-      gem 'sass-rails', "~> 3.2.5"
-      gem 'compass-rails', "~> 1.0.3"
-      gem 'nyulibraries-assets', :git => "git://github.com/NYULibraries/nyulibraries-assets.git"
-      gem 'mustache-rails", ~> 0.2.3"
-      ...
-    end
+```ruby
+group :assets do
+  ...
+  gem 'sass-rails', "~> 3.2.5"
+  gem 'compass-rails', "~> 1.0.3"
+  gem 'nyulibraries-assets', :git => "git://github.com/NYULibraries/nyulibraries-assets.git", :tag => "3.2.6"
+  gem 'mustache-rails", ~> 0.2.3"
+  ...
+end
+```
 
 ### Stylesheets
 Import "nyulibraries" in your SCSS file of choice to get all NYU Libraries and Bootstrap styles, mixins and variables!
 
     @import "nyulibraries";
-    
+
 ### Javascripts
 _**Currently assumes that you're using [Sprockets](https://github.com/sstephenson/sprockets)**_
 
-You can include the NYU Libraries javascripts through two methods. 
+You can include the NYU Libraries javascripts through two methods.
 In this case, Sprocket's `//=` (`#=` in CoffeeScript) require directives.
 
 We have a helper that includes all available javascripts and preps BobCat elements:
@@ -43,16 +58,16 @@ You can also load individual modules, provided you sort out any related dependen
     //= require nyulibraries/popover
 
 #### Tooltips and Popovers
-NYU Libraries Popovers use Twitter Bootstrap's [Tooltips](http://twitter.github.com/bootstrap/javascript.html#tooltips) 
+NYU Libraries Popovers use Twitter Bootstrap's [Tooltips](http://twitter.github.com/bootstrap/javascript.html#tooltips)
 and [Popovers](http://twitter.github.com/bootstrap/javascript.html#popovers)
 
 NYU Libraries Tooltips and Popovers leverage the Builder pattern to chain Bootstrap options so you can do something like this
-    
+
     $ ->
       new window.nyulibraries.Popover('.someclass').html(false).trigger('click').init()
 
 There are 4 classes of Tooltips/Popovers
-    
+
 1. `Tooltip` - Bootstrap tooltip
 2. `Popover` - Bootstrap popover that can load HTML from an external source
 3. `HoverPopover` - Popover with extended hover scope that allows users to mouseover the popover.
@@ -63,7 +78,14 @@ There are 4 classes of Tooltips/Popovers
 In BobCat, `Popover`s are enabled for tab tooltips and a `HoverPopover` is enable for the My Workspace help icon.
 
 ### Icons and Sprites
-NYU Libraries assets have sprites built in.
+NYU Libraries assets have sprites built in using Compass.
 
-## Compass
-Documentation coming soon.
+The following lines in your SCSS will generate sprites from the all PNGs in `#{images_path}/icons`:
+
+```
+@import "compass";
+@import "icons/*.png";
+@include all-icons-sprites;
+```
+
+Read more about [Spriting with Compass](http://compass-style.org/help/tutorials/spriting/).
