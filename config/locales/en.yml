@@ -34,7 +34,7 @@ en:
       edit: edit
       save: save
       label_html: "Labeled as:"
-      placeholder: Add comma delimitted labels
+      placeholder: Add comma delimited labels
       submit_html: Save labels
     collection:
       eshelf:
