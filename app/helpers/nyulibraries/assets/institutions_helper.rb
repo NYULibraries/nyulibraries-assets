@@ -27,6 +27,7 @@ module Nyulibraries
       def url_for(options={})
         if institution_param.present? and options.is_a? Hash
           options[:institution] ||= institution_param
+          options[:institute] ||= institution_param
         end
         super options
       end
@@ -54,9 +55,15 @@ module Nyulibraries
       private :institutions
 
       # The institution param as a Symbol
+      # failover to institute if it exists for backwards compatibility
       def institution_param
-        params['institution'].upcase.to_sym if params['institution'].present?
+        if params['institution'].present?
+          params['institution'].upcase.to_sym
+        elsif params['institute'].present?
+          params['institute'].upcase.to_sym
+        end
       end
+      alias_method :institute_param, :institution_param
       private :institution_param
     end
   end
