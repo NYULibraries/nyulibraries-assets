@@ -26,7 +26,7 @@ module Nyulibraries
       # Override Rails #url_for to add institution
       def url_for(options={})
         if institution_param.present? and options.is_a? Hash
-          options[:institute] ||= institution_param
+          options[:institution] ||= institution_param
         end
         super options
       end
@@ -38,6 +38,14 @@ module Nyulibraries
         end
       end
       private :institution_from_ip
+
+      # Get the institution from a given code
+      def institution_from_code(code)
+        unless code.nil?
+          @institution_from_code ||= institutions[code.upcase.to_sym]
+        end
+      end
+      private :institution_from_code
 
       # All institutions
       def institutions
