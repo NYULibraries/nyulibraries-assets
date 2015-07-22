@@ -30,7 +30,7 @@ module Nyulibraries
       end
 
       def username
-        if current_user.firstname.present?
+        if current_user.respond_to?(:firstname) && current_user.firstname.present?
           current_user.firstname
         else
           current_user.username
