@@ -19,6 +19,16 @@ $login-text-color: #4a4a4a;
 }
 
 #logins {
+  &.ns-container {
+    div.primary-login, div.alt-login {
+      &#nysid-login {
+        background-color: $nysid-bg !important;
+      }
+      &#ns-login {
+        background-color: $ns-bg !important;
+      }
+    }
+  }
   @include container-box();
   font-family: 'Montserrat', sans-serif;
   &.options-container {
@@ -132,13 +142,13 @@ $login-text-color: #4a4a4a;
       background-color: $bobst-bg;
     }
     &#nysid-login {
-      background-color: $nysid-bg;
+      background-color: $nysid-secondary-bg;
     }
     &#cu-login {
       background-color: $cu-bg;
     }
     &#ns-login {
-      background-color: $ns-bg;
+      background-color: $ns-secondary-bg;
     }
     &#visitor-login {
       background-color: $visitor-bg;
