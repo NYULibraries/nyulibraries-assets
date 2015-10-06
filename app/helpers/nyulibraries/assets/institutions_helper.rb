@@ -37,7 +37,14 @@ module Nyulibraries
       # Grab the first institution that matches the client IP
       def institution_from_ip
         unless request.nil?
-          @institution_from_ip ||= Institutions.with_ip(request.remote_ip).first
+          @institution_from_ip ||= begin
+            institutions_from_ip = institutions.find_all do |code, institution|
+              institution.includes_ip? request.remote_ip
+            end
+            # Get the first found institution in form { :NYU => Institution }
+            # then get the institution object
+            institutions_from_ip.first.last
+          end
         end
       end
       private :institution_from_ip
@@ -52,7 +59,14 @@ module Nyulibraries
 
       # All institutions
       def institutions
-        @institutions ||= Institutions.institutions
+        @institutions ||= {}
+        Institutions.institutions.each do |code, institution|
+          unless institution.ip_addresses.nil? || institution.ip_addresses.is_a?(IPAddrRangeSet)
+            institution.send("ip_addresses=", institution.ip_addresses)
+          end
+          @institutions[code] = institution
+        end
+        @institutions
       end
       private :institutions
 
