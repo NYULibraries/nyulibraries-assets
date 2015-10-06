@@ -42,8 +42,9 @@ module Nyulibraries
               institution.includes_ip? request.remote_ip
             end
             # Get the first found institution in form { :NYU => Institution }
-            # then get the institution object
-            institutions_from_ip.first.last
+            # then get the institution object, rescue if nothing is found
+            # so conditional can move on
+            institutions_from_ip.first.last rescue nil
           end
         end
       end
