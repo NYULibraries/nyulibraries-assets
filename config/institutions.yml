@@ -23,6 +23,10 @@ NYU:
         display: 'Articles & Databases'
         url: https://arch.library.nyu.edu
         tip: by Subject and Content Type
+      databases:
+        display: Databases A-Z
+        url: https://arch.library.nyu.edu/databases/alphabetical/
+        tip: All databases by title
       journals:
         display: Journals
         tip: Find e-journals by title or locate a known article
@@ -61,6 +65,10 @@ NYUSH:
         display: 'Articles & Databases'
         url: https://arch.library.nyu.edu/nyush
         tip: by Subject and Content Type
+      databases:
+        display: Databases A-Z
+        url: https://arch.library.nyu.edu/nyush/databases/alphabetical/
+        tip: All databases by title
       journals:
         display: Journals
         tip: Find e-journals by title or locate a known article
@@ -95,6 +103,10 @@ NYUAD:
         display: 'Articles & Databases'
         url: https://arch.library.nyu.edu/nyuad
         tip: Sorted by Subject and Content Type
+      databases:
+        display: Databases A-Z
+        url: https://arch.library.nyu.edu/nyuad/databases/alphabetical/
+        tip: All Databases by Title
       journals:
         display: Journals
         tip: Find E-journals by Title or Locate a Known Article
