@@ -36,17 +36,14 @@ module Nyulibraries
 
       # Grab the first institution that matches the client IP
       def institution_from_ip
+        # Get the first found institution in form { :NYU => Institution }
+        # then get the institution object, rescue if nothing is found
+        # so conditional can move on
         unless request.nil?
-          @institution_from_ip ||= begin
-            institutions_from_ip = institutions.find_all do |code, institution|
-              institution.includes_ip? request.remote_ip
-            end
-            # Get the first found institution in form { :NYU => Institution }
-            # then get the institution object, rescue if nothing is found
-            # so conditional can move on
-            institutions_from_ip.first.last rescue nil
-          end
+          @institution_from_ip ||= institutions.find_all { |code, institution| institution.includes_ip? request.remote_ip }.first.last
         end
+      rescue
+        nil
       end
       private :institution_from_ip
 
@@ -60,14 +57,11 @@ module Nyulibraries
 
       # All institutions
       def institutions
-        @institutions ||= {}
-        Institutions.institutions.each do |code, institution|
+        @institutions ||= Institutions.institutions.each do |code, institution|
           unless institution.ip_addresses.nil? || institution.ip_addresses.is_a?(IPAddrRangeSet)
             institution.send("ip_addresses=", institution.ip_addresses)
           end
-          @institutions[code] = institution
         end
-        @institutions
       end
       private :institutions
 
