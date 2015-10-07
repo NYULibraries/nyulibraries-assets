@@ -57,6 +57,9 @@ module Nyulibraries
 
       # All institutions
       def institutions
+        # Reset ip_addresses with the protected setter
+        # to separate IP ranges as a string into IPRange objects
+        # See institutions gem: https://github.com/scotdalton/institutions/blob/745b26efb082bec055818baf61a112f4f99db657/lib/institutions/institution/ip_addresses.rb#L6-L12
         @institutions ||= Institutions.institutions.each do |code, institution|
           unless institution.ip_addresses.nil? || institution.ip_addresses.is_a?(IPAddrRangeSet)
             institution.send("ip_addresses=", institution.ip_addresses)
