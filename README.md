@@ -9,14 +9,16 @@
 
 No more `:assets` group in Gemfile:
 ```ruby
-gem 'sass-rails', '~> 5.0.0'
+gem 'sass-rails', '5.0.0.beta1'
 gem 'compass-rails', '~> 2.0.0'
 gem 'mustache', '0.99.4'
-gem 'mustache-rails', git: 'git://github.com/josh/mustache-rails.git', :require => 'mustache/railtie'
-gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.4.0'
+gem 'mustache-rails', github: 'NYULibraries/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
+gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.6.1'
 ```
 
 Note that mustache has been locked into `0.99.4`. That's because `> 0.99.4` broke the functionality and semantic versioning, clearly not a backwards compatible patch. There have since been updates but this gem has not been updated to reflect those changes yet.
+
+Note that mustache-rails was forked and locked in at `v0.2.3`. This is because the former maintainer took the code off rubygems. The long term goal is to remove the dependency on this and switch to something that is maintained.
 
 ### Rails 3.x and Bootstrap 2
 In your gemfile,
@@ -27,7 +29,7 @@ group :assets do
   gem 'sass-rails', "~> 3.2.5"
   gem 'compass-rails', "~> 1.0.3"
   gem 'nyulibraries-assets', :git => "git://github.com/NYULibraries/nyulibraries-assets.git", :tag => "3.2.6"
-  gem 'mustache-rails", ~> 0.2.3"
+  gem 'mustache-rails', github: 'NYULibraries/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
   ...
 end
 ```

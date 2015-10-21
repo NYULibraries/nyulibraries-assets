@@ -36,14 +36,16 @@ module Nyulibraries
 
       # Grab the first institution that matches the client IP
       def institution_from_ip
-        # Get the first found institution in form { :NYU => Institution }
-        # then get the institution object, rescue if nothing is found
-        # so conditional can move on
         unless request.nil?
-          @institution_from_ip ||= institutions.find_all { |code, institution| institution.includes_ip? request.remote_ip }.first.last
+          @institution_from_ip ||= begin
+            institutions_from_ip = institutions.find_all { |code, institution| institution.includes_ip? request.remote_ip }
+            if institutions_from_ip.present?
+              # Get first matching institution and get the last element from
+              # [:NYU, Institution] array, that is, the actual Institution object
+              institutions_from_ip.first.last
+            end
+          end
         end
-      rescue
-        nil
       end
       private :institution_from_ip
 
@@ -62,7 +64,7 @@ module Nyulibraries
         # See institutions gem: https://github.com/scotdalton/institutions/blob/745b26efb082bec055818baf61a112f4f99db657/lib/institutions/institution/ip_addresses.rb#L6-L12
         @institutions ||= Institutions.institutions.each do |code, institution|
           unless institution.ip_addresses.nil? || institution.ip_addresses.is_a?(IPAddrRangeSet)
-            institution.send("ip_addresses=", institution.ip_addresses)
+            institution.send("ip_addresses=", ip_addresses_for(institution))
           end
         end
       end
@@ -80,6 +82,41 @@ module Nyulibraries
         params['institute'].upcase.to_sym if params['institute'].present?
       end
       private :institute_param
+
+      # Get the IP addresses for an individual institution after it's already been loaded
+      # I don't like this but we need it to get around the fact that Institutions
+      # deep merges with parent institutions and so IPs don't match one specific
+      # institution but the parent
+      def ip_addresses_for(institution)
+        varname = "@ip_addresses_for_#{institution.code.to_s.downcase}"
+        ip_addresses_for_institution = self.instance_variable_get(varname)
+        if ip_addresses_for_institution.nil?
+          self.instance_variable_set(varname, reload_ip_addresses_for(institution))
+        else
+          ip_addresses_for_institution
+        end
+      end
+      private :ip_addresses_for
+
+      # Take a page from the institutions gem and reload just the ip_addresses
+      # as an array for the given institution
+      def reload_ip_addresses_for(institution)
+        institution_ip_addresses = []
+        Institutions.loadfiles.each do |loadfile|
+          # Loop through institutions in the yaml
+          YAML.load(ERB.new(File.read(loadfile)).result).each_pair do |code, elements|
+            code = code.to_sym
+            if institution.code == code
+              ip_addresses = elements[:ip_addresses] || elements["ip_addresses"]
+              if ip_addresses
+                institution_ip_addresses << ip_addresses
+              end
+            end
+          end
+        end
+        institution_ip_addresses.flatten.uniq
+      end
+      private :reload_ip_addresses_for
     end
   end
 end
