@@ -8,7 +8,7 @@ module Nyulibraries
         breadcrumbs = []
         if breadcrumbs.empty?
           breadcrumbs << link_to(views["breadcrumbs"]["title"], views["breadcrumbs"]["url"])
-          breadcrumbs << link_to('BobCat', "http://bobcat.library.nyu.edu/#{views["dir"]}")
+          breadcrumbs << link_to('BobCat', bobcat_breadcrumb_root)
         end
       end
 
@@ -35,6 +35,24 @@ module Nyulibraries
         else
           current_user.username
         end
+      end
+
+      def bobcat_breadcrumb_root
+        "#{bobcat_breadcrumb_base_url}/#{bobcat_breadcrumb_alias}"
+      end
+
+      # Ensure there is always a bobcat url to show even if it isn't set anywhere
+      def bobcat_breadcrumb_base_url
+        (current_institution.bobcat_url) ? current_institution.bobcat_url : default_institution.bobcat_url
+      rescue
+        default_institution.bobcat_url
+      end
+
+      # Ensure there is always an alias to show even if it isn't set anywhere
+      def bobcat_breadcrumb_alias
+        (current_institution.bobcat_alias) ? current_institution.bobcat_alias : views["dir"]
+      rescue
+        views["dir"]
       end
     end
   end

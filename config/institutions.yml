@@ -5,6 +5,8 @@ NYU:
   auth:
     code: NYU
   getit_url: https://getit.library.nyu.edu/nyu/resolve?
+  bobcat_url: http://bobcat.library.nyu.edu
+  bobcat_alias: nyu
   views:
     css: application
     dir: nyu
@@ -123,6 +125,7 @@ NYUAD:
 CU:
   name: The Cooper Union Library
   getit_url: https://getit.library.nyu.edu/cu/resolve?
+  bobcat_alias: cooper
   auth:
     code: CU
   views:
@@ -160,6 +163,7 @@ CU:
 NS:
   name: New School Libraries
   getit_url: https://getit.library.nyu.edu/ns/resolve?
+  bobcat_alias: newschool
   auth:
     code: NS
   views:
