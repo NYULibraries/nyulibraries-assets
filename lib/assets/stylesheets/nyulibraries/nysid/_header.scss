@@ -18,3 +18,10 @@
 	border-bottom: 8px solid $nysid-secondary-bg;
 	background-size: 153px;
 }
+header {
+	a {
+		float: left;
+		height: 161px !important;
+		width: 125px !important;
+	}
+}
