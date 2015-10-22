@@ -49,6 +49,7 @@ NYU:
 NYUSH:
   name: NYU Shanghai Library
   getit_url: https://getit.library.nyu.edu/nyush/resolve?
+  link_to_parent: NYU
   views:
     css: application_nyush
     dir: nyush
