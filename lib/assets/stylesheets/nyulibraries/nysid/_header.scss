@@ -1,25 +1,27 @@
 .header {
 	background: {
-		image: url('https://library.nyu.edu/images/common/bobcat/nysid/header.jpg'), url('https://library.nyu.edu/images/common/bobcat/nysid/header_bg.jpg');
+		image: image-url("nyulibraries/nysid/header.png");
 		color: transparent;
 		repeat: no-repeat, repeat-x;
     position: top left;
 	}
-	border-bottom:1px solid #ef4135;
-	height: 80px;
-}
-#content {
-	background: {
-		image: url('https://library.nyu.edu/images/common/bobcat/nysid/header_bg.jpg');
-		repeat: repeat-x;
-	}
 }
 #header {
 	background: {
-		image: url('https://library.nyu.edu/images/common/bobcat/nysid/header.jpg'), url('https://library.nyu.edu/images/common/bobcat/nysid/header_bg.jpg');
+		image: image-url("nyulibraries/nysid/header.jpg");
 		color: transparent;
 		repeat: no-repeat, repeat-x;
 	}
-	height:97px;
-	border-bottom:0;
+	background-color: transparent;
+	background-repeat: no-repeat, repeat-x;
+	height: 161px;
+	border-bottom: 8px solid #EF4036;
+	background-size: 153px;
+}
+header {
+	a {
+		float: left;
+		height: 161px !important;
+		width: 125px !important;
+	}
 }
