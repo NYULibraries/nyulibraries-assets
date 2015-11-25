@@ -26,12 +26,18 @@ module Nyulibraries
       # Override Rails #url_for to add institution
       def url_for(options={})
         if institution_param.present? and options.is_a? Hash
-          options[:institution] ||= institution_param
+          options[institution_param_name] ||= institution_param
         end
         if institute_param.present? and options.is_a? Hash
           options[:institute] ||= institute_param
         end
         super options
+      end
+
+      # Default param name is institution
+      # can be overridden in local applications
+      def institution_param_name
+        'institution'
       end
 
       # Grab the first institution that matches the client IP
@@ -72,7 +78,7 @@ module Nyulibraries
 
       # The institution param as a Symbol
       def institution_param
-        params['institution'].upcase.to_sym if params['institution'].present?
+        params[institution_param_name].upcase.to_sym if params[institution_param_name].present?
       end
       private :institution_param
 
