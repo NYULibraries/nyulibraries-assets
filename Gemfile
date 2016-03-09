@@ -3,7 +3,7 @@ gemspec
 group :development, :test do
   gem 'coveralls', :require => false
   gem "pry"
-  gem "mustache-rails", github: "josh/mustache-rails", require: "mustache/railtie"
+  gem 'mustache-rails', github: 'NYULibraries/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
   gem "jquery-rails"
 
   platforms :jruby do
@@ -14,10 +14,6 @@ group :development, :test do
   platforms :ruby do
     gem 'therubyracer', "~> 0.12.0"
     gem "sqlite3", "~> 1.3.7"
-  end
-
-  platforms :mri do
-    gem "debugger", "~> 1.6.0"
   end
 
   platforms :rbx do
