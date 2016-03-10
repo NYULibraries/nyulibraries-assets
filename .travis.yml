@@ -4,5 +4,4 @@ rvm:
   - 2.0.0
   - jruby-19mode # JRuby (1.9)
   - rbx
-before_script:
-  - gem install bootstrap-sass
+sudo: false
