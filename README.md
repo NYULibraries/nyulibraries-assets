@@ -26,7 +26,7 @@ In your gemfile,
 ```ruby
 group :assets do
   ...
-  gem 'sass-rails', "~> 3.2.5"
+  gem 'sass-rails', "~> 3.2.9"
   gem 'compass-rails', "~> 1.0.3"
   gem 'nyulibraries-assets', :git => "git://github.com/NYULibraries/nyulibraries-assets.git", :tag => "3.2.6"
   gem 'mustache-rails', github: 'NYULibraries/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
