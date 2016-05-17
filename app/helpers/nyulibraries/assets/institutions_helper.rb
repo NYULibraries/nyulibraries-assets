@@ -9,7 +9,7 @@ module Nyulibraries
       #   3. primary institution for the current user
       #   4. first default institution
       def current_institution
-        @current_institution ||= case
+        case
         when (institution_param.present? && institutions[institution_param])
           institutions[institution_param]
         when institution_from_ip.present?
