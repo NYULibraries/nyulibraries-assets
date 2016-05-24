@@ -9,7 +9,7 @@ group :development, :test do
   platforms :jruby do
     gem 'therubyrhino', "~> 2.0.0"
     gem "activerecord-jdbcsqlite3-adapter", "~> 1.3.0"
-    gem "mime-types", '2.99.1'
+    gem "mime-types", '~> 2' # Verions of this >= 3 fail with jruby 1.7
   end
 
   platforms :ruby do
