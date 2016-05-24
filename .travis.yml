@@ -7,3 +7,6 @@ rvm:
   - jruby-head
   - jruby-1.7.24
 sudo: false
+matrix:
+  allow_failures:
+    - rvm: jruby-head
