@@ -25,7 +25,7 @@ module Nyulibraries
 
       def institution_from_current_user
         @institution_from_current_user ||= begin
-          if @current_user && current_user.try(:institution_code).present?
+          if current_user && current_user.try(:institution_code).present?
             institutions[current_user.institution_code.to_sym]
           end
         end
