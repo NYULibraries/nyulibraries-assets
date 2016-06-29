@@ -9,19 +9,27 @@ module Nyulibraries
       #   3. primary institution for the current user
       #   4. first default institution
       def current_institution
-        case
+        @current_institution ||= case
         when (institution_param.present? && institutions[institution_param])
           institutions[institution_param]
         when institution_from_ip.present?
           institution_from_ip
-        when (@current_user && current_user.try(:institution_code).present?)
-          institutions[current_user.institution_code.to_sym]
+        when (institution_from_current_user.present?)
+          institution_from_current_user
         else
           Institutions.defaults.first
         end
       end
       alias current_primary_institution current_institution
       alias current_institute current_institution
+
+      def institution_from_current_user
+        @institution_from_current_user ||= begin
+          if @current_user && current_user.try(:institution_code).present?
+            institutions[current_user.institution_code.to_sym]
+          end
+        end
+      end
 
       # Override Rails #url_for to add institution
       def url_for(options={})
