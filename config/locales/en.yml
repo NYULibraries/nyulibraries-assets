@@ -7,7 +7,6 @@ en:
     title_html: BobCat
   workspace:
     header_html: My Workspace
-    title_html: What is My Workspace?
     guest_user_name_html: Guest
   record:
     flash:
