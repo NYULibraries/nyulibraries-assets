@@ -1,0 +1,10 @@
+/* NYHS Override */
+header {
+  background: {
+    image: image-url("nyulibraries/nyhs/header.png");
+    color: #fff;
+    position: center;
+  }
+	height: 100px;
+	border-bottom: 1px solid #385982;
+}
