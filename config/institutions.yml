@@ -218,7 +218,7 @@ HSL:
     css: application_hsl
     dir: hsl
     breadcrumbs:
-      title: NYU Health Sciences Libraries
+      title: NYU Health Sciences Library
       url: http://hsl.med.nyu.edu/
     tabs:
       all:
