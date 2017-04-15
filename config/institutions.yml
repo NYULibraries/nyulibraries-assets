@@ -209,7 +209,7 @@ NS:
         - nysid
       general_public: true
 
-HSL:
+HSL: 216.165.0-127.*
   name: NYU Health Sciences Libraries
   getit_url: https://getit.library.nyu.edu/hsl/resolve?
   auth:
@@ -226,7 +226,7 @@ HSL:
         url: "http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=HSL&tab=all"
         tip: "Keyword search: library catalog"
       eresources:
-        display: Search e-Resources
+        display: e-Resources
         tip: "Title search: databases, ejournals, websites, etc."
       journals:
         display: Journals A-Z
