@@ -15,11 +15,16 @@
   min-width: 200px;
 }
 
+.btn1 {
+  line-height: $line-height-large-computed;
+}
+
+
 .nyu-tip {
   @extend .pull-right;
   width: 225px;
   &:before, &:hover:before {
-    @extend .btn;
+    @extend .btn1;
     float: left;
     margin-right: 5px;
     padding: {
@@ -36,6 +41,3 @@
   }
 }
 
-.btn {
-  line-height: $line-height-large-computed;
-}
